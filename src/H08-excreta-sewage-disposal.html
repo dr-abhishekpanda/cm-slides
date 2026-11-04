@@ -1,0 +1,234 @@
+<!--meta
+{"short":"Excreta and Sewage","part":"Environment and Health","title":"Excreta and <em>Sewage</em> Disposal","sub":"The Sanitation Barrier, Sanitary Latrines, Septic Tanks, Sewage Treatment and Swachh Bharat",
+"codes":["CM 3.4"],
+"desc":"One-hour interactive lecture on excreta disposal (sanitation barrier, sanitary latrines, septic tank) and sewage treatment, with the Swachh Bharat Mission.",
+"notes":"60-minute plan: hook 3 min, F-diagram 8, sanitary latrines 15, septic tank 8, sewage treatment 15, SBM 5, check 6.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><path d='M120 160 h320 v40 h-320z' fill='#D7DCD1' stroke='#15201B' stroke-width='3'/><path d='M260 200 v60 q0 50 50 50 h40 v-40' fill='none' stroke='#0C5E4E' stroke-width='18' stroke-linecap='round'/><rect x='340' y='300' width='120' height='170' rx='60' fill='#F0E2D2' stroke='#BE651F' stroke-width='4'/><line x1='60' y1='240' x2='500' y2='240' stroke='#15201B' stroke-width='3'/></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter: Environment and Health (Excreta disposal; Sewage).",
+"Wagner EG, Lanoix JN. <i>Excreta Disposal for Rural Areas and Small Communities</i>. WHO Monograph Series No. 39. Geneva: WHO; 1958.",
+"Ministry of Jal Shakti. <i>Swachh Bharat Mission (Grameen) Phase II Operational Guidelines</i>; 2020.",
+"CPHEEO. <i>Manual on Sewerage and Sewage Treatment Systems</i>. MoHUA, Government of India; 2013.",
+"World Health Organization. <i>Guidelines on Sanitation and Health</i>. Geneva: WHO; 2018.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 3."]}
+-->
+
+<section data-title="One Gram of Faeces" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="WHO/UNICEF sanitation advocacy figures; teaching case">
+  <h2 class="s">One Gram of Faeces Can Hold <em>Millions</em> of Viruses and Bacteria</h2>
+  <p class="lede">A child with diarrhoea defecates near the courtyard. Two days later, three neighbours are ill.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:48px;font-style:italic;color:var(--amber);margin-top:26px">Trace every route from that stool to the neighbours' mouths.</p>
+  <aside class="notes"><p>0:00–0:03. Let groups draw routes. Commonly cited estimates: one gram of faeces can contain about 10 million viruses, 1 million bacteria, 1,000 parasite cysts and 100 worm eggs. Treat these as illustrative orders of magnitude. The next page names the routes (the F-diagram).</p></aside>
+</section>
+
+<section data-title="The F-diagram" data-tab="Tap a Route" data-src="Park 27e, Environment and Health: Sanitation barrier">
+  <h2 class="xs">Five Routes, One <em>Barrier</em></h2>
+  <div class="cols top" style="grid-template-columns:860px 1fr;gap:40px">
+    <svg id="fd" viewBox="0 0 860 520" style="width:860px;height:520px" aria-label="Faecal-oral transmission routes">
+      <g font-family="IBM Plex Sans" text-anchor="middle">
+        <rect x="20" y="220" width="150" height="80" rx="14" fill="#7A5230"/><text x="95" y="268" font-size="26" fill="#fff">Faeces</text>
+        <rect x="690" y="220" width="150" height="80" rx="14" fill="#0C5E4E"/><text x="765" y="268" font-size="26" fill="#fff">New Host</text>
+        <rect x="490" y="220" width="150" height="80" rx="14" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="565" y="268" font-size="26">Food</text>
+        <g class="rt" data-i="0"><rect x="300" y="30" width="150" height="70" rx="12" fill="#DCEAE5"/><text x="375" y="73" font-size="24">Water</text></g>
+        <g class="rt" data-i="1"><rect x="300" y="130" width="150" height="70" rx="12" fill="#DCEAE5"/><text x="375" y="173" font-size="24">Fingers</text></g>
+        <g class="rt" data-i="2"><rect x="300" y="320" width="150" height="70" rx="12" fill="#DCEAE5"/><text x="375" y="363" font-size="24">Flies</text></g>
+        <g class="rt" data-i="3"><rect x="300" y="420" width="150" height="70" rx="12" fill="#DCEAE5"/><text x="375" y="463" font-size="24">Fields / Soil</text></g>
+        <g stroke="#15201B" stroke-width="2.5" fill="none"><path d="M170 245 C 230 120 250 70 300 65"/><path d="M170 255 C 240 180 260 165 300 165"/><path d="M170 275 C 240 340 260 355 300 355"/><path d="M170 285 C 230 420 250 455 300 455"/>
+        <path d="M450 65 C 600 70 700 150 740 220"/><path d="M450 165 C 480 200 490 230 490 240"/><path d="M450 355 C 480 320 490 300 490 290"/><path d="M450 455 C 520 430 550 330 560 300"/><path d="M640 260 H690"/></g>
+        <rect id="bar" x="205" y="10" width="34" height="500" rx="8" fill="#BE651F" opacity="0"/>
+        <text id="barT" x="222" y="270" font-size="20" fill="#fff" opacity="0" transform="rotate(-90 222 270)" font-family="IBM Plex Mono" letter-spacing="3">SANITATION BARRIER</text>
+      </g>
+    </svg>
+    <div>
+      <div id="fdInfo" class="panel" style="min-height:220px"><span class="kicker">Tap a route</span><h3>Where Would You Break It?</h3><p>Water, food, personal hygiene and fly control each break one route.</p></div>
+      <button class="btn amber mt20" id="barBtn">Raise the Sanitation Barrier</button>
+    </div>
+  </div>
+  <aside class="notes"><p>0:03–0:11. Park: "the most effective step would be to segregate the faeces and arrange for its proper disposal so that the disease agent cannot reach the new host". A sanitary latrine and disposal pit form the barrier; sewers and treatment plants are the elaborate version.</p></aside>
+</section>
+
+<section data-title="Methods of Excreta Disposal" data-src="Park 27e, Environment and Health: Methods of excreta disposal">
+  <h2 class="xs">Methods of Excreta Disposal</h2>
+  <div class="cols c3 g28">
+    <div class="panel"><span class="kicker">Unsewered · Service Type</span><h3>Conservancy</h3><p>Nightsoil removed by hand from bucket latrines. <b>Not in use</b>: manual scavenging is banned (2013 Act).</p></div>
+    <div class="panel tl"><span class="kicker">Unsewered · Non-service</span><h3>Sanitary Latrines</h3><p>Bore hole, dug well (pit), <b>water-seal</b> (PRAI, RCA, Sulabh), septic tank, aqua privy.</p></div>
+    <div class="panel"><span class="kicker">Sewered</span><h3>Water Carriage</h3><p>Sewers to a treatment plant: primary and secondary treatment, or oxidation ponds, land or sea outfall.</p></div>
+  </div>
+  <p class="small mt30"><b>Camps and temporary use:</b> shallow trench, deep trench, pit and bore-hole latrines.</p>
+  <aside class="notes"><p>0:11–0:13. The Prohibition of Employment as Manual Scavengers and their Rehabilitation Act, 2013.</p></aside>
+</section>
+
+<section data-title="A Sanitary Latrine" data-src="Park 27e, Environment and Health: Sanitary latrines (criteria)">
+  <h2 class="s">What Makes a Latrine <em>Sanitary</em>?</h2>
+  <div class="cols c4 g20">
+    <div class="panel"><span class="kicker">1</span><p style="font-size:27px">Excreta must not contaminate <b>ground or surface water</b></p></div>
+    <div class="panel"><span class="kicker">2</span><p style="font-size:27px">Must not pollute the <b>soil</b></p></div>
+    <div class="panel"><span class="kicker">3</span><p style="font-size:27px">Must not be accessible to <b>flies, rodents, animals</b></p></div>
+    <div class="panel"><span class="kicker">4</span><p style="font-size:27px">Must not create a <b>nuisance</b> of odour or sight</p></div>
+  </div>
+  <div class="panel am mt40" style="display:flex;gap:30px;align-items:center"><span class="big-num" style="font-size:80px">15 m</span><p style="font-size:28px">Keep any latrine at least <b>15 m (50 ft)</b> from a water source, and at a <b>lower elevation</b>.</p></div>
+  <aside class="notes"><p>0:13–0:15. Safe distance in practice depends on soil porosity, ground-water level, slope and direction of flow.</p></aside>
+</section>
+
+<section data-title="The Water-seal Latrine" data-tab="Tap the Parts" data-src="Park 27e, Environment and Health: Water seal latrine; RCA latrine">
+  <h2 class="xs">The <em>Water-seal</em> Latrine (RCA Type)</h2>
+  <div class="cols top" style="grid-template-columns:640px 1fr;gap:40px">
+    <svg id="rca" viewBox="0 0 640 560" style="width:640px;height:560px" aria-label="Water-seal latrine parts">
+      <rect x="0" y="130" width="640" height="430" fill="#ECEEE7"/><line x1="0" y1="130" x2="640" y2="130" stroke="#15201B" stroke-width="3"/>
+      <rect x="60" y="110" width="320" height="22" fill="#D7DCD1" stroke="#15201B" stroke-width="2"/>
+      <path d="M180 132 v50 q0 50 50 50 h60 v-30" fill="none" stroke="#0C5E4E" stroke-width="22"/>
+      <path d="M200 205 h70" stroke="#3D6E7A" stroke-width="10"/>
+      <path d="M290 202 l100 80" stroke="#0C5E4E" stroke-width="22"/>
+      <rect x="380" y="260" width="180" height="280" rx="80" fill="#F0E2D2" stroke="#BE651F" stroke-width="4"/>
+      <g class="pins"></g>
+    </svg>
+    <div id="rcaInfo" class="panel" style="min-height:300px"><span class="kicker">Tap a number</span><h3>Seven Parts</h3><p>Location, squatting plate, pan, trap with water seal, connecting pipe, dug well (pit), superstructure.</p></div>
+  </div>
+  <aside class="notes"><p>0:15–0:22. The water seal keeps flies away and odours in. Once flushed, nightsoil is not visible: hence acceptability. The RCA type was accepted for wide adoption. Verify the pan and pit dimensions in the speaker notes against your Park edition.</p></aside>
+</section>
+
+<section data-title="Twin-pit Pour-flush" data-src="SBM (G) Phase II Operational Guidelines; CPHEEO guidance on twin-pit toilets">
+  <h2 class="s">Swachh Bharat's Workhorse: The <em>Twin-pit</em> Toilet</h2>
+  <div class="cols mid" style="grid-template-columns:560px 1fr;gap:60px">
+    <svg viewBox="0 0 560 420" style="width:560px;height:420px" aria-label="Twin-pit toilet">
+      <rect x="0" y="120" width="560" height="300" fill="#ECEEE7"/><line x1="0" y1="120" x2="560" y2="120" stroke="#15201B" stroke-width="3"/>
+      <rect x="200" y="20" width="160" height="100" fill="#FAFBF7" stroke="#15201B" stroke-width="3"/><text x="280" y="78" text-anchor="middle" font-size="20">pan</text>
+      <path d="M280 120 v40" stroke="#0C5E4E" stroke-width="14"/><rect x="250" y="160" width="60" height="40" fill="#BE651F"/><text x="280" y="225" text-anchor="middle" font-size="16">Y-junction</text>
+      <path d="M260 180 L150 230" stroke="#0C5E4E" stroke-width="12"/><path d="M300 180 L410 230" stroke="#D7DCD1" stroke-width="12"/>
+      <rect x="60" y="230" width="150" height="160" rx="70" fill="#F0E2D2" stroke="#BE651F" stroke-width="3"/><text x="135" y="320" text-anchor="middle" font-size="20">Pit 1 · in use</text>
+      <rect x="350" y="230" width="150" height="160" rx="70" fill="#FAFBF7" stroke="#7B877E" stroke-width="3" stroke-dasharray="8 6"/><text x="425" y="320" text-anchor="middle" font-size="20">Pit 2 · resting</text>
+    </svg>
+    <ul class="clean small">
+      <li>Pour-flush pan with water seal; a junction chamber sends waste to <b>one pit at a time</b></li>
+      <li>When pit 1 fills, switch to pit 2; pit 1 rests and its contents turn into <b>safe, odourless manure</b></li>
+      <li>Empty the rested pit; no handling of fresh excreta</li>
+      <li>Honeycomb (leaching) walls let liquid soak away</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>0:22–0:25. Commonly cited design: each pit sized for about 3–5 years' use by a family of five; rest period of about 2 years before emptying. Verify the SBM(G) design norms you teach.</p></aside>
+</section>
+
+<section data-title="Septic Tank" data-tab="Step Through" data-src="Park 27e, Environment and Health: Septic tank">
+  <h2 class="xs">How a <em>Septic Tank</em> Works</h2>
+  <div class="cols top" style="grid-template-columns:780px 1fr;gap:40px">
+    <svg viewBox="0 0 780 420" style="width:780px;height:420px" aria-label="Septic tank section">
+      <rect x="60" y="60" width="660" height="300" fill="#FAFBF7" stroke="#15201B" stroke-width="4"/>
+      <rect x="64" y="64" width="652" height="40" fill="#fff"/><text x="390" y="90" text-anchor="middle" font-size="17" fill="#7B877E" font-family="IBM Plex Mono">AIR SPACE ≥ 30 cm</text>
+      <rect x="64" y="104" width="652" height="252" fill="#DCEAE5"/>
+      <rect class="frag" x="64" y="104" width="652" height="26" fill="#C9B79A"/><text class="frag" x="390" y="123" text-anchor="middle" font-size="18">scum (grease, fat)</text>
+      <rect class="frag" x="64" y="296" width="652" height="60" fill="#7A5230"/><text class="frag" x="390" y="332" text-anchor="middle" font-size="18" fill="#fff">sludge: anaerobic digestion</text>
+      <g class="frag" fill="#7B877E"><circle cx="250" cy="250" r="6"/><circle cx="270" cy="200" r="5"/><circle cx="420" cy="230" r="6"/><circle cx="440" cy="180" r="5"/></g>
+      <path d="M0 150 h80 v40" stroke="#0C5E4E" stroke-width="12" fill="none"/><path d="M700 190 v-40 h80" stroke="#0C5E4E" stroke-width="12" fill="none"/>
+      <text x="20" y="135" font-size="18" fill="#0C5E4E">inlet</text><text x="700" y="135" font-size="18" fill="#0C5E4E">effluent</text>
+      <path d="M740 104 v252" stroke="#BE651F" stroke-width="3" stroke-dasharray="6 6"/><text x="745" y="390" font-size="17" fill="#BE651F">liquid 1.2 m</text>
+    </svg>
+    <ul class="clean" style="font-size:24px;gap:10px">
+      <li><b>20–30 gallons</b> (2–5 cu ft) per person; minimum 500 gallons</li>
+      <li>Length twice the breadth; depth 1.5–2 m</li>
+      <li class="frag">Retention period <b>24 hours</b></li>
+      <li class="frag">Stage 1: <b>anaerobic</b> digestion in the tank</li>
+      <li class="frag">Stage 2: <b>aerobic</b> oxidation of effluent in the soil (soakage pit)</li>
+      <li class="frag">Desludge periodically; never use the effluent as safe</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>0:25–0:33. Effluent still contains pathogens, ova and cysts; it must go to a soakage pit or drain field. Septic tanks are not recommended for large communities. Faecal sludge from septic tanks now goes to faecal sludge treatment plants (FSTPs) under SBM.</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Sewage">
+  <div class="big-n">2</div>
+  <h2>Sewage: <em>99.9%</em> Water, 0.1% Trouble</h2>
+  <p>Treatment, its standards, and the alternatives.</p>
+  <aside class="notes"><p>0:33.</p></aside>
+</section>
+
+<section data-title="BOD" data-src="Park 27e, Environment and Health: Sewage (strength of sewage; Royal Commission standards, 1908)">
+  <h2 class="s">Measuring the Strength of Sewage</h2>
+  <div class="cols c2 g28">
+    <div class="panel tl"><span class="kicker">BOD</span><h3>Biochemical Oxygen Demand</h3><p>Oxygen used by bacteria to oxidise organic matter in <b>5 days at 20 °C</b>. The higher the BOD, the stronger the sewage.</p></div>
+    <div class="panel"><span class="kicker">Also</span><h3>COD, Suspended Solids</h3><p>Chemical oxygen demand (all oxidisable matter) and suspended solids complete the picture.</p></div>
+  </div>
+  <div class="panel am mt30" style="display:flex;gap:40px;align-items:center"><span class="big-num" style="font-size:84px">20/30</span><p style="font-size:27px">Royal Commission (1908): effluent BOD ≤ <b>20 mg/L</b> and suspended solids ≤ <b>30 mg/L</b>, assuming 8:1 dilution in the river.</p></div>
+  <aside class="notes"><p>0:33–0:37. Current Indian discharge norms for STPs are set by CPCB/MoEFCC and are stricter for new plants; check the latest notification before quoting.</p></aside>
+</section>
+
+<section data-title="Sewage Treatment" data-tab="Step Through" data-src="Park 27e, Environment and Health: Modern sewage treatment">
+  <h2 class="xs">Inside a Sewage Treatment Plant</h2>
+  <svg viewBox="0 0 1300 330" style="width:1300px;height:330px" aria-label="Sewage treatment flow">
+    <g font-family="IBM Plex Sans" text-anchor="middle" font-size="22">
+      <rect x="0" y="120" width="160" height="90" rx="12" fill="#7A5230"/><text x="80" y="172" fill="#fff">Raw sewage</text>
+      <g class="frag"><rect x="190" y="120" width="170" height="90" rx="12" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="275" y="160">Screening</text><text x="275" y="188" font-size="16" fill="#4B5A52">floating matter</text></g>
+      <g class="frag"><rect x="380" y="120" width="170" height="90" rx="12" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="465" y="160">Grit chamber</text><text x="465" y="188" font-size="16" fill="#4B5A52">sand, gravel</text></g>
+      <g class="frag"><rect x="570" y="120" width="190" height="90" rx="12" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="665" y="160">Primary settling</text><text x="665" y="188" font-size="16" fill="#4B5A52">plain sedimentation</text></g>
+      <g class="frag"><rect x="780" y="120" width="230" height="90" rx="12" fill="#0C5E4E"/><text x="895" y="160" fill="#fff">Trickling filter or</text><text x="895" y="188" fill="#fff">activated sludge</text></g>
+      <g class="frag"><rect x="1030" y="120" width="170" height="90" rx="12" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="1115" y="160">Secondary</text><text x="1115" y="188">settling</text></g>
+      <g class="frag"><path d="M1200 165 h60" stroke="#0C5E4E" stroke-width="6"/><text x="1250" y="120" font-size="18" fill="#0C5E4E">effluent</text></g>
+      <text x="370" y="60" font-size="18" fill="#BE651F" font-family="IBM Plex Mono" letter-spacing="2">PRIMARY TREATMENT</text><path d="M190 75 h570" stroke="#BE651F" stroke-width="3"/>
+      <text x="990" y="60" font-size="18" fill="#0C5E4E" font-family="IBM Plex Mono" letter-spacing="2">SECONDARY TREATMENT</text><path d="M780 75 h420" stroke="#0C5E4E" stroke-width="3"/>
+      <g class="frag"><path d="M665 210 v60 h330 v-60" fill="none" stroke="#7A5230" stroke-width="4" stroke-dasharray="8 6"/><text x="830" y="300" font-size="18" fill="#7A5230">sludge → digestion → manure / biogas</text></g>
+    </g>
+  </svg>
+  <p class="small mt20">Primary treatment is <b>physical</b>; secondary treatment is <b>biological</b> (aerobic bacteria oxidise organic matter).</p>
+  <aside class="notes"><p>0:37–0:44. Activated sludge: sewage is aerated with a portion of returned "activated" sludge; the heart of the process is the aeration tank. Trickling filter: sewage sprinkled over a bed of stones coated with a zoogleal film.</p></aside>
+</section>
+
+<section data-title="Other Methods" data-src="Park 27e, Environment and Health: Other methods of sewage disposal">
+  <h2 class="s">Cheaper Alternatives</h2>
+  <div class="cols c4 g20">
+    <div class="panel tl"><span class="kicker">Oxidation Pond</span><p>Shallow pond; <b>algae</b> supply oxygen, <b>bacteria</b> oxidise organic matter. Cheap for small towns.</p></div>
+    <div class="panel"><span class="kicker">Oxidation Ditch</span><p>A mechanised, extended-aeration version of activated sludge.</p></div>
+    <div class="panel"><span class="kicker">Sewage Farming</span><p>About one acre per 100–300 persons; grow crops <b>not eaten raw</b>. Poorly managed: "sewage sickness".</p></div>
+    <div class="panel am"><span class="kicker">Outfalls</span><p>Sea outfall into deep water. <b>Raw sewage must never go into rivers.</b></p></div>
+  </div>
+  <aside class="notes"><p>0:44–0:48.</p></aside>
+</section>
+
+<section data-title="Swachh Bharat" data-src="Ministry of Jal Shakti: SBM(G) Phase II guidelines and dashboard">
+  <h2 class="s">Swachh Bharat Mission: From Toilets to <em>ODF Plus</em></h2>
+  <div class="cols c2 g28">
+    <div class="panel"><span class="kicker">Phase I · 2014–2019</span><h3>Open Defecation Free</h3><p>Individual household latrines in every rural home; behaviour change.</p></div>
+    <div class="panel tl"><span class="kicker">Phase II · 2020–2025/26</span><h3>ODF Plus</h3><p>Sustain ODF status; solid and liquid waste management; faecal sludge management; plastic waste; visual cleanliness.</p></div>
+  </div>
+  <p class="small mt30">A toilet is not sanitation unless the waste is <b>safely contained, emptied, treated and reused or disposed of</b>: the whole sanitation chain.</p>
+  <aside class="notes"><p>0:48–0:52. Quote current ODF Plus village numbers from the SBM(G) dashboard if you wish. NFHS-5: share of households using an improved sanitation facility by state.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on Park 27e">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="3"><p style="font-size:29px">The retention period of a household septic tank is:</p>
+      <button class="opt"><span class="l">A</span>6 hours</button><button class="opt"><span class="l">B</span>12 hours</button><button class="opt"><span class="l">C</span>3 days</button><button class="opt"><span class="l">D</span>24 hours</button>
+      <p class="fb" data-fb="24 hours: longer gives undue septicity, shorter gives too little treatment."></p></div>
+    <div class="mcq" data-ans="0"><p style="font-size:29px">The Royal Commission standard for sewage effluent (BOD/SS, mg/L) is:</p>
+      <button class="opt"><span class="l">A</span>20/30</button><button class="opt"><span class="l">B</span>30/20</button><button class="opt"><span class="l">C</span>10/10</button><button class="opt"><span class="l">D</span>50/100</button>
+      <p class="fb" data-fb="BOD ≤ 20 mg/L, suspended solids ≤ 30 mg/L, with 8:1 dilution."></p></div>
+  </div>
+  <aside class="notes"><p>0:52–0:56.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>Faeces reach mouths by <b>water, fingers, flies, fields and food</b>.</span></li>
+    <li><span>A <b>sanitary latrine</b> is the sanitation barrier; keep it <b>15 m</b> from water.</span></li>
+    <li><span>The <b>water seal</b> blocks flies and odour; twin pits make manure safely.</span></li>
+    <li><span>Septic tank: <b>24-hour</b> retention, anaerobic then aerobic purification.</span></li>
+    <li><span>Sewage treatment: <b>physical</b> primary, <b>biological</b> secondary; aim for 20/30.</span></li>
+  </ol>
+  <aside class="notes"><p>0:56–0:60. Next: Medical entomology, mosquitoes.</p></aside>
+</section>
+
+<script>
+const RT=[['Water','Protect water supplies: sanitary wells, chlorination.'],['Fingers','Personal hygiene: handwashing with soap after defecation and before food.'],['Flies','Fly control: covered latrines, refuse disposal, food protection.'],['Fields and Soil','Stop open defecation: hookworm larvae and roundworm eggs live in soil.']];
+const info=document.getElementById('fdInfo');
+document.querySelectorAll('#fd .rt').forEach(g=>{g.style.cursor='pointer';g.addEventListener('click',()=>{const r=RT[+g.dataset.i];info.innerHTML=`<span class="kicker">Route</span><h3>${r[0]}</h3><p style="font-size:26px">${r[1]}</p>`;});});
+let on=false;document.getElementById('barBtn').onclick=function(){on=!on;document.getElementById('bar').setAttribute('opacity',on?.95:0);document.getElementById('barT').setAttribute('opacity',on?1:0);this.textContent=on?'Remove the Barrier':'Raise the Sanitation Barrier';
+info.innerHTML=on?'<span class="kicker">Sanitation Barrier</span><h3>All Routes Blocked at Source</h3><p style="font-size:26px">Segregating faeces in a sanitary latrine stops every route at once. That is why it is the most effective step.</p>':'<span class="kicker">Tap a route</span><h3>Where Would You Break It?</h3><p>Water, food, personal hygiene and fly control each break one route.</p>';};
+const P=[[560,140,'1','Location','At least 15 m (50 ft) from any water source, at a lower level; not in flood-prone ground.'],
+[100,90,'2','Squatting Plate','Impervious cement concrete, at least 90 cm square and 5 cm thick at the edge, sloping towards the pan. Kept dry, it does not support hookworm larvae.'],
+[230,150,'3','Pan','Receives faeces, urine and wash water; smooth, with a steep slope so excreta slide into the trap.'],
+[160,215,'4','Trap and Water Seal','A bent pipe holding a small depth of water (about 2 cm): keeps flies out and odours in.'],
+[340,250,'5','Connecting Pipe','Carries excreta from the trap to the pit; used where the pit is offset from the squatting plate.'],
+[470,420,'6','Dug Well (Pit)','About 75 cm (30 in) in diameter and about 3 m deep; lined in loose soil; lasts a family several years.'],
+[40,180,'7','Superstructure','Gives privacy and protection from weather. Can be built of local materials.']];
+const g=document.querySelector('#rca .pins'),ri=document.getElementById('rcaInfo'),NS='http://www.w3.org/2000/svg';
+P.forEach(p=>{const c=document.createElementNS(NS,'g');c.style.cursor='pointer';c.innerHTML=`<circle cx="${p[0]}" cy="${p[1]}" r="24" fill="#BE651F"/><text x="${p[0]}" y="${p[1]+8}" text-anchor="middle" font-size="22" font-weight="600" fill="#fff">${p[2]}</text>`;
+c.addEventListener('click',()=>{ri.innerHTML=`<span class="kicker">${p[2]} of 7</span><h3>${p[3]}</h3><p style="font-size:27px">${p[4]}</p>`;g.querySelectorAll('circle').forEach(x=>x.setAttribute('fill','#BE651F'));c.querySelector('circle').setAttribute('fill','#0C5E4E');});g.appendChild(c);});
+</script>

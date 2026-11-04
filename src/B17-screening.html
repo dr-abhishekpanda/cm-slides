@@ -1,0 +1,677 @@
+<!--meta
+{
+"short": "Screening",
+"part": "Epidemiology",
+"title": "Screening for <em>Disease</em>",
+"sub": "Finding the disease that has not yet found the patient.",
+"codes": [
+"CM 7.6"
+],
+"desc": "One-hour interactive lecture on screening for disease: concepts, uses, types, criteria, validity, predictive value and screening in India.",
+"notes": "0:00. Lecture of 60 minutes; timings in each page's notes.",
+"art": "<svg class='art' viewBox='0 0 520 560' aria-hidden='true'><rect x='0' y='150' width='520' height='410' fill='#0C5E4E' opacity='.09'/><line x1='0' y1='150' x2='520' y2='150' stroke='#0C5E4E' stroke-width='3'/><polygon points='230,62 288,150 196,150' fill='#FAFBF7' stroke='#15201B' stroke-width='3'/><polygon points='196,150 288,150 400,300 430,450 330,540 150,540 70,420 110,270' fill='none' stroke='#0C5E4E' stroke-width='3' stroke-dasharray='10 9'/><text x='300' y='110' font-family='IBM Plex Mono,monospace' font-size='17' fill='#4B5A52' letter-spacing='2'>SEEN</text><text x='210' y='360' font-family='IBM Plex Mono,monospace' font-size='17' fill='#0C5E4E' letter-spacing='2'>UNSEEN</text></svg>",
+"refs": [
+"Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 28th ed. Jabalpur: Banarsidas Bhanot; 2025. Chapter 4, Screening for Disease.",
+"National Medical Commission. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 7 (CM 7.6).",
+"Wilson JMG, Jungner G. <i>Principles and Practice of Screening for Disease</i>. Public Health Paper No. 34. Geneva: WHO; 1968.",
+"Andermann A, Blancquaert I, Beauchamp S, Déry V. Revisiting Wilson and Jungner in the genomic age: a review of screening criteria over the past 40 years. <i>Bull World Health Organ</i>. 2008;86(4):317–319.",
+"Celentano DD, Szklo M. <i>Gordis Epidemiology</i>, 7th ed. Elsevier; 2024. Validity and reliability of tests; evaluation of screening.",
+"Ministry of Health and Family Welfare. Press releases on the NP-NCD intensified screening campaign (2025) and NSCAEM progress (2026). pib.gov.in."
+]
+}
+-->
+<style>
+/* 2x2 */
+.tt{display:grid;grid-template-columns:200px 230px 230px 170px;font-variant-numeric:tabular-nums}
+.tt > div{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:28px}
+.tt .hd{font-family:var(--font-mono);font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.tt .cell{flex-direction:column;gap:2px;border:1.5px solid var(--line);background:var(--card);margin:4px;border-radius:10px}
+.tt .cell input{width:150px;font:600 38px var(--font-mono);text-align:center;border:0;background:transparent;color:var(--ink);padding:2px}
+.tt .cell small{font-family:var(--font-mono);font-size:15px;letter-spacing:.1em;text-transform:uppercase}
+.tt .tp{border-color:var(--teal)} .tt .tp small{color:var(--teal)}
+.tt .fp small,.tt .fn small{color:var(--amber)} .tt .fp,.tt .fn{border-color:var(--amber)}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;font-variant-numeric:tabular-nums}
+.res .r{border-top:2px solid var(--ink);padding-top:10px}
+.res .k{font-family:var(--font-mono);font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.res .f{font-family:var(--font-mono);font-size:20px;color:var(--ink-soft)}
+.res .v{font-family:var(--font-display);font-size:58px;line-height:1.05;color:var(--teal)}
+.res.hide .v{filter:blur(14px)}
+
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:12px 26px;font-size:22px;color:var(--ink-soft)}
+.legend i{display:inline-block;width:20px;height:20px;border-radius:50%;margin-right:8px;vertical-align:-3px}
+
+
+/* checklist (criteria) */
+.crit{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.crit button{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:center;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 18px;font-size:24px;line-height:1.25;cursor:pointer}
+.crit button .m{width:44px;height:44px;border-radius:50%;border:2px dashed var(--ink-faint);display:grid;place-items:center;font:600 22px var(--font-mono);color:var(--ink-faint)}
+.crit button[data-s="y"]{border-color:var(--teal)} .crit button[data-s="y"] .m{border:0;background:var(--teal);color:#fff}
+.crit button[data-s="q"]{border-color:var(--amber)} .crit button[data-s="q"] .m{border:0;background:var(--amber);color:#fff}
+.crit button[data-s="n"]{border-color:var(--danger)} .crit button[data-s="n"] .m{border:0;background:var(--danger);color:#fff}
+
+
+/* quiz */
+.quiz{display:grid;gap:14px}
+.quiz .opt{display:flex;gap:18px;align-items:center;text-align:left;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:14px 22px;font-size:28px;cursor:pointer}
+.quiz .opt .l{font:600 22px var(--font-mono);width:44px;height:44px;border-radius:50%;border:2px solid var(--ink-faint);display:grid;place-items:center;flex:none;color:var(--ink-soft)}
+.quiz .opt.right{border-color:var(--teal);background:var(--teal-tint)} .quiz .opt.right .l{background:var(--teal);border-color:var(--teal);color:#fff}
+.quiz .opt.wrong{border-color:var(--danger);opacity:.7} .quiz .opt.wrong .l{background:var(--danger);border-color:var(--danger);color:#fff}
+.qfb{font-size:25px;color:var(--ink-soft);min-height:70px;margin-top:10px}
+
+
+.slide .art{right:110px;top:150px;width:520px;height:560px}
+</style>
+<section data-title="Opening Case: Sunita" data-run="Opening Case" data-tab="Think · Pair · Share">
+  
+  
+  <div class="cols c-6-4" style="align-items:center;margin-top:30px">
+    <div>
+            <h2 style="font-size:66px">She Feels Perfectly Well.<br>She Has Never Been to a <em>Hospital</em>.</h2>
+      <p class="lede">Sunita is 34 and lives in a village. Her ASHA asks her to come to the Ayushman Arogya Mandir for a blood test.</p>
+      <p class="frag" style="font-family:var(--font-display);font-size:50px;font-style:italic;color:var(--amber);margin-top:30px">Why test someone who is not sick?</p>
+    </div>
+    <div class="panel frag" style="transform:rotate(1deg)">
+      <span class="kicker">90 seconds · with your neighbour</span>
+      <ul class="clean" style="font-size:28px;gap:14px">
+        <li>What could the test find?</li>
+        <li>What could go wrong if the test is wrong?</li>
+        <li>Who pays for the follow-up?</li>
+      </ul>
+    </div>
+  </div>
+  <div class="poll" data-poll><div class="qr"></div><span>Scan to answer on your phone</span></div>
+  <aside class="notes"><p>0:00–0:03. Do not answer the question yet. Collect 3–4 responses. Write them on the board in two columns: "benefits" and "harms". You will return to these on the evaluation slide.</p><p>Sunita is a composite teaching case, not a real patient. The test could be the sickle cell solubility/POC test (NSCAEM covers ages 0–40), or BP and glucose if you change her age to over 30.</p></aside>
+</section>
+
+<section data-title="Learning Objectives" data-run="Learning Objectives" data-src="NMC CBME 2024, Vol II, Topic 7: Epidemiology. Linked: CM 8.2 (NCD screening), CM 6.3">
+  
+  <h2 class="xs">By the End of This Hour, You Should Be Able To</h2>
+  <div class="cols c2" style="gap:24px 60px;font-size:31px;line-height:1.3">
+    <div><span class="kicker">01 · Knows</span>Define screening and tell it apart from case-finding and diagnosis</div>
+    <div><span class="kicker">02 · Knows</span>Explain the iceberg phenomenon and lead time</div>
+    <div><span class="kicker">03 · Knows how</span>List the uses and types of screening</div>
+    <div><span class="kicker">04 · Knows how</span>Apply the criteria for screening to a disease that matters in our district</div>
+    <div><span class="kicker">05 · Shows how</span>Calculate sensitivity, specificity, PPV and NPV from a 2×2 table</div>
+    <div><span class="kicker">06 · Shows how</span>Explain how prevalence and cut-off choice change a test's performance</div>
+  </div>
+  <div class="panel" style="margin-top:40px;padding:20px 28px;display:flex;gap:26px;align-items:center">
+    <span class="chip">CM 7.6</span>
+    <span style="font-size:26px"><i>"Enumerate and evaluate the need of screening tests"</i></span>
+    <span class="small mono" style="margin-left:auto;font-size:18px">S · SH · Core · SGT, DOAP</span>
+  </div>
+  
+  <aside class="notes"><p>0:03–0:04. The objectives are numbered because they follow the order of the lecture. CM 7.6 is listed as a skill (SH) in the 2024 curriculum, so objectives 05 and 06 carry the DOAP practice in the next SGT.</p></aside>
+</section>
+
+<section data-title="Iceberg Phenomenon" data-run="Why Screen?" data-src="Park 28e, Ch 4 Iceberg phenomenon of disease (figure in Ch 2)" data-tab="Look Below the Waterline">
+  
+  
+  <div class="cols c-6-4" style="grid-template-columns:1.05fr 1fr;align-items:start">
+    <div>
+            <h2 style="font-size:64px">The Physician Sees the <em>Tip</em>.<br>The Community Holds the <em>Mass</em>.</h2>
+      <p class="small" style="font-size:30px">Diabetes and hypertension are classic icebergs: far more disease is hidden in the community than reaches the clinic.</p>
+      <button class="btn amber" id="iceBtn" style="margin-top:20px">Look below the waterline</button>
+    </div>
+    <svg id="ice" viewBox="0 0 640 700" style="width:640px;height:700px;margin-top:-40px" aria-label="Iceberg diagram">
+      <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0C5E4E" stop-opacity=".55"/><stop offset="1" stop-color="#08493C" stop-opacity=".95"/></linearGradient></defs>
+      <polygon points="300,40 380,190 240,190" fill="#FAFBF7" stroke="#15201B" stroke-width="3"/>
+      <text x="400" y="95" font-family="IBM Plex Sans" font-size="24" fill="#15201B" font-weight="600">Clinical cases</text>
+      <text x="400" y="124" font-family="IBM Plex Sans" font-size="19" fill="#4B5A52">what the physician sees</text>
+      <polygon points="240,190 380,190 520,330 560,520 450,680 170,680 70,520 120,320" fill="#ECEEE7" stroke="#15201B" stroke-width="3"/>
+      <g font-family="IBM Plex Sans" font-size="23" fill="#15201B" text-anchor="middle">
+        <text x="320" y="270">Undiagnosed cases</text>
+        <text x="320" y="360">Pre-symptomatic / latent</text>
+        <text x="320" y="450">Sub-clinical cases</text>
+        <text x="320" y="540">Carriers</text>
+        <text x="320" y="620" font-size="19" fill="#4B5A52">→ the target of screening</text>
+      </g>
+      <rect id="water" x="0" y="190" width="640" height="510" fill="url(#sea)" style="transition:opacity .9s ease"/>
+      <line x1="0" y1="190" x2="640" y2="190" stroke="#0C5E4E" stroke-width="3"/>
+      <text x="14" y="180" font-family="IBM Plex Mono" font-size="16" letter-spacing="2" fill="#0C5E4E">CLINICAL HORIZON</text>
+    </svg>
+  </div>
+  
+  <aside class="notes"><p>0:04–0:08. Ask first: "What lies below?" Then click the button. Park's wording: the submerged portion represents "sub-clinical cases, carriers, undiagnosed cases". Pre-symptomatic is added here to link with lead time two slides later.</p><p>Local hook: [INSERT: your district NP-NCD figures, e.g., number newly detected with hypertension in the 2025 intensified screening campaign vs number already on treatment].</p></aside>
+</section>
+
+<section data-title="Definition" data-run="Definition" data-src="Park 28e, Ch 4, Concept of screening">
+  
+  <h2 class="xs" style="margin-top:20px">Concept of Screening</h2>
+  <div class="clip">
+    <blockquote>"The search for unrecognized disease or defect by means of rapidly applied tests, examinations or other procedures in apparently healthy individuals."</blockquote>
+  </div>
+  <div class="cols c3 frag" style="margin-top:56px;gap:30px">
+    <div><span class="kicker">Key word 1</span><h3>Unrecognized</h3></div>
+    <div><span class="kicker">Key word 2</span><h3>Rapidly Applied</h3></div>
+    <div><span class="kicker">Key word 3</span><h3>Apparently Healthy</h3></div>
+  </div>
+  
+  <aside class="notes"><p>0:08–0:10. Ask students to underline the three key words in their notebooks. Park adds that screening differs from periodic health examination: capable of wide application, relatively inexpensive, needs little physician time ("the physician is not required to administer the test, but only to interpret it").</p></aside>
+</section>
+
+<section data-title="Screening, Case-finding or Diagnosis?" data-run="Explanation of Terms" data-src="Park 28e, Ch 4, Explanation of terms" data-tab="Tap to Reveal">
+  
+  
+  <h2 style="font-size:62px">Same Test. Three Different <em>Jobs</em>.</h2>
+  <p class="small" style="margin-top:-14px;margin-bottom:30px">Is each of these screening, case-finding or a diagnostic test?</p>
+  <div class="cols c3" style="gap:28px">
+    <button class="reveal"><span class="kicker">Case A</span><span class="q">An HIV serology test on every blood donor at the district blood bank</span><span class="why">Testing people who are <b>not seeking health care</b>.</span><span class="a">Screening</span></button>
+    <button class="reveal"><span class="kicker">Case B</span><span class="q">A VDRL test on a pregnant woman at her first ANC visit</span><span class="why">She came for <b>another reason</b> (antenatal care).</span><span class="a">Case-finding</span></button>
+    <button class="reveal"><span class="kicker">Case C</span><span class="q">A VDRL test on a man with lesions suggestive of secondary syphilis</span><span class="why">Confirms or refutes disease in someone <b>with signs and symptoms</b>.</span><span class="a">Diagnostic test</span></button>
+  </div>
+  <div class="poll" data-poll><div class="qr"></div><span>Vote A / B / C on your phone</span></div>
+  
+  <aside class="notes"><p>0:10–0:13. Show of hands for each case before revealing. Park: "the distinction between screening, case-finding or diagnosis should be clear-cut. Often, however, it is blurred."</p></aside>
+</section>
+
+<section data-title="Screening vs Diagnostic Test" data-run="Screening and Diagnostic Tests Contrasted" data-src="Park 28e, Ch 4, Table 1 (after Blumberg 1966)">
+  
+  <h2 style="font-size:60px;margin-bottom:24px">A Screening Test Is <em>Not</em> a Diagnosis</h2>
+  <table class="t" style="font-size:27px">
+    <thead><tr><th style="width:34%">Screening test</th><th>Diagnostic test</th></tr></thead>
+    <tbody>
+      <tr><td>Done on apparently healthy people</td><td>Done on those with indications or sick</td></tr>
+      <tr class="frag"><td>Applied to groups</td><td>Applied to single patients; all diseases considered</td></tr>
+      <tr class="frag"><td>Based on one criterion or cut-off point</td><td>Based on a number of symptoms, signs and lab findings</td></tr>
+      <tr class="frag"><td>Less accurate · less expensive</td><td>More accurate · more expensive</td></tr>
+      <tr class="frag"><td>Not a basis for treatment</td><td>Used as a basis for treatment</td></tr>
+      <tr class="frag"><td>Initiative from the investigator or agency</td><td>Initiative from a patient with a complaint</td></tr>
+    </tbody>
+  </table>
+  <p class="small frag" style="margin-top:22px">Some tests do both jobs, e.g. the test for anaemia and the glucose tolerance test.</p>
+  
+  <aside class="notes"><p>0:13–0:15. [VERIFY wording against Park 28e Table 1: the table did not come through in the text layer of your Drive copy, so these rows are condensed from the 28e table as I know it. Check before teaching.]</p></aside>
+</section>
+
+<section data-title="Lead Time" data-run="Concept of Lead Time" data-src="Park 28e, Ch 4, Fig. 1 Model for early detection programmes">
+  
+  <h2 style="font-size:62px">Lead Time Is the <em>Head Start</em> Screening Buys</h2>
+  <svg viewBox="0 0 1310 430" style="width:1310px;height:430px;margin-top:10px" aria-label="Lead time timeline">
+    <g font-family="IBM Plex Sans" font-size="24" fill="#15201B">
+      <line x1="40" y1="200" x2="1250" y2="200" stroke="#15201B" stroke-width="4"/>
+      <polygon points="1250,188 1280,200 1250,212" fill="#15201B"/>
+      <g><circle cx="80" cy="200" r="12" fill="#15201B"/><text x="80" y="132" text-anchor="middle">Disease</text><text x="80" y="160" text-anchor="middle">onset</text></g>
+      <g class="frag"><circle cx="360" cy="200" r="14" fill="#0C5E4E"/><text x="360" y="132" text-anchor="middle" fill="#0C5E4E" font-weight="600">First possible</text><text x="360" y="160" text-anchor="middle" fill="#0C5E4E" font-weight="600">diagnosis</text>
+        <text x="360" y="250" text-anchor="middle" font-family="IBM Plex Mono" font-size="18" fill="#0C5E4E" letter-spacing="2">SCREENING TIME</text></g>
+      <g class="frag"><line x1="760" y1="110" x2="760" y2="290" stroke="#A23B2B" stroke-width="4" stroke-dasharray="10 8"/><text x="760" y="90" text-anchor="middle" fill="#A23B2B" font-weight="600">Final critical point</text>
+        <text x="760" y="320" text-anchor="middle" font-size="19" fill="#A23B2B">beyond this, treatment fails or damage is permanent</text></g>
+      <g class="frag"><circle cx="1040" cy="200" r="14" fill="#BE651F"/><text x="1040" y="132" text-anchor="middle" fill="#BE651F" font-weight="600">Usual time</text><text x="1040" y="160" text-anchor="middle" fill="#BE651F" font-weight="600">of diagnosis</text></g>
+      <g class="frag"><path d="M360 370 L360 395 L1040 395 L1040 370" fill="none" stroke="#0C5E4E" stroke-width="3"/>
+        <text x="700" y="425" text-anchor="middle" font-family="IBM Plex Mono" font-size="22" fill="#0C5E4E" letter-spacing="3">LEAD TIME</text></g>
+    </g>
+  </svg>
+  <p class="frag" style="font-size:31px;margin-top:6px">Screening helps only when early detection comes <b>before the final critical point</b>. Benefit of the programme = outcome <b>B</b> (early) − outcome <b>A</b> (usual).</p>
+  
+  <aside class="notes"><p>0:15–0:18. Park: "Lead time is the advantage gained by screening, i.e., the period between diagnosis by early detection and diagnosis by other means." Ask: for which disease is the final critical point very early? (e.g., congenital hypothyroidism: before brain damage, hence newborn screening.)</p></aside>
+</section>
+
+<section data-title="Possible Outcomes of Screening" data-run="Aims and Objectives" data-src="Park 28e, Ch 4, Fig. 2 Possible outcomes of screening">
+  
+  <h2 style="font-size:60px">Screening Sorts.<br>It Does Not <em>Diagnose</em>.</h2>
+  <svg viewBox="0 0 1300 480" style="width:1300px;height:480px" aria-label="Flowchart of screening outcomes">
+    <g font-family="IBM Plex Sans" font-size="26" text-anchor="middle">
+      <rect x="470" y="10" width="360" height="74" rx="12" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="650" y="56">Apparently healthy</text>
+      <line x1="650" y1="84" x2="650" y2="140" stroke="#15201B" stroke-width="2.5"/>
+      <rect x="520" y="140" width="260" height="56" rx="28" fill="#0C5E4E"/><text x="650" y="177" fill="#fff" font-family="IBM Plex Mono" font-size="20" letter-spacing="2">SCREENING TEST</text>
+      <path d="M650 196 V230 H330 V262 M650 230 H970 V262" fill="none" stroke="#15201B" stroke-width="2.5"/>
+      <rect x="150" y="262" width="360" height="74" rx="12" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="330" y="308">Apparently normal</text>
+      <text x="330" y="372" font-size="21" fill="#4B5A52">→ periodic re-screening</text>
+      <rect x="790" y="262" width="360" height="74" rx="12" fill="#F0E2D2" stroke="#BE651F" stroke-width="2.5"/><text x="970" y="308">Apparently abnormal</text>
+      <text x="970" y="372" font-size="21" fill="#BE651F" font-family="IBM Plex Mono" letter-spacing="1">DIAGNOSTIC WORK-UP</text>
+      <g font-size="21" fill="#15201B" text-anchor="start">
+        <text x="830" y="410">(a) Normal — periodic re-screening</text>
+        <text x="830" y="436">(b) Intermediate — surveillance</text>
+        <text x="830" y="462">(c) Abnormal — treatment</text>
+      </g>
+    </g>
+  </svg>
+  
+  <aside class="notes"><p>0:18–0:19. Park: the basic purpose is "to sort out from a large group of apparently healthy persons those likely to have the disease or at increased risk of the disease under study".</p></aside>
+</section>
+
+<section class="section" data-title="Section: Uses and Types">
+  
+  <div class="big-n">2</div>
+  <h2>Why We Screen, and <em>Whom</em></h2>
+  <p>Four uses. Three types. One question to ask every time: who benefits?</p>
+  <aside class="notes"><p>0:19.</p></aside>
+</section>
+
+<section data-title="Uses of Screening" data-run="Uses of Screening" data-src="Park 28e, Ch 4, Uses of screening">
+  
+  <h2 style="font-size:60px">Four Uses of Screening</h2>
+  <div class="cols c2" style="gap:26px 34px">
+    <div class="panel"><span class="kicker">a · Prescriptive screening</span><h3>Case detection</h3><p>People screened <b>for their own benefit</b>. Neonatal screening; bacteriuria in pregnancy; cervical cancer; PKU.</p></div>
+    <div class="panel frag"><span class="kicker">b · Prospective screening</span><h3>Control of disease</h3><p>People examined <b>for the benefit of others</b>. Immigrants screened for TB and syphilis; streptococcal infection to prevent rheumatic fever.</p></div>
+    <div class="panel frag"><span class="kicker">c</span><h3>Research purposes</h3><p>Initial screening gives prevalence; later rounds give incidence. Participants must be told no follow-up therapy will be available.</p></div>
+    <div class="panel frag"><span class="kicker">d</span><h3>Educational opportunities</h3><p>Builds public awareness and educates health professionals, e.g. diabetes screening camps.</p></div>
+  </div>
+  
+  <aside class="notes"><p>0:20–0:23. Exam tip: "prescriptive" vs "prospective" is a favourite MCQ. Memory hook: pre-SCRIPT-ive = a prescription for me; pro-SPECT-ive = protecting the spectators.</p></aside>
+</section>
+
+<section data-title="Types of Screening" data-run="Types of Screening" data-src="Park 28e, Ch 4, Types of screening">
+  
+  <h2 style="font-size:60px">Three Types of Screening</h2>
+  <div class="cols c3" style="gap:30px;align-items:start">
+    <div>
+      <svg viewBox="0 0 300 200" style="width:100%;height:190px" aria-hidden="true"><g id="massDots"></g></svg>
+      <h3>Mass</h3><p class="small">Whole population or a sub-group (e.g. all adults), irrespective of individual risk. Of little value unless backed by effective treatment.</p>
+    </div>
+    <div class="frag">
+      <svg viewBox="0 0 300 200" style="width:100%;height:190px" aria-hidden="true"><g id="riskDots"></g></svg>
+      <h3>High-risk / selective</h3><p class="small">Applied to groups at high risk, defined by epidemiological research. Most productive. Extends to screening for <b>risk factors</b>, e.g. serum cholesterol for CHD.</p>
+    </div>
+    <div class="frag">
+      <svg viewBox="0 0 300 200" style="width:100%;height:190px" aria-hidden="true"><g id="multiDots"></g></svg>
+      <h3>Multiphasic</h3><p class="small">Two or more tests in combination, at one time. Popular, but RCTs in the UK and USA showed no reduction in mortality or morbidity, at higher cost.</p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:23–0:25. Ask: which type is the Ayushman Arogya Mandir NCD screening of everyone aged 30+? (Population-based, i.e. mass screening of an age-defined sub-group; it is also multiphasic since BP, glucose and three cancers are screened together.) Which type is NSCAEM? (Selective: tribal-majority areas, age 0–40.)</p></aside>
+</section>
+
+<section class="section" data-title="Section: Criteria">
+  
+  <div class="big-n">3</div>
+  <h2>Is It Worth <em>Screening</em> For?</h2>
+  <p>Two sets of criteria: the <b>disease</b> and the <b>test</b>.</p>
+  <aside class="notes"><p>0:25.</p></aside>
+</section>
+
+<section data-title="Criteria: the Disease" data-run="Criteria for Screening: Disease" data-src="Park 28e, Ch 4, Criteria for screening: Disease (based on Wilson & Jungner, WHO 1968)" data-tab="Tap to Rate">
+  
+  
+  <h2 style="font-size:52px;margin-bottom:10px">Does <em>Sickle Cell Disease</em> in a Tribal District Pass?</h2>
+  <p class="small" style="margin-bottom:20px">Tap each criterion as the class decides: <b class="am">?</b> unsure → <b style="color:var(--teal)">✓</b> met → <b style="color:var(--danger)">✗</b> not met</p>
+  <div class="crit" id="crit">
+    <button><span class="m">1</span>An important health problem (prevalence generally high)</button>
+    <button><span class="m">2</span>A recognizable latent or early asymptomatic stage</button>
+    <button><span class="m">3</span>Natural history adequately understood</button>
+    <button><span class="m">4</span>A test that detects disease before signs and symptoms</button>
+    <button><span class="m">5</span>Facilities to confirm the diagnosis</button>
+    <button><span class="m">6</span>An effective treatment</button>
+    <button><span class="m">7</span>An agreed policy on whom to treat as patients</button>
+    <button><span class="m">8</span>Good evidence that early detection reduces morbidity and mortality</button>
+    <button style="grid-column:1/-1"><span class="m">9</span>Expected benefits of early detection exceed the risks and costs</button>
+  </div>
+  
+  <aside class="notes"><p>0:26–0:32. Wording is condensed from Park's nine criteria; read the verbatim list from Park if students ask. Park: "When the above criteria are satisfied, then only, it would be appropriate to consider a suitable screening test."</p><p>Discussion prompts: (6) Treatment: hydroxyurea, penicillin prophylaxis, folic acid, vaccination, plus genetic counselling for trait carriers. (2) Screening also finds carriers (trait), which is a different purpose from case detection. Update: Andermann et al., Bull WHO 2008;86(4):317–9 reviewed 50+ later criteria lists, most overlapping Wilson–Jungner.</p><p>[INSERT: your district NSCAEM figures, e.g. number screened, SCD and trait detected in 2025–26.]</p></aside>
+</section>
+
+<section data-title="Criteria: the Test" data-run="Criteria for Screening: Test" data-src="Park 28e, Ch 4, Screening test">
+  
+  <h2 style="font-size:60px">A Good Screening Test Is <em>Acceptable</em>, <em>Repeatable</em> and <em>Valid</em></h2>
+  <div class="cols c3" style="gap:30px;margin-top:10px">
+    <div class="panel"><span class="kicker">1</span><h3>Acceptability</h3><p>A high rate of cooperation is needed. Painful, discomforting or embarrassing tests (rectal, vaginal examination) are less acceptable in mass campaigns.</p></div>
+    <div class="panel frag"><span class="kicker">2</span><h3>Repeatability</h3><p>Consistent results when repeated on the same person under the same conditions. Also called reliability, precision, reproducibility.</p></div>
+    <div class="panel frag"><span class="kicker">3</span><h3>Validity</h3><p>Ability to separate those who have the disease from those who do not. Components: sensitivity and specificity.</p></div>
+  </div>
+  <p class="frag" style="font-size:28px;margin-top:30px;color:var(--ink-soft)">Plus: yield, simplicity, safety, rapidity, ease of administration and cost. <b style="color:var(--ink)">The choice of test is often a compromise.</b></p>
+  
+  <aside class="notes"><p>0:32–0:34.</p></aside>
+</section>
+
+<section data-title="Repeatability" data-run="Repeatability" data-src="Park 28e, Ch 4, Repeatability; Table 2 (Yerushalmy 1956)">
+  
+  <h2 style="font-size:58px">Three Sources of Variation</h2>
+  <div class="cols c3" style="gap:34px">
+    <div><span class="kicker">A · Observer variation</span><p style="font-size:28px"><b>Intra-observer:</b> same observer, same subject, different result.</p><p style="font-size:28px"><b>Inter-observer:</b> one reader finds malaria parasites on a slide; a second calls it normal.</p></div>
+    <div class="frag"><span class="kicker">B · Biological variation</span><p style="font-size:28px">BP, blood sugar and cholesterol fluctuate in the same person.</p><p style="font-size:28px"><b>Regression to the mean:</b> extreme values drift towards the average on repeat measurement.</p></div>
+    <div class="frag"><span class="kicker">C · Technical methods</span><p style="font-size:28px">Defective instruments, wrong calibration, faulty reagents, or an unsuitable test.</p></div>
+  </div>
+  <div class="panel frag" style="margin-top:22px;display:flex;gap:30px;align-items:center;padding:22px 30px">
+    <span class="big-num" style="font-size:84px">8</span>
+    <p style="font-size:27px;margin:0">radiologists read the same <b>14,867</b> chest X-rays independently, and disagreed often enough to be called "sobering and instructive". Blood pressure is poorly reproducible because all three sources act on it.</p>
+  </div>
+  
+  <aside class="notes"><p>0:34–0:37. Quick demo: two students measure the same volunteer's BP with the same cuff; compare. Observer error is reduced by standardising procedures, training observers and using two or more independent observers.</p></aside>
+</section>
+
+<section class="section" data-title="Section: Validity">
+  
+  <div class="big-n">4</div>
+  <h2>Who Is Really <em>Sick</em>?</h2>
+  <p>The 2×2 table, four numbers, and why a positive result can still be wrong.</p>
+  <aside class="notes"><p>0:37.</p></aside>
+</section>
+
+<section data-title="2×2 Table Calculator" data-run="Evaluation of a Screening Test" data-src="Park 28e, Ch 4, Tables 3-A and 3-B; formulae (a)–(f)" data-tab="Calculate First · Then Reveal">
+  
+  
+  <h2 style="font-size:52px;margin-bottom:20px">Work It Out: A Worked <em>2×2</em> Example</h2>
+  <div class="cols" style="grid-template-columns:auto 1fr;gap:60px;align-items:start">
+    <div>
+      <div class="tt">
+        <div class="hd"></div><div class="hd">Diseased</div><div class="hd">Not diseased</div><div class="hd">Total</div>
+        <div class="hd" style="justify-content:flex-start">Test +</div>
+        <div class="cell tp"><input id="ca" inputmode="numeric" value="40" aria-label="a, true positives"><small>a · true +</small></div>
+        <div class="cell fp"><input id="cb" inputmode="numeric" value="20" aria-label="b, false positives"><small>b · false +</small></div>
+        <div id="tAB" class="mono"></div>
+        <div class="hd" style="justify-content:flex-start">Test −</div>
+        <div class="cell fn"><input id="cc" inputmode="numeric" value="100" aria-label="c, false negatives"><small>c · false −</small></div>
+        <div class="cell"><input id="cd" inputmode="numeric" value="9840" aria-label="d, true negatives"><small>d · true −</small></div>
+        <div id="tCD" class="mono"></div>
+        <div class="hd" style="justify-content:flex-start">Total</div><div id="tAC" class="mono"></div><div id="tBD" class="mono"></div><div id="tN" class="mono"></div>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:24px">
+        <button class="btn solid" id="calcReveal">Reveal answers</button>
+        <button class="btn" id="calcReset">Reset the Numbers</button>
+      </div>
+    </div>
+    <div class="res hide" id="res">
+      <div class="r"><div class="k">Sensitivity</div><div class="f">a / (a + c)</div><div class="v" id="rSe"></div></div>
+      <div class="r"><div class="k">Specificity</div><div class="f">d / (b + d)</div><div class="v" id="rSp"></div></div>
+      <div class="r"><div class="k">PPV</div><div class="f">a / (a + b)</div><div class="v" id="rPPV"></div></div>
+      <div class="r"><div class="k">NPV</div><div class="f">d / (c + d)</div><div class="v" id="rNPV"></div></div>
+      <div class="r"><div class="k">False negatives</div><div class="f">c / (a + c)</div><div class="v" id="rFN"></div></div>
+      <div class="r"><div class="k">False positives</div><div class="f">b / (b + d)</div><div class="v" id="rFP"></div></div>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:37–0:44. Give students 3 minutes with calculators. Park's answers: sensitivity 28.57%, specificity 99.79%, false-negative 71.4%, false-positive 0.20%, PPV 66.66%, NPV 98.9%. Cells are editable: change d to 984 and show how the PPV stays the same but NPV collapses.</p><p>Point to stress: this test has excellent specificity but misses 71% of cases. "A screening test which is very sensitive has few false negatives."</p></aside>
+</section>
+
+<section data-title="Sensitivity and Specificity" data-run="Sensitivity and Specificity" data-src="Park 28e, Ch 4, Sensitivity, Specificity, False negatives and positives">
+  
+  <div class="cols c2" style="gap:60px;margin-top:20px">
+    <div>
+      <span class="chip">Sensitivity · Yerushalmy, 1940s</span>
+      <div class="clip" style="margin-top:28px;padding:40px 44px;transform:rotate(-.8deg)"><blockquote style="font-size:38px">"the ability of a test to identify correctly all those who have the disease, that is 'true-positive'."</blockquote></div>
+      <p class="frag" style="margin-top:30px;font-size:29px">High sensitivity → few <b class="am">false negatives</b> → fewer people falsely reassured.</p>
+    </div>
+    <div>
+      <span class="chip am">Specificity</span>
+      <div class="clip" style="margin-top:28px;padding:40px 44px;transform:rotate(.7deg)"><blockquote style="font-size:38px">"the ability of a test to identify correctly those who do not have the disease, that is, 'true-negatives'."</blockquote></div>
+      <p class="frag" style="margin-top:30px;font-size:29px">High specificity → few <b class="am">false positives</b> → fewer healthy people sent for work-up.</p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:44–0:45. Park: "Whereas the epidemiologist thinks in terms of sensitivity and specificity, the clinician thinks in terms of false negatives and false positives." Park's example: CT scan for brain tumours, sensitivity 97.5% and specificity 95% (Table 5).</p></aside>
+</section>
+
+<section data-title="The Problem of the Borderline" data-run="The Problem of the Borderline" data-src="Park 28e, Ch 4, Fig. 3 and Table 6 (2-hour post-prandial glucose)" data-tab="Drag the Cut-off">
+  
+  
+  <h2 style="font-size:52px;margin-bottom:6px">Move the Cut-off.<br>Watch What You <em>Trade</em>.</h2>
+  <div class="cols" style="grid-template-columns:1fr 400px;gap:44px;align-items:start">
+    <svg id="dist" viewBox="0 0 900 500" style="width:900px;height:500px" aria-label="Overlapping distributions of 2-hour post-prandial glucose"></svg>
+    <div style="padding-top:30px">
+      <div class="ctl"><label for="cut">Cut-off <b id="cutV">180 mg/dl</b></label><input type="range" id="cut" min="90" max="260" step="5" value="180"></div>
+      <div class="res" style="grid-template-columns:1fr;gap:12px">
+        <div class="r"><div class="k">Sensitivity</div><div class="v" id="dSe" style="font-size:64px"></div></div>
+        <div class="r"><div class="k">Specificity</div><div class="v" id="dSp" style="font-size:64px;color:var(--amber)"></div></div>
+      </div>
+      <p class="small" style="font-size:20px;margin-top:16px">Curves calibrated to the textbook data point (180 mg/dl → Se 50%, Sp 99.8%). Shapes are illustrative, not real data.</p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:45–0:48. Drag down to 120 mg/dl: sensitivity rises, specificity falls. Park: "sensitivity and specificity are inversely related", and "there is no blood sugar level which will ensure the separation of all those with the disease from those without the disease." The shaded amber area is false positives; the hatched teal area is false negatives.</p></aside>
+</section>
+
+<section data-title="Predictive Value and Prevalence" data-run="Predictive Accuracy" data-src="Park 28e, Ch 4, Table 7 (Gram-stained cervical smear for gonorrhoea; Se 50%, Sp 90%)" data-tab="Move the Prevalence">
+  
+  
+  <h2 style="font-size:50px;margin-bottom:8px">Same Test. Different Village. Different <em>PPV</em>.</h2>
+  <div class="cols" style="grid-template-columns:780px 1fr;gap:50px;align-items:start">
+    <div>
+      <svg id="dots" viewBox="0 0 780 490" style="width:780px;height:490px" aria-label="Icon array of 1000 people"></svg>
+      <div class="legend"><span><i style="background:#0C5E4E"></i>True +</span><span><i style="background:#BE651F"></i>False +</span><span><i style="border:3px solid #0C5E4E;box-sizing:border-box"></i>False −</span><span><i style="background:#D7DCD1"></i>True −</span></div>
+    </div>
+    <div>
+      <div class="ctl"><label for="pPrev">Prevalence <b id="vPrev"></b></label><input type="range" id="pPrev" min="1" max="50" value="5"></div>
+      <div class="ctl"><label for="pSe">Sensitivity <b id="vSe"></b></label><input type="range" id="pSe" min="30" max="99" value="50"></div>
+      <div class="ctl"><label for="pSp">Specificity <b id="vSp"></b></label><input type="range" id="pSp" min="50" max="99" value="90"></div>
+      <div style="display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap">
+        <button class="btn" data-prev="5" style="font-size:20px;padding:10px 18px">5%</button>
+        <button class="btn" data-prev="15" style="font-size:20px;padding:10px 18px">15%</button>
+        <button class="btn" data-prev="25" style="font-size:20px;padding:10px 18px">25%</button>
+      </div>
+      <div class="k mono" style="font-size:18px;letter-spacing:.12em;color:var(--ink-faint)">POSITIVE PREDICTIVE VALUE</div>
+      <div class="big-num" id="vPPV"></div>
+      <p class="small" id="vPPVtxt" style="font-size:24px;margin-top:10px"></p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:48–0:52. Click 5%, 15%, 25%: PPV becomes ~21%, ~47%, ~63%, matching Park's Table 7. Park: "The predictive value of a positive result falls as disease prevalence declines." Sensitivity and specificity do not change with prevalence; predictive values do. This is the core reason for high-risk (selective) screening: it raises prevalence and so raises PPV and yield.</p></aside>
+</section>
+
+<section data-title="Sensitivity or Specificity First?" data-run="Choosing the Cut-off" data-src="Park 28e, Ch 4, The problem of the borderline" data-tab="Tap to Reveal">
+  
+  
+  <h2 style="font-size:56px">Which Would You Protect: <em>Sensitivity</em> or <em>Specificity</em>?</h2>
+  <div class="cols c3" style="gap:28px">
+    <button class="reveal"><span class="kicker">Scenario 1</span><span class="q">Cervical cancer: lethal, and early detection markedly improves prognosis</span><span class="why">False positives are tolerable (work-up rules them out). False negatives are not.</span><span class="a">Sensitivity</span></button>
+    <button class="reveal"><span class="kicker">Scenario 2</span><span class="q">Diabetes: very common, and early treatment does not markedly alter outcome</span><span class="why">Too many false positives would overburden the health system with diagnostic demands.</span><span class="a">Specificity</span></button>
+    <button class="reveal"><span class="kicker">Scenario 3</span><span class="q">Prevalence is high in the community</span><span class="why">When prevalence is high, the screening level is set lower, which increases sensitivity.</span><span class="a">Sensitivity (lower cut-off)</span></button>
+  </div>
+  
+  <aside class="notes"><p>0:52–0:54. Park's guiding index for the decision is the PPV: it is a function of sensitivity, specificity and frequency of disease.</p></aside>
+</section>
+
+<section data-title="Combination of Tests and Yield" data-run="Combination of Tests · Yield" data-src="Park 28e, Ch 4, Yield, Combination of tests; series/parallel: Gordis Epidemiology 7e, Ch 5">
+  
+  <div class="cols c2" style="gap:70px">
+    <div>
+      <h3 style="margin-bottom:14px">Combination of Tests</h3>
+      <svg viewBox="0 0 640 220" style="width:640px;height:220px" aria-label="Two tests in series">
+        <g font-family="IBM Plex Sans" font-size="22" text-anchor="middle">
+          <rect x="0" y="70" width="150" height="70" rx="10" fill="#FAFBF7" stroke="#15201B" stroke-width="2.5"/><text x="75" y="113">All screenees</text>
+          <line x1="150" y1="105" x2="215" y2="105" stroke="#15201B" stroke-width="2.5"/>
+          <rect x="215" y="70" width="160" height="70" rx="10" fill="#0C5E4E"/><text x="295" y="103" fill="#fff" font-weight="600">RPR</text><text x="295" y="128" fill="#DCEAE5" font-size="17">high sensitivity</text>
+          <line x1="375" y1="105" x2="440" y2="105" stroke="#15201B" stroke-width="2.5"/><text x="407" y="92" font-size="18" fill="#BE651F">+ only</text>
+          <rect x="440" y="70" width="190" height="70" rx="10" fill="#BE651F"/><text x="535" y="103" fill="#fff" font-weight="600">FTA-ABS</text><text x="535" y="128" fill="#F0E2D2" font-size="17">more specific</text>
+          <text x="320" y="200" font-size="20" fill="#4B5A52">Positives on both "now truly have syphilis"</text>
+        </g>
+      </svg>
+      <table class="t frag" style="font-size:25px;margin-top:10px">
+        <thead><tr><th>Tests used</th><th>Net effect</th></tr></thead>
+        <tbody><tr><td>In series (sequential)</td><td>Specificity ↑ · sensitivity ↓</td></tr><tr><td>In parallel (simultaneous)</td><td>Sensitivity ↑ · specificity ↓</td></tr></tbody>
+      </table>
+    </div>
+    <div class="frag">
+      <h3 style="margin-bottom:14px">Yield</h3>
+      <div class="clip" style="padding:36px 40px;transform:rotate(.6deg)"><blockquote style="font-size:36px">"the amount of previously unrecognized disease that is diagnosed as a result of the screening effort."</blockquote></div>
+      <p style="font-size:27px;margin-top:28px">Depends on sensitivity, specificity, <b>prevalence</b> and <b>participation</b>. Limiting diabetes screening to people over 40 increases yield.</p>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:54–0:56. Series vs parallel is not spelt out as a table in Park; it is from Gordis (in your Drive). Park gives the RPR → FTA-ABS example.</p></aside>
+</section>
+
+<section data-title="Evaluation of Screening Programmes" data-run="Evaluation of Screening Programmes" data-src="Park 28e, Ch 4, Evaluation of screening programmes; biases: Gordis Epidemiology 7e">
+  
+  <h2 style="font-size:56px">Did Screening Actually <em>Help</em>?</h2>
+  <div class="cols c2" style="gap:60px">
+    <div>
+      <span class="kicker">Methods of Evaluation</span>
+      <ul class="clean" style="font-size:29px">
+        <li><span><b>RCT</b>: the ideal; costly for rare diseases with long latency, may need tens of thousands followed for 10–20 years</span></li>
+        <li><span><b>Uncontrolled trials</b>: e.g. survival after cervical cancer screening</span></li>
+        <li><span><b>Other</b>: case-control studies; trends in areas with different screening coverage</span></li>
+      </ul>
+    </div>
+    <div class="frag">
+      <span class="kicker">Biases That Flatter Screening</span>
+      <ul class="clean" style="font-size:29px">
+        <li><span><b>Lead-time bias</b>: survival looks longer only because diagnosis came earlier</span></li>
+        <li><span><b>Length bias</b>: screening picks up slow-growing disease more often</span></li>
+        <li><span><b>Volunteer bias</b>: those who attend differ from those who do not</span></li>
+        <li><span><b>Overdiagnosis</b>: disease that would never have caused harm</span></li>
+      </ul>
+    </div>
+  </div>
+  
+  <aside class="notes"><p>0:56–0:57. Return to the "harms" column you wrote on the board in the opening case. Park also notes: those at greatest risk of cervical cancer are least likely to attend for cytology, so participants may not be those who have most to gain.</p></aside>
+</section>
+
+<section data-title="Screening in India Today" data-run="Screening in India Today" data-src="MoHFW press releases 2025; Lok Sabha reply Dec 2025; NSCAEM figures via newsonair/Medical Dialogues, Feb 2026 [verify on PIB]">
+  
+  <h2 style="font-size:56px">Where Your Patients Meet <em>Screening</em></h2>
+  <div class="cols c2" style="gap:34px">
+    <div class="panel">
+      <span class="kicker">NP-NCD · Ayushman Arogya Mandir</span>
+      <h3>Everyone aged 30+</h3>
+      <p>Population-based screening for hypertension, diabetes and oral, breast and cervical cancer. Intensified national NCD screening campaign: 20 Feb–31 Mar 2025.</p>
+      <p style="margin-top:14px"><span class="ph">[INSERT: your district ≥30 y screening coverage]</span></p>
+    </div>
+    <div class="panel">
+      <span class="kicker">NSCAEM · launched July 2023</span>
+      <h3>Sickle cell: 7 crore, ages 0–40</h3>
+      <p>Universal screening in tribal-affected areas of 17 states; elimination target 2047. About 6.83 crore screened and 2.38 lakh with disease detected by 3 Feb 2026 (reported).</p>
+      <p style="margin-top:14px"><span class="ph">[INSERT: your district NSCAEM screened / SCD / trait]</span></p>
+    </div>
+  </div>
+  <p class="small" style="margin-top:22px">Also: ANC screening (anaemia, syphilis, HIV, GDM), newborn and child screening under RBSK (4Ds), TB active case-finding.</p>
+  
+  <aside class="notes"><p>0:57–0:58. Ask: which use of screening is NSCAEM? (Case detection plus carrier detection for genetic counselling.) Which type? (Selective / high-risk by geography and age.) Verify the NSCAEM figures on PIB before teaching; the February 2026 numbers came from secondary news reports.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-run="Quick Check" data-tab="Tap an Option">
+  <div class="mono" style="position:absolute;right:120px;top:100px;font-size:22px;color:var(--amber)">SCORE <span id="qScore">0</span>/<span id="qTotal">0</span></div>
+  
+  
+  <div id="quizWrap">
+    <div class="qset" data-ans="2">
+      <span class="kicker">Q1 of 5</span>
+      <h3 style="font-size:40px;margin-bottom:20px">A test with sensitivity 90% and specificity 90% is used in a village where prevalence is 1%. Among those testing positive, most are:</h3>
+      <div class="quiz"><button class="opt"><span class="l">A</span>True positives</button><button class="opt"><span class="l">B</span>False negatives</button><button class="opt"><span class="l">C</span>False positives</button><button class="opt"><span class="l">D</span>True negatives</button></div>
+      <p class="qfb" data-fb="Per 1,000: 9 true positives, 99 false positives. PPV ≈ 8%. Low prevalence drags PPV down."></p>
+    </div>
+    <div class="qset" data-ans="1" hidden>
+      <span class="kicker">Q2 of 5</span>
+      <h3 style="font-size:40px;margin-bottom:20px">Raising the blood-glucose cut-off from 120 to 180 mg/dl will:</h3>
+      <div class="quiz"><button class="opt"><span class="l">A</span>Increase sensitivity</button><button class="opt"><span class="l">B</span>Increase specificity</button><button class="opt"><span class="l">C</span>Increase both</button><button class="opt"><span class="l">D</span>Change neither</button></div>
+      <p class="qfb" data-fb="Raising the cut-off decreases sensitivity and increases specificity. They are inversely related."></p>
+    </div>
+    <div class="qset" data-ans="1" hidden>
+      <span class="kicker">Q3 of 5</span>
+      <h3 style="font-size:40px;margin-bottom:20px">A VDRL test on women attending their first antenatal visit is an example of:</h3>
+      <div class="quiz"><button class="opt"><span class="l">A</span>Mass screening</button><button class="opt"><span class="l">B</span>Case-finding</button><button class="opt"><span class="l">C</span>Diagnostic testing</button><button class="opt"><span class="l">D</span>Multiphasic screening</button></div>
+      <p class="qfb" data-fb="A textbook example of case-finding: detecting disease in people seeking care for other reasons."></p>
+    </div>
+    <div class="qset" data-ans="0" hidden>
+      <span class="kicker">Q4 of 5</span>
+      <h3 style="font-size:40px;margin-bottom:20px">Screening immigrants for tuberculosis to protect the home population is called:</h3>
+      <div class="quiz"><button class="opt"><span class="l">A</span>Prospective screening</button><button class="opt"><span class="l">B</span>Prescriptive screening</button><button class="opt"><span class="l">C</span>Opportunistic screening</button><button class="opt"><span class="l">D</span>Selective screening</button></div>
+      <p class="qfb" data-fb="Control of disease = prospective screening: people examined for the benefit of others."></p>
+    </div>
+    <div class="qset" data-ans="3" hidden>
+      <span class="kicker">Q5 of 5</span>
+      <h3 style="font-size:40px;margin-bottom:20px">Which of these changes when the same test is used in a population with higher prevalence?</h3>
+      <div class="quiz"><button class="opt"><span class="l">A</span>Sensitivity</button><button class="opt"><span class="l">B</span>Specificity</button><button class="opt"><span class="l">C</span>Both sensitivity and specificity</button><button class="opt"><span class="l">D</span>Positive predictive value</button></div>
+      <p class="qfb" data-fb="Sensitivity and specificity are inherent properties of the test; predictive value depends on prevalence."></p>
+    </div>
+    <button class="btn" id="qNext" style="margin-top:6px" hidden>Next question</button>
+  </div>
+  <div class="poll" data-poll><div class="qr"></div><span>Answer on your phone</span></div>
+  <aside class="notes"><p>0:58–0:60 (or move to the start of the next SGT). Students write A–D on a slip before you click. Tap an option to mark it; the score counts first attempts only.</p></aside>
+</section>
+
+<section data-title="Take-home" data-run="Take-home">
+  
+  <h2 class="xs">Five Things to Keep</h2>
+  <div style="display:grid;gap:20px;font-size:36px;max-width:1250px">
+    <div style="display:grid;grid-template-columns:90px 1fr;align-items:baseline"><span class="mono am" style="font-size:24px">01</span><span>Screening <b>sorts</b> apparently healthy people. Diagnosis comes after.</span></div>
+    <div style="display:grid;grid-template-columns:90px 1fr;align-items:baseline"><span class="mono am" style="font-size:24px">02</span><span>Screen only when detection can beat the <b>final critical point</b>.</span></div>
+    <div style="display:grid;grid-template-columns:90px 1fr;align-items:baseline"><span class="mono am" style="font-size:24px">03</span><span>Judge the <b>disease</b> first, then the <b>test</b>.</span></div>
+    <div style="display:grid;grid-template-columns:90px 1fr;align-items:baseline"><span class="mono am" style="font-size:24px">04</span><span>Sensitivity and specificity pull against each other; the <b>cut-off</b> decides.</span></div>
+    <div style="display:grid;grid-template-columns:90px 1fr;align-items:baseline"><span class="mono am" style="font-size:24px">05</span><span><b>Prevalence</b> moves the predictive value. Screen where the disease is.</span></div>
+  </div>
+  <p class="lede" style="margin-top:40px;font-family:var(--font-display);font-style:italic;color:var(--teal)">So, should Sunita be tested? Answer in one line in your notebook.</p>
+  <aside class="notes"><p>One-minute paper: "Should Sunita be tested? Why?" Collect slips. Next SGT/DOAP: CM 7.6 practice on 2×2 tables with local NP-NCD data.</p></aside>
+</section>
+
+<script>
+const NS='http://www.w3.org/2000/svg';const $=id=>document.getElementById(id);
+/* ===== reveal cards ===== */
+  
+
+  /* ===== iceberg ===== */
+  const water=document.getElementById('water'),iceBtn=document.getElementById('iceBtn');
+  iceBtn.onclick=()=>{const o=water.style.opacity==='0.18';water.style.opacity=o?'1':'0.18';iceBtn.textContent=o?'Look below the waterline':'Back to the surface';};
+
+  /* ===== types dots ===== */
+  
+  function dotField(id,fn){const g=document.getElementById(id);for(let r=0;r<6;r++)for(let c=0;c<12;c++){const el=document.createElementNS(NS,'circle');el.setAttribute('cx',20+c*24);el.setAttribute('cy',30+r*28);el.setAttribute('r',8);const st=fn(r,c);el.setAttribute('fill',st.f);if(st.s){el.setAttribute('stroke',st.s);el.setAttribute('stroke-width',3);}g.appendChild(el);}}
+  dotField('massDots',()=>({f:'#0C5E4E'}));
+  dotField('riskDots',(r,c)=>(c>=7&&r>=2)?{f:'#BE651F'}:{f:'#D7DCD1'});
+  dotField('multiDots',(r,c)=>({f:['#0C5E4E','#BE651F','#3D6E7A'][(r+c)%3]}));
+
+  /* ===== criteria checklist ===== */
+  const cyc={'':'q',q:'y',y:'n',n:''}, sym={q:'?',y:'✓',n:'✗'};
+  document.querySelectorAll('#crit button').forEach((b,i)=>{b.dataset.s='';b.addEventListener('click',()=>{b.dataset.s=cyc[b.dataset.s];b.querySelector('.m').textContent=b.dataset.s?sym[b.dataset.s]:String(i+1);});});
+
+  /* ===== 2x2 calculator ===== */
+  
+  const pct=(x,y)=>y>0?(x/y*100).toFixed(2).replace(/\.?0+$/,'')+'%':'—';
+  function calc(){const v=k=>Math.max(0,parseInt($(k).value,10)||0);const a=v('ca'),b=v('cb'),c=v('cc'),d=v('cd');
+    $('tAB').textContent=a+b;$('tCD').textContent=c+d;$('tAC').textContent=a+c;$('tBD').textContent=b+d;$('tN').textContent=a+b+c+d;
+    $('rSe').textContent=pct(a,a+c);$('rSp').textContent=pct(d,b+d);$('rPPV').textContent=pct(a,a+b);$('rNPV').textContent=pct(d,c+d);$('rFN').textContent=pct(c,a+c);$('rFP').textContent=pct(b,b+d);}
+  ['ca','cb','cc','cd'].forEach(k=>$(k).addEventListener('input',calc));
+  $('calcReveal').onclick=()=>{const r=$('res');r.classList.toggle('hide');$('calcReveal').textContent=r.classList.contains('hide')?'Reveal answers':'Hide answers';};
+  $('calcReset').onclick=()=>{$('ca').value=40;$('cb').value=20;$('cc').value=100;$('cd').value=9840;calc();};
+  calc();
+
+  /* ===== distributions (cut-off) ===== */
+  const nd=(x,m,s)=>Math.exp(-.5*((x-m)/s)**2)/(s*Math.sqrt(2*Math.PI));
+  function Phi(z){const t=1/(1+.2316419*Math.abs(z));const d=.3989423*Math.exp(-z*z/2);let p=d*t*(.3193815+t*(-.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return z>0?1-p:p;}
+  const H={m:110,s:24.3,n:510}, D={m:180,s:40,n:70};   /* calibrated: 180 -> Se 50%, Sp 99.8% */
+  const X0=60,X1=300,W=840,Ht=400,L=40,T=20;
+  const sx2=x=>L+(x-X0)/(X1-X0)*W;
+  const yH=x=>nd(x,H.m,H.s), yD=x=>nd(x,D.m,D.s)*1.6;   /* diseased curve scaled for visibility */
+  const ymax=yH(H.m)*1.08, sy=y=>T+Ht-(y/ymax)*Ht;
+  const svg=$('dist');
+  svg.innerHTML='<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#DCEAE5"/><line x1="0" y1="0" x2="0" y2="10" stroke="#0C5E4E" stroke-width="3"/></pattern></defs>'+
+    '<g id="ax"></g><path id="fpA" fill="#BE651F" opacity=".45"/><path id="fnA" fill="url(#hatch)" opacity=".9"/>'+
+    '<path id="cH" fill="none" stroke="#15201B" stroke-width="3.5"/><path id="cD" fill="none" stroke="#0C5E4E" stroke-width="3.5"/>'+
+    '<line id="cutL" stroke="#A23B2B" stroke-width="4" stroke-dasharray="10 7"/><text id="cutT" font-family="IBM Plex Mono" font-size="18" fill="#A23B2B" text-anchor="middle"></text>'+
+    '<text x="'+sx2(110)+'" y="'+(sy(yH(110))-12)+'" font-family="IBM Plex Sans" font-size="22" text-anchor="middle" fill="#15201B">Non-diabetic</text>'+
+    '<text x="'+sx2(255)+'" y="'+(sy(yD(240))-14)+'" font-family="IBM Plex Sans" font-size="22" text-anchor="middle" fill="#0C5E4E">Diabetic</text>';
+  const path=(f,a,b)=>{let d='';for(let x=a;x<=b;x+=1)d+=(d?'L':'M')+sx2(x).toFixed(1)+' '+sy(f(x)).toFixed(1);return d;};
+  const area=(f,a,b)=>path(f,a,b)+'L'+sx2(b)+' '+sy(0)+'L'+sx2(a)+' '+sy(0)+'Z';
+  $('cH').setAttribute('d',path(yH,X0,X1)); $('cD').setAttribute('d',path(yD,X0,X1));
+  let ax='<line x1="'+L+'" y1="'+sy(0)+'" x2="'+(L+W)+'" y2="'+sy(0)+'" stroke="#15201B" stroke-width="2"/>';
+  for(let x=80;x<=300;x+=40){ax+='<line x1="'+sx2(x)+'" y1="'+sy(0)+'" x2="'+sx2(x)+'" y2="'+(sy(0)+8)+'" stroke="#15201B" stroke-width="2"/><text x="'+sx2(x)+'" y="'+(sy(0)+32)+'" font-family="IBM Plex Mono" font-size="18" fill="#4B5A52" text-anchor="middle">'+x+'</text>';}
+  ax+='<text x="'+(L+W)+'" y="'+(sy(0)+58)+'" font-family="IBM Plex Mono" font-size="16" fill="#7B877E" text-anchor="end" letter-spacing="1">2-H POST-PRANDIAL GLUCOSE, MG/DL</text>';
+  $('ax').innerHTML=ax;
+  function cut(){const c=+$('cut').value;$('cutV').textContent=c+' mg/dl';
+    $('fpA').setAttribute('d',area(yH,c,X1)); $('fnA').setAttribute('d',area(yD,X0,c));
+    $('cutL').setAttribute('x1',sx2(c));$('cutL').setAttribute('x2',sx2(c));$('cutL').setAttribute('y1',T);$('cutL').setAttribute('y2',sy(0));
+    $('cutT').setAttribute('x',sx2(c));$('cutT').setAttribute('y',T+4);$('cutT').textContent='';
+    const se=(1-Phi((c-D.m)/D.s))*100, sp=Phi((c-H.m)/H.s)*100;
+    $('dSe').textContent=se.toFixed(1)+'%'; $('dSp').textContent=sp.toFixed(1)+'%';}
+  $('cut').addEventListener('input',cut); cut();
+
+  /* ===== icon array ===== */
+  const dg=$('dots'); const circles=[];
+  for(let i=0;i<1000;i++){const c=document.createElementNS(NS,'circle');const col=i%40,row=Math.floor(i/40);c.setAttribute('cx',10+col*19.2);c.setAttribute('cy',10+row*19.2);c.setAttribute('r',7.2);dg.appendChild(c);circles.push(c);}
+  function arr(){const P=+$('pPrev').value,Se=+$('pSe').value,Sp=+$('pSp').value;
+    $('vPrev').textContent=P+'%';$('vSe').textContent=Se+'%';$('vSp').textContent=Sp+'%';
+    const D=Math.round(1000*P/100), TP=Math.round(D*Se/100), FN=D-TP, ND=1000-D, TN=Math.round(ND*Sp/100), FP=ND-TN;
+    /* order: TP, FN, FP, TN, filled column-wise so groups read left to right */
+    const seq=[];for(let i=0;i<TP;i++)seq.push('tp');for(let i=0;i<FN;i++)seq.push('fn');for(let i=0;i<FP;i++)seq.push('fp');for(let i=0;i<TN;i++)seq.push('tn');
+    seq.forEach((k,j)=>{const col=Math.floor(j/25),row=j%25;const c=circles[row*40+col];
+      c.setAttribute('fill',k==='tp'?'#0C5E4E':k==='fp'?'#BE651F':k==='fn'?'#FAFBF7':'#D7DCD1');
+      if(k==='fn'){c.setAttribute('stroke','#0C5E4E');c.setAttribute('stroke-width','2.5');}else c.removeAttribute('stroke');});
+    const ppv=TP+FP?TP/(TP+FP)*100:0;
+    $('vPPV').textContent=Math.round(ppv)+'%';
+    $('vPPVtxt').innerHTML='<b>'+(TP+FP)+'</b> test positive; only <b>'+TP+'</b> have the disease. <b>'+FN+'</b> cases missed.';}
+  ['pPrev','pSe','pSp'].forEach(k=>$(k).addEventListener('input',arr));
+  document.querySelectorAll('[data-prev]').forEach(b=>b.addEventListener('click',()=>{$('pPrev').value=b.dataset.prev;$('pSe').value=50;$('pSp').value=90;arr();}));
+  arr();
+
+  /* ===== quiz ===== */
+  const sets=[...document.querySelectorAll('.qset')]; let qi=0,score=0; $('qTotal').textContent=sets.length;
+  sets.forEach(s=>{const ans=+s.dataset.ans;let done=false;
+    s.querySelectorAll('.opt').forEach((o,i)=>o.addEventListener('click',()=>{
+      if(s.querySelector('.right'))return;
+      if(i===ans){o.classList.add('right'); if(!done){score++;$('qScore').textContent=score;} done=true;
+        const fb=s.querySelector('.qfb');fb.textContent=fb.dataset.fb; if(qi<sets.length-1)$('qNext').hidden=false;}
+      else{o.classList.add('wrong');done=true;}}));});
+  $('qNext').onclick=()=>{sets[qi].hidden=true;qi++;sets[qi].hidden=false;$('qNext').hidden=true;};
+
+  
+</script>

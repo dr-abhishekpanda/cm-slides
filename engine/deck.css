@@ -74,8 +74,9 @@ ol.steps li::before{content:counter(st,decimal-leading-zero);position:absolute;l
 .frag:not(.on){opacity:0;transform:translateY(12px);pointer-events:none}
 
 /* title sheet */
-.slide.title h1{margin-top:70px;max-width:1000px}
-.slide.title .sub{font-size:38px;color:var(--ink-soft);margin-top:30px;max-width:900px;line-height:1.28}
+.slide.title h1{margin-top:70px;max-width:800px}
+.slide.title h1.long{font-size:88px}
+.slide.title .sub{font-size:32px;color:var(--ink-soft);margin-top:30px;max-width:780px;line-height:1.3}
 .slide.title .codes{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;max-width:900px}
 .slide.title .by{position:absolute!important;left:168px;bottom:64px;font-family:var(--font-mono);font-size:19px;letter-spacing:.03em;color:var(--ink-soft);line-height:1.6}
 .slide.title .by b{color:var(--ink);font-weight:500}

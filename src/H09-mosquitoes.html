@@ -1,0 +1,206 @@
+<!--meta
+{"short":"Mosquitoes","part":"Environment and Health","title":"Mosquitoes of <em>Public Health</em> Importance","sub":"Arthropod-borne Disease Transmission, Life Cycle, Identification of Anopheles, Culex, Aedes and Mansonia, and Principles of Control",
+"codes":["CM 3.6","CM 3.7"],
+"desc":"One-hour interactive lecture on mosquitoes of public health importance: transmission, life cycle, identifying features, Indian vectors and control.",
+"notes":"60-minute plan: hook 3 min, transmission 7, life cycle 8, identification 20, Indian vectors 8, control overview 6, check 8.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><g stroke='#15201B' stroke-width='4' fill='none' stroke-linecap='round'><path d='M150 330 L 420 230'/><path d='M420 230 L 500 205'/><path d='M260 290 L 210 420'/><path d='M300 276 L 300 430'/><path d='M340 262 L 400 400'/></g><ellipse cx='250' cy='250' rx='120' ry='34' fill='#DCEAE5' stroke='#0C5E4E' stroke-width='3' transform='rotate(-30 250 250)'/><ellipse cx='320' cy='230' rx='110' ry='30' fill='#DCEAE5' stroke='#0C5E4E' stroke-width='3' transform='rotate(-55 320 230)'/></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter: Environment and Health (Medical entomology: mosquitoes).",
+"National Center for Vector Borne Diseases Control (NCVBDC), MoHFW. <i>Operational Manual for Malaria Elimination in India</i>; 2016 (and updates).",
+"NCVBDC. <i>National Guidelines for Clinical Management of Dengue</i> and <i>Guidelines for Integrated Vector Management</i>.",
+"World Health Organization. <i>Global Vector Control Response 2017–2030</i>. Geneva: WHO; 2017.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 3."]}
+-->
+
+<section data-title="The Deadliest Animal" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="WHO vector-borne diseases fact sheet">
+  <h2 class="s">Which Animal Kills the Most People Every Year?</h2>
+  <div class="cols c4 g20 mt20">
+    <button class="reveal" style="min-height:170px"><span class="q">Snake</span><span class="a"><b>Not first</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Dog (rabies)</span><span class="a"><b>Not first</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Human</span><span class="a"><b>Not first</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Mosquito</span><span class="a"><b>Yes</b></span></button>
+  </div>
+  <p class="lede frag mt30">Malaria alone killed an estimated <b>600,000</b> people in 2023. Vector-borne diseases cause over <b>17%</b> of all infectious disease.</p>
+  <aside class="notes"><p>0:00–0:03. WHO World Malaria Report 2024: about 597,000 malaria deaths in 2023. Vector-borne diseases account for more than 17% of all infectious diseases (WHO fact sheet). Verify the newest World Malaria Report figure before teaching.</p></aside>
+</section>
+
+<section data-title="How Arthropods Transmit Disease" data-src="Park 27e, Environment and Health: Arthropod-borne diseases (modes of transmission)">
+  <h2 class="s">How Arthropods Transmit Disease</h2>
+  <div class="cols c3 g28">
+    <div class="panel"><span class="kicker">1</span><h3>Direct Contact</h3><p>Transferred person to person: scabies mite, lice.</p></div>
+    <div class="panel"><span class="kicker">2</span><h3>Mechanical</h3><p>Carried on legs or body, no development: housefly and typhoid, cholera, trachoma.</p></div>
+    <div class="panel tl"><span class="kicker">3</span><h3>Biological</h3><p>The agent multiplies or develops inside the vector, which then needs an <b>extrinsic incubation period</b>.</p></div>
+  </div>
+  <table class="t frag mt30" style="font-size:25px">
+    <thead><tr><th>Biological type</th><th>What happens in the vector</th><th>Example</th></tr></thead>
+    <tbody><tr><td>Propagative</td><td>Multiplies, no change in form</td><td>Plague bacilli in rat flea</td></tr>
+    <tr><td>Cyclo-propagative</td><td>Changes form <b>and</b> multiplies</td><td>Malaria parasite in Anopheles</td></tr>
+    <tr><td>Cyclo-developmental</td><td>Changes form, <b>no</b> multiplication</td><td>Filarial larvae in Culex</td></tr></tbody>
+  </table>
+  <aside class="notes"><p>0:03–0:10. A classic viva question. Extrinsic incubation period: time from ingestion by the vector until it becomes infective (e.g. about 10–14 days for P. vivax in Anopheles, depending on temperature).</p></aside>
+</section>
+
+<section data-title="Life Cycle" data-tab="Tap a Stage" data-src="Park 27e, Environment and Health: Mosquitoes (life history)">
+  <h2 class="xs">Four Stages, Three in <em>Water</em></h2>
+  <div class="cols top" style="grid-template-columns:620px 1fr;gap:50px">
+    <svg id="lc" viewBox="0 0 620 560" style="width:620px;height:560px" aria-label="Mosquito life cycle">
+      <rect x="0" y="300" width="620" height="260" fill="#DCEAE5"/><line x1="0" y1="300" x2="620" y2="300" stroke="#0C5E4E" stroke-width="3"/>
+      <text x="16" y="290" font-family="IBM Plex Mono" font-size="16" fill="#0C5E4E" letter-spacing="2">WATER SURFACE</text>
+      <circle cx="310" cy="300" r="200" fill="none" stroke="#7B877E" stroke-width="2" stroke-dasharray="8 8"/>
+      <g class="st" data-i="0"><circle cx="110" cy="300" r="62" fill="#FAFBF7" stroke="#BE651F" stroke-width="4"/><text x="110" y="308" text-anchor="middle" font-size="24">Egg</text></g>
+      <g class="st" data-i="1"><circle cx="310" cy="500" r="62" fill="#FAFBF7" stroke="#BE651F" stroke-width="4"/><text x="310" y="508" text-anchor="middle" font-size="24">Larva</text></g>
+      <g class="st" data-i="2"><circle cx="510" cy="300" r="62" fill="#FAFBF7" stroke="#BE651F" stroke-width="4"/><text x="510" y="308" text-anchor="middle" font-size="24">Pupa</text></g>
+      <g class="st" data-i="3"><circle cx="310" cy="100" r="62" fill="#0C5E4E"/><text x="310" y="108" text-anchor="middle" font-size="24" fill="#fff">Adult</text></g>
+    </svg>
+    <div id="lcInfo" class="panel" style="min-height:340px"><span class="kicker">Tap a stage</span><h3>About 1–2 Weeks, Egg to Adult</h3><p>Shorter in warm weather. Every stage before the adult needs water, so <b>no water, no mosquito</b>.</p></div>
+  </div>
+  <aside class="notes"><p>0:10–0:18. Only females bite (need blood for eggs); males feed on plant juices. Ask: which stage is easiest to kill? (Larva: concentrated, immobile breeding sites.)</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Identification">
+  <div class="big-n">2</div>
+  <h2>Anopheles, Culex, Aedes, <em>Mansonia</em></h2>
+  <p>Tell them apart at every stage.</p>
+  <aside class="notes"><p>0:18.</p></aside>
+</section>
+
+<section data-title="Eggs and Larvae" data-tab="Tap to Reveal" data-src="Park 27e, Environment and Health: Identifying features of mosquitoes">
+  <h2 class="xs">Eggs and Larvae</h2>
+  <table class="t" style="font-size:23px">
+    <thead><tr><th></th><th>Anopheles</th><th>Culex</th><th>Aedes</th><th>Mansonia</th></tr></thead>
+    <tbody>
+      <tr><td>Eggs</td>
+        <td><button class="hot"><span class="h">?</span><span class="v">Laid singly; boat-shaped with lateral <b>floats</b></span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">In <b>rafts</b> of 100–300</span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">Singly, cigar-shaped, <b>no floats</b>; on damp surfaces; survive drying</span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">In <b>star-shaped clusters</b> under leaves of water plants</span></button></td></tr>
+      <tr><td>Larva: siphon</td>
+        <td><button class="hot"><span class="h">?</span><span class="v"><b>No siphon</b></span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v"><b>Long</b>, slender siphon</span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v"><b>Short</b>, stout siphon</span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">Siphon <b>pierces plant roots</b> for air</span></button></td></tr>
+      <tr><td>Larva: position</td>
+        <td><button class="hot"><span class="h">?</span><span class="v"><b>Parallel</b> to the surface (palmate hairs)</span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">Hangs <b>at an angle</b></span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">Hangs at an angle</span></button></td>
+        <td><button class="hot"><span class="h">?</span><span class="v">Attached to roots, below the surface</span></button></td></tr>
+    </tbody>
+  </table>
+  <aside class="notes"><p>0:18–0:24. Pupae: Anopheles respiratory trumpets short and broad; Culex long and narrow. Aedes eggs can survive dry for months, which is why dry containers seed outbreaks after the first rains.</p></aside>
+</section>
+
+<section data-title="Adults" data-src="Park 27e, Environment and Health: Identifying features of mosquitoes">
+  <h2 class="xs">Adults: Posture, Palps and Patterns</h2>
+  <div class="cols top" style="grid-template-columns:720px 1fr;gap:40px">
+    <svg viewBox="0 0 720 440" style="width:720px;height:440px" aria-label="Resting posture of Anopheles and Culex">
+      <line x1="20" y1="380" x2="700" y2="380" stroke="#15201B" stroke-width="4"/>
+      <g transform="translate(70,0)"><line x1="40" y1="380" x2="220" y2="200" stroke="#0C5E4E" stroke-width="16" stroke-linecap="round"/><line x1="100" y1="320" x2="70" y2="380" stroke="#15201B" stroke-width="3"/><line x1="130" y1="290" x2="140" y2="380" stroke="#15201B" stroke-width="3"/><text x="140" y="430" text-anchor="middle" font-size="24" fill="#0C5E4E">Anopheles</text><text x="210" y="260" font-size="18" fill="#4B5A52">body at an angle</text></g>
+      <g transform="translate(410,0)"><path d="M30 300 Q 110 250 210 300" stroke="#BE651F" stroke-width="16" fill="none" stroke-linecap="round"/><line x1="80" y1="290" x2="60" y2="380" stroke="#15201B" stroke-width="3"/><line x1="120" y1="282" x2="125" y2="380" stroke="#15201B" stroke-width="3"/><line x1="160" y1="288" x2="190" y2="380" stroke="#15201B" stroke-width="3"/><text x="120" y="430" text-anchor="middle" font-size="24" fill="#BE651F">Culex</text><text x="70" y="240" font-size="18" fill="#4B5A52">parallel, "hunch-backed"</text></g>
+    </svg>
+    <ul class="clean" style="font-size:24px;gap:12px">
+      <li><b>Anopheles</b>: rests at an angle; female palps <b>as long as the proboscis</b>; wings usually <b>spotted</b></li>
+      <li><b>Culex</b>: rests parallel; female palps <b>short</b>; plain wings; night biter</li>
+      <li><b>Aedes</b>: black with <b>white stripes</b> on body and legs ("tiger mosquito"); <b>day biter</b></li>
+      <li><b>Mansonia</b>: speckled wings and legs; breeds where water plants (Pistia) grow</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>0:24–0:30. Show the photos on the next page and ask students to name each one before tapping.</p></aside>
+</section>
+
+<section data-title="Name the Mosquito" data-tab="Tap to Reveal" data-src="Photographs: CDC Public Health Image Library via Wikimedia Commons">
+  <h2 class="xs">Name the Mosquito</h2>
+  <div class="cols c3 g28">
+    <button class="reveal" style="padding:14px"><img src="img/anopheles.jpg" alt="Mosquito photograph 1" style="width:100%;height:280px;object-fit:cover;border-radius:8px"><span class="a"><b>Anopheles: body at an angle while feeding</b></span></button>
+    <button class="reveal" style="padding:14px"><img src="img/aedes.jpg" alt="Mosquito photograph 2" style="width:100%;height:280px;object-fit:cover;border-radius:8px"><span class="a"><b>Aedes aegypti: white-striped legs</b></span></button>
+    <button class="reveal" style="padding:14px"><img src="img/culex.jpg" alt="Mosquito photograph 3" style="width:100%;height:280px;object-fit:cover;border-radius:8px"><span class="a"><b>Culex: plain brown, body parallel</b></span></button>
+  </div>
+  <aside class="notes"><p>0:30–0:33. If an image fails to load or you have better field photographs, replace img/anopheles.jpg, img/aedes.jpg and img/culex.jpg and rebuild.</p></aside>
+</section>
+
+<section data-title="Which Mosquito, Which Disease" data-tab="Tap to Reveal" data-src="Park 27e, Environment and Health: Mosquito-borne diseases; NCVBDC">
+  <h2 class="xs">Match the Mosquito to Its Diseases</h2>
+  <div class="cols c4 g20">
+    <button class="reveal" style="min-height:280px"><span class="q"><b>Anopheles</b></span><span class="a"><b>Malaria; filariasis in some regions</b></span></button>
+    <button class="reveal" style="min-height:280px"><span class="q"><b>Culex</b></span><span class="a"><b>Bancroftian filariasis; Japanese encephalitis; West Nile fever</b></span></button>
+    <button class="reveal" style="min-height:280px"><span class="q"><b>Aedes</b></span><span class="a"><b>Dengue; chikungunya; Zika; yellow fever</b></span></button>
+    <button class="reveal" style="min-height:280px"><span class="q"><b>Mansonia</b></span><span class="a"><b>Brugian (B. malayi) filariasis</b></span></button>
+  </div>
+  <p class="small mt30">India is free of yellow fever, but <b>Aedes aegypti</b> is present: hence vaccination certificates for travellers from endemic countries.</p>
+  <aside class="notes"><p>0:33–0:37.</p></aside>
+</section>
+
+<section data-title="Indian Vectors" data-src="NCVBDC: malaria vectors of India; Park 27e">
+  <h2 class="s">Know Your Local Vectors</h2>
+  <table class="t" style="font-size:24px">
+    <thead><tr><th>Species</th><th>Where it breeds / matters</th><th>Disease</th></tr></thead>
+    <tbody>
+      <tr><td>An. culicifacies</td><td>Rural plains: irrigation channels, rice fields, borrow pits</td><td>Malaria (main rural vector)</td></tr>
+      <tr><td>An. stephensi</td><td>Urban: overhead tanks, wells, construction sites</td><td>Urban malaria</td></tr>
+      <tr><td>An. fluviatilis</td><td>Slow-flowing foothill streams</td><td>Malaria (hilly, forest areas)</td></tr>
+      <tr><td>An. minimus, An. baimaii</td><td>North-east, forest fringe</td><td>Malaria</td></tr>
+      <tr><td>Cx. quinquefasciatus</td><td>Polluted water, drains, cesspits</td><td>Bancroftian filariasis</td></tr>
+      <tr><td>Cx. tritaeniorhynchus</td><td>Rice fields</td><td>Japanese encephalitis</td></tr>
+      <tr><td>Ae. aegypti, Ae. albopictus</td><td>Containers, tyres, coolers, tree holes</td><td>Dengue, chikungunya, Zika</td></tr>
+    </tbody>
+  </table>
+  <aside class="notes"><p>0:37–0:44. An. sundaicus: brackish coastal water (Andaman and Nicobar). Ask which of these vectors dominate in your district.</p></aside>
+</section>
+
+<section data-title="Control at a Glance" data-src="Park 27e, Environment and Health: Mosquito control measures; WHO GVCR 2017–2030">
+  <h2 class="s">Mosquito Control at a Glance</h2>
+  <div class="cols c3 g28">
+    <div class="panel tl"><span class="kicker">Anti-larval</span><ul class="clean" style="font-size:23px;gap:8px"><li><b>Environmental</b>: source reduction, drainage, filling, covering tanks</li><li><b>Chemical</b>: temephos, larvicidal oil</li><li><b>Biological</b>: larvivorous fish (Gambusia, guppy), Bti</li></ul></div>
+    <div class="panel"><span class="kicker">Anti-adult</span><ul class="clean" style="font-size:23px;gap:8px"><li><b>Indoor residual spraying</b></li><li><b>Space spraying</b> (fogging) in outbreaks</li><li>Genetic and sterile-insect methods (research)</li></ul></div>
+    <div class="panel"><span class="kicker">Personal Protection</span><ul class="clean" style="font-size:23px;gap:8px"><li><b>LLINs</b> (long-lasting insecticidal nets)</li><li>Repellents, screens, full sleeves</li><li>Community: dry day every week</li></ul></div>
+  </div>
+  <p class="small mt30">Details of insecticides and Integrated Vector Management come in the next lecture.</p>
+  <aside class="notes"><p>0:44–0:48. Aedes control is mainly source reduction: empty and scrub containers weekly ("dry day"), because Aedes breeds in clean, stored water.</p></aside>
+</section>
+
+<section data-title="Find the Breeding Sites" data-tab="Tap to Reveal" data-src="NCVBDC dengue control guidance; teaching exercise">
+  <h2 class="xs">A Home Visit: Where Is Aedes Breeding?</h2>
+  <div class="cols c4 g20">
+    <button class="reveal" style="min-height:180px"><span class="q">Desert cooler tray</span><span class="a"><b>Breeding site: drain weekly</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Old tyres on the roof</span><span class="a"><b>Breeding site: remove or puncture</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Flowing canal</span><span class="a"><b>Not Aedes (Anopheles may breed at edges)</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Fridge drip tray</span><span class="a"><b>Breeding site: empty</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Uncovered overhead tank</span><span class="a"><b>Aedes and An. stephensi: cover</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Coconut shells, plastic cups</span><span class="a"><b>Breeding site: dispose</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Septic, polluted drain</span><span class="a"><b>Culex, not Aedes</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">Flower vase, money plant bottle</span><span class="a"><b>Breeding site: change water weekly</b></span></button>
+  </div>
+  <aside class="notes"><p>0:48–0:52. Larval indices used in dengue surveillance: House index, Container index, Breteau index (positive containers per 100 houses; above 20 signals high risk). Covered in the dengue lecture.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on Park 27e">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="1"><p style="font-size:29px">Development of malaria parasites in Anopheles is:</p>
+      <button class="opt"><span class="l">A</span>Propagative</button><button class="opt"><span class="l">B</span>Cyclo-propagative</button><button class="opt"><span class="l">C</span>Cyclo-developmental</button><button class="opt"><span class="l">D</span>Mechanical</button>
+      <p class="fb" data-fb="The parasite changes form and multiplies: cyclo-propagative."></p></div>
+    <div class="mcq" data-ans="0"><p style="font-size:29px">A larva lying parallel to the water surface with no siphon is:</p>
+      <button class="opt"><span class="l">A</span>Anopheles</button><button class="opt"><span class="l">B</span>Culex</button><button class="opt"><span class="l">C</span>Aedes</button><button class="opt"><span class="l">D</span>Mansonia</button>
+      <p class="fb" data-fb="Anopheles larvae have no siphon and float parallel, held by palmate hairs."></p></div>
+  </div>
+  <aside class="notes"><p>0:52–0:56.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>Biological transmission: <b>propagative, cyclo-propagative, cyclo-developmental</b>.</span></li>
+    <li><span>Egg, larva and pupa live in water: <b>no water, no mosquito</b>.</span></li>
+    <li><span>Anopheles: no siphon, rests at an angle, spotted wings, long palps.</span></li>
+    <li><span>Aedes: striped, day-biting, breeds in <b>containers</b> of clean water.</span></li>
+    <li><span>Control the larva first: <b>source reduction</b> beats spraying.</span></li>
+  </ol>
+  <aside class="notes"><p>0:56–0:60. Next: other arthropods of public health importance.</p></aside>
+</section>
+
+<script>
+const S=[['Egg','Laid on or near water. Anopheles: singly with floats. Culex: rafts. Aedes: singly on damp walls of containers, survive drying for months. Hatch in 2–3 days.'],
+['Larva','Feeds in water; four moults; breathes at the surface (except Mansonia, which taps plant roots). The best target for control. About a week.'],
+['Pupa','Comma-shaped, does not feed, breathes through respiratory trumpets. 1–3 days.'],
+['Adult','Emerges on the water surface. Females need a blood meal for eggs; males feed on plant juices. Flight range usually short (Aedes about 100–400 m).']];
+const info=document.getElementById('lcInfo');
+document.querySelectorAll('#lc .st').forEach(g=>{g.style.cursor='pointer';g.addEventListener('click',()=>{const s=S[+g.dataset.i];info.innerHTML=`<span class="kicker">Stage ${+g.dataset.i+1} of 4</span><h3>${s[0]}</h3><p style="font-size:27px">${s[1]}</p>`;});});
+</script>

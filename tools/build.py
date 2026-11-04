@@ -42,6 +42,11 @@ def credit(name):
 
 def embed(m):
     p = IMG / m.group(1)
+    if not p.exists():
+        print(f"  ! missing image img/{m.group(1)}: placeholder used")
+        svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#ECEEE7"/>'
+               '<text x="200" y="155" text-anchor="middle" font-family="monospace" font-size="16" fill="#7B877E">IMAGE: ' + m.group(1) + '</text></svg>')
+        return f'src="data:image/svg+xml;base64,{base64.b64encode(svg.encode()).decode()}"'
     mime = mimetypes.guess_type(p.name)[0] or "image/jpeg"
     return f'src="data:{mime};base64,{base64.b64encode(p.read_bytes()).decode()}"'
 
@@ -77,6 +82,10 @@ def build(path):
     m = re.match(r"\s*<!--meta(.*?)-->", raw, re.S)
     meta = json.loads(m.group(1))
     rest = raw[m.end():]
+    style = ""
+    st = re.search(r"\s*<style>(.*?)</style>", rest, re.S)
+    if st:
+        style, rest = st.group(1), rest[:st.start()] + rest[st.end():]
     script = ""
     sm = re.search(r"<script>(.*?)</script>\s*$", rest, re.S)
     if sm:
@@ -85,7 +94,7 @@ def build(path):
     slides = [slide(a, b, short) for a, b in re.findall(r"<section([^>]*)>(.*?)</section>", rest, re.S)]
     codes = "".join(f'<span class="chip">{c}</span>' for c in meta.get("codes", []))
     title = (f'<section class="slide title" data-title="Title"><div class="run"><span><b>Community Medicine</b> · {meta.get("part","")}</span>'
-             f'<span class="pn"></span></div>{meta.get("art","")}<h1>{meta["title"]}</h1><p class="sub">{meta.get("sub","")}</p>'
+             f'<span class="pn"></span></div>{meta.get("art","")}<h1{' class="long"' if len(re.sub(r"<[^>]+>", "", meta["title"])) > 26 else ""}>{meta["title"]}</h1><p class="sub">{meta.get("sub","")}</p>'
              f'<div class="codes">{codes}</div><div class="by">{AUTHOR}</div><div class="tag">#CM-APP</div>'
              f'<aside class="notes"><p>{meta.get("notes","")}</p><p>Keys: &rarr; / Space next, &larr; back, N notes, O contents, F full screen, B blank screen. Click the clock to start the 60-minute timer.</p></aside></section>')
     refs = "".join(f"<li>{r}</li>" for r in meta.get("refs", []))
@@ -97,7 +106,7 @@ def build(path):
     body = re.sub(r'src="img/([^"]+)"', embed, body)
     page_title = html.unescape(re.sub(r"<[^>]+>", "", meta["title"])).strip()
     inner = (f'<title>{page_title}</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n'
-             f'<meta name="description" content="{html.escape(meta.get("desc",""))}">\n{FONTS}\n<style>{CSS}</style>\n'
+             f'<meta name="description" content="{html.escape(meta.get("desc",""))}">\n{FONTS}\n<style>{CSS}{style}</style>\n'
              f'<div id="viewport"><div id="stage">\n{body}\n</div></div>\n{CHROME}\n'
              f'<script>window.POLL_URL="";</script>\n<script>{JS}</script>\n'
              + (f"<script>(function(){{{script}}})();</script>\n" if script else ""))
