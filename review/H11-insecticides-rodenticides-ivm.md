@@ -7,7 +7,7 @@
 - **Park edition.** Your Drive copy of Park 28e Chapter 15 (145 MB) returned no text through the Drive connector, so this deck uses the 27e chapter. Please check the verbatim quotes and figures against 28e.
 - **DDT dosage (pages 5–6).** These are Park's figures (100–200 mg per sq ft; 5% suspension at 1 gallon per 1,000 sq ft). Current IRS in India uses synthetic pyrethroids with dosages in mg/m². Add the NCVBDC dosages for your state's current insecticide.
 - **Rodenticides (page 10).** I could not find Park's rodent-control section in the 27e text. The rodenticide list comes from standard toxicology and NCDC plague guidance. Please check it against Park.
-- **Missing photos.** The Gambusia, LLIN and IRS images may still be downloading. If the folder is missing them, the pages use drawn content only.
+- **Photos.** This deck uses no photographs yet. Wikimedia's rate limit blocked the Gambusia, LLIN and IRS downloads, so add your own field photos where suggested below.
 
 ## Images
 
