@@ -1,0 +1,148 @@
+<!--meta
+{"short":"ARI and Meningitis","part":"Communicable Diseases","title":"Acute Respiratory Infections and <em>Meningococcal</em> Disease","sub":"Childhood Pneumonia: Risk Factors, Fast Breathing, IMNCI Classification and Treatment; Meningococcal Meningitis and Chemoprophylaxis",
+"codes":["CM 8.1","CM 10.5"],
+"desc":"One-hour interactive lecture on childhood ARI and pneumonia (risk factors, IMNCI classification, amoxicillin, PCV, SAANS) and meningococcal meningitis (carriers, outbreaks, chemoprophylaxis, vaccines).",
+"notes":"60-minute plan: hook 3 min, ARI burden and risk factors 8, classification and treatment 20, prevention 8, meningococcal disease 15, check 6.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><path d='M200 130 q-80 80 -60 210 q20 90 90 100 q30 -60 30 -170 q0 -90 -60 -140z' fill='#DCEAE5' stroke='#0C5E4E' stroke-width='4'/><path d='M360 130 q80 80 60 210 q-20 90 -90 100 q-30 -60 -30 -170 q0 -90 60 -140z' fill='#DCEAE5' stroke='#0C5E4E' stroke-width='4'/><g fill='#BE651F'><circle cx='190' cy='320' r='10'/><circle cx='210' cy='360' r='8'/><circle cx='175' cy='370' r='7'/></g></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 5: Acute respiratory infections; Meningococcal meningitis.",
+"World Health Organization. <i>Revised WHO Classification and Treatment of Pneumonia in Children at Health Facilities</i>. Geneva: WHO; 2014.",
+"Ministry of Health and Family Welfare. <i>IMNCI Chart Booklet</i>; and <i>SAANS (Social Awareness and Actions to Neutralise Pneumonia Successfully) Guidelines</i>; 2019.",
+"WHO/UNICEF. <i>Global Action Plan for the Prevention and Control of Pneumonia and Diarrhoea (GAPPD)</i>; 2013.",
+"National Centre for Disease Control. <i>CD Alert: Meningococcal Disease</i>.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 8."]}
+-->
+
+<section data-title="Count the Breaths" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="Teaching case">
+  <h2 class="s">An ASHA Counts <em>54 Breaths</em> a Minute in a 9-month-old With Cough</h2>
+  <p class="lede">No chest indrawing. The child is feeding and alert.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">Pneumonia or not? Can she treat at home?</p>
+  <aside class="notes"><p>0:00–0:03. For 2–12 months, fast breathing is 50 or more per minute, so this is pneumonia (no danger signs): oral amoxicillin at home with follow-up in 2–3 days.</p></aside>
+</section>
+
+<section data-title="Burden and Risk Factors" data-src="Park 27e, Ch 5: Acute respiratory infections; GAPPD 2013">
+  <h2 class="s">Pneumonia: A Leading Killer of Under-5s</h2>
+  <div class="cols c2 g28">
+    <div>
+      <div class="stat"><span class="n">~15%</span><span class="l">of under-5 deaths in India are due to pneumonia</span></div>
+      <p class="small mt20">Most childhood ARI is upper respiratory and self-limiting; deaths come from <b>pneumonia</b>, mainly <i>S. pneumoniae</i> and <i>H. influenzae</i> type b, and RSV.</p>
+    </div>
+    <div class="panel"><span class="kicker">Risk Factors</span><ul class="clean" style="font-size:24px;gap:8px"><li>Low birth weight, malnutrition</li><li>Not exclusively breastfed</li><li>Indoor air pollution (chulha smoke), parental smoking</li><li>Crowding; no measles or Hib/PCV vaccination</li><li>Vitamin A and zinc deficiency</li></ul></div>
+  </div>
+  <aside class="notes"><p>0:03–0:11. GAPPD framework: Protect (breastfeeding, nutrition), Prevent (vaccines, clean air, handwashing), Treat (case management, amoxicillin, oxygen).</p></aside>
+</section>
+
+<section data-title="Fast Breathing" data-tab="Enter Age and Rate" data-src="MoHFW IMNCI; WHO 2014 revised classification">
+  <h2 class="xs">Is This Fast Breathing?</h2>
+  <div class="cols top" style="grid-template-columns:1fr 1fr;gap:60px">
+    <div>
+      <div class="ctl"><label>Age</label><div style="display:flex;gap:10px;flex-wrap:wrap" id="ag"><button class="btn sm" data-c="60">Under 2 months</button><button class="btn sm solid" data-c="50">2–12 months</button><button class="btn sm" data-c="40">12 months–5 years</button></div></div>
+      <div class="ctl mt20"><label for="rr">Breaths per minute <b id="rrv"></b></label><input type="range" id="rr" min="20" max="80" value="54"></div>
+      <p class="small">Count for a <b>full minute</b> when the child is calm.</p>
+    </div>
+    <div class="panel" id="rrR" style="text-align:center;min-height:260px"></div>
+  </div>
+  <aside class="notes"><p>0:11–0:16. Cut-offs: under 2 months ≥ 60; 2–12 months ≥ 50; 12 months to 5 years ≥ 40. In young infants, a repeat count is needed if the first is 60 or more.</p></aside>
+</section>
+
+<section data-title="Classification" data-src="WHO 2014 revised pneumonia classification; MoHFW IMNCI (2–59 months)">
+  <h2 class="xs">Classify and Treat (2–59 Months)</h2>
+  <div class="cols c3 g28">
+    <div class="panel" style="border-color:var(--danger)"><span class="kicker" style="color:var(--danger)">Severe Pneumonia</span><p style="font-size:24px">Cough or difficult breathing + any <b>general danger sign</b> (not able to drink, vomits everything, convulsions, lethargic or unconscious) or stridor in a calm child, or severe malnutrition.<br><b>First dose of antibiotic; refer urgently.</b></p></div>
+    <div class="panel am"><span class="kicker">Pneumonia</span><p style="font-size:24px">Fast breathing and/or <b>chest indrawing</b>, no danger sign.<br><b>Oral amoxicillin</b> (5 days); follow up in 2–3 days.</p></div>
+    <div class="panel tl"><span class="kicker">No Pneumonia: Cough or Cold</span><p style="font-size:24px">No fast breathing, no chest indrawing.<br>Soothe the throat, keep feeding; <b>no antibiotic</b>; return if worse.</p></div>
+  </div>
+  <aside class="notes"><p>0:16–0:26. In the 2014 WHO revision, chest indrawing without danger signs moved from "severe" to "pneumonia" treated with oral amoxicillin, except in HIV-exposed children (check your state's IMNCI chart). Young infants under 2 months with fast breathing or severe chest indrawing are referred (possible serious bacterial infection).</p></aside>
+</section>
+
+<section data-title="Classify the Child" data-tab="Tap to Reveal" data-src="WHO 2014; MoHFW IMNCI">
+  <h2 class="xs">Classify These Children</h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:180px"><span class="q">2-year-old, cough, RR 36, feeding well</span><span class="a"><b>No pneumonia: cough or cold</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">9-month-old, RR 54, no indrawing</span><span class="a"><b>Pneumonia: oral amoxicillin</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">3-year-old, chest indrawing, drinking well</span><span class="a"><b>Pneumonia: oral amoxicillin</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">1-year-old, cough, convulsion today</span><span class="a"><b>Severe pneumonia: first dose, refer</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">4-week-old, RR 66 on repeat count</span><span class="a"><b>Young infant: refer (possible serious bacterial infection)</b></span></button>
+    <button class="reveal" style="min-height:180px"><span class="q">18-month-old, stridor while calm</span><span class="a"><b>Severe pneumonia (or very severe disease): refer</b></span></button>
+  </div>
+  <aside class="notes"><p>0:26–0:31.</p></aside>
+</section>
+
+<section data-title="Prevention" data-src="MoHFW UIP (PCV); SAANS 2019; GAPPD">
+  <h2 class="s">Preventing Childhood Pneumonia</h2>
+  <div class="cols c3 g28">
+    <div class="panel tl"><span class="kicker">Vaccines</span><p><b>PCV</b> at 6 weeks, 14 weeks and booster at 9 months (UIP); <b>Hib</b> in pentavalent; measles; pertussis</p></div>
+    <div class="panel"><span class="kicker">Protect</span><p>Exclusive breastfeeding; adequate complementary feeding; vitamin A; zinc</p></div>
+    <div class="panel"><span class="kicker">Clean Air</span><p>LPG instead of chulha; no smoking at home; ventilation</p></div>
+  </div>
+  <p class="small mt30"><b>SAANS</b> (2019): community awareness, ASHA training to count breaths, amoxicillin and pulse oximetry at every level, observed every November–February.</p>
+  <aside class="notes"><p>0:31–0:37. PCV was introduced in phases from 2017 and scaled nationally in 2021.</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Meningococcal Disease">
+  <div class="big-n">2</div>
+  <h2>Meningococcal Meningitis: Fast and <em>Fatal</em></h2>
+  <p>Carriers, outbreaks and chemoprophylaxis.</p>
+  <aside class="notes"><p>0:37.</p></aside>
+</section>
+
+<section data-title="Meningococcal Epidemiology" data-src="Park 27e, Ch 5: Meningococcal meningitis">
+  <h2 class="s">Epidemiology of Meningococcal Disease</h2>
+  <div class="cols c2 g28">
+    <table class="t" style="font-size:24px"><tbody>
+      <tr><td>Agent</td><td><i>Neisseria meningitidis</i>; serogroups A, B, C, W, X, Y</td></tr>
+      <tr><td>Reservoir</td><td><b>Nasopharyngeal carriers</b> (far outnumber cases)</td></tr>
+      <tr><td>Spread</td><td>Droplets; close prolonged contact</td></tr>
+      <tr><td>Incubation</td><td>3–4 days (2–10)</td></tr>
+      <tr><td>Setting</td><td>Crowding: hostels, barracks, camps, pilgrimages</td></tr>
+    </tbody></table>
+    <div class="panel am"><span class="kicker">Recognise Early</span><p style="font-size:25px">Fever, headache, neck stiffness, vomiting; <b>petechial or purpuric rash</b> that does not blanch. Fulminant meningococcaemia can kill within hours.</p></div>
+  </div>
+  <aside class="notes"><p>0:37–0:44. Serogroup A caused major epidemics in the African meningitis belt and outbreaks in India (e.g. Delhi 2005). Treatment: ceftriaxone or penicillin as early as possible.</p></aside>
+</section>
+
+<section data-title="Chemoprophylaxis" data-tab="Tap to Reveal" data-src="Park 27e, Ch 5: Meningococcal meningitis (control); NCDC CD Alert">
+  <h2 class="xs">Protect the Close Contacts</h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:190px"><span class="q">Adult contact</span><span class="a"><b>Ciprofloxacin 500 mg single dose, or rifampicin 600 mg twice daily for 2 days</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q">Child contact</span><span class="a"><b>Rifampicin 10 mg/kg twice daily for 2 days</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q">Pregnant contact</span><span class="a"><b>Ceftriaxone 250 mg IM single dose</b></span></button>
+  </div>
+  <div class="cols c2 g28 mt30">
+    <div class="panel"><span class="kicker">Who Is a Close Contact?</span><p>Household members, hostel or dormitory mates, kissing contacts, and health workers exposed to secretions (e.g. intubation) within 7 days before onset</p></div>
+    <div class="panel tl"><span class="kicker">Vaccines</span><p>Polysaccharide and <b>conjugate</b> vaccines (A, C, W, Y; MenAfriVac for A). Used in outbreaks and for Hajj and Umrah pilgrims; not in the UIP.</p></div>
+  </div>
+  <aside class="notes"><p>0:44–0:52. Give prophylaxis within 24 hours of identifying the case. Check doses against current NCDC guidance.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on IMNCI and Park 27e">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="2"><p style="font-size:29px">Fast breathing in a child aged 12 months to 5 years is a rate of:</p>
+      <button class="opt"><span class="l">A</span>≥ 60/min</button><button class="opt"><span class="l">B</span>≥ 50/min</button><button class="opt"><span class="l">C</span>≥ 40/min</button><button class="opt"><span class="l">D</span>≥ 30/min</button>
+      <p class="fb" data-fb="≥ 40/min; 2–12 months ≥ 50; under 2 months ≥ 60."></p></div>
+    <div class="mcq" data-ans="1"><p style="font-size:29px">The chief source of meningococcal infection in a community is:</p>
+      <button class="opt"><span class="l">A</span>Clinical cases</button><button class="opt"><span class="l">B</span>Nasopharyngeal carriers</button><button class="opt"><span class="l">C</span>Contaminated water</button><button class="opt"><span class="l">D</span>Animals</button>
+      <p class="fb" data-fb="Carriers far outnumber cases."></p></div>
+  </div>
+  <aside class="notes"><p>0:52–0:56.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>Count breaths for a full minute: <b>60 · 50 · 40</b> by age.</span></li>
+    <li><span>Danger signs = <b>severe pneumonia</b>: first dose and refer.</span></li>
+    <li><span>Pneumonia without danger signs: <b>oral amoxicillin</b> at home, follow-up.</span></li>
+    <li><span>Prevent with breastfeeding, clean air, <b>PCV, Hib, measles</b> vaccines.</span></li>
+    <li><span>Meningococcal disease: carriers spread it; <b>chemoprophylaxis</b> for close contacts.</span></li>
+  </ol>
+  <aside class="notes"><p>0:56–0:60. Next: Poliomyelitis.</p></aside>
+</section>
+
+<script>
+let cut=50;
+document.querySelectorAll('#ag button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#ag button').forEach(x=>x.classList.remove('solid'));b.classList.add('solid');cut=+b.dataset.c;R();}));
+function R(){const r=+document.getElementById('rr').value;document.getElementById('rrv').textContent=r;const f=r>=cut;
+document.getElementById('rrR').innerHTML=`<span class="kicker">Cut-off for this age: ${cut}/min</span><div class="big-num" style="font-size:66px;color:${f?'#A23B2B':'#0C5E4E'}">${f?'Fast breathing':'Not fast'}</div><p style="font-size:24px;margin-top:12px">${f?'Pneumonia if no danger signs (oral amoxicillin); refer if any danger sign'+(cut==60?'. Young infant: refer.':'.'):'Check for chest indrawing and danger signs before deciding.'}</p>`;}
+document.getElementById('rr').addEventListener('input',R);R();
+</script>

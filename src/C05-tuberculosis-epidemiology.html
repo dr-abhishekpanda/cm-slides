@@ -1,0 +1,136 @@
+<!--meta
+{"short":"Tuberculosis","part":"Communicable Diseases","title":"Tuberculosis: <em>Epidemiology</em> and Diagnosis","sub":"Burden, Natural History, Risk Factors, Case Finding, Diagnostic Algorithm and BCG",
+"codes":["CM 8.1","CM 8.3"],
+"desc":"One-hour interactive lecture on tuberculosis epidemiology: burden in India, natural history, risk factors, presumptive TB, diagnosis with NAAT, tuberculin test and BCG.",
+"notes":"60-minute plan: hook 3 min, burden 6, agent and transmission 8, natural history 10, risk factors 6, case finding and diagnosis 17, BCG 5, check 5.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><path d='M200 120 q-90 60 -80 200 q10 120 90 150 q40 -40 50 -150 q5 -110 -60 -200z' fill='#F0E2D2' stroke='#15201B' stroke-width='4'/><path d='M360 120 q90 60 80 200 q-10 120 -90 150 q-40 -40 -50 -150 q-5 -110 60 -200z' fill='#F0E2D2' stroke='#15201B' stroke-width='4'/><circle cx='180' cy='200' r='22' fill='#A23B2B'/><path d='M280 60 v120' stroke='#15201B' stroke-width='10'/></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 5: Epidemiology of Communicable Diseases (Tuberculosis).",
+"World Health Organization. <i>Global Tuberculosis Report 2025</i>. Geneva: WHO; 2025.",
+"Central TB Division, MoHFW. <i>Training Modules for Programme Managers and Medical Officers, NTEP</i>; Diagnostic algorithms (2021 update).",
+"Central TB Division, MoHFW. <i>India TB Report</i> (latest edition).",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 8."]}
+-->
+
+<section data-title="The Cough" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="Teaching case">
+  <h2 class="s">A Bus Conductor Has Coughed for <em>Three Weeks</em></h2>
+  <p class="lede">He has lost weight and has evening fever. He lives in a one-room house with his wife, mother and two children.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">What is the first test, and who else needs attention?</p>
+  <aside class="notes"><p>0:00–0:03. He is a presumptive TB case: sputum for NAAT (or microscopy where NAAT is unavailable). Every household contact needs screening and, if TB is ruled out, TB preventive treatment.</p></aside>
+</section>
+
+<section data-title="The Burden" data-src="WHO Global TB Report 2025 (as reported by MoHFW and the press, November 2025)">
+  <h2 class="s">India Carries About a <em>Quarter</em> of the World's TB</h2>
+  <div class="cols c4 g28">
+    <div class="stat"><span class="n">187</span><span class="l">new cases per lakh population (2024), down from 237 in 2015</span></div>
+    <div class="stat"><span class="n tl">−21%</span><span class="l">fall in incidence, 2015–2024</span></div>
+    <div class="stat"><span class="n">26.18 lakh</span><span class="l">cases notified in 2024</span></div>
+    <div class="stat"><span class="n">21</span><span class="l">TB deaths per lakh (2024), down from 28</span></div>
+  </div>
+  <p class="small mt40">Still far from the End TB milestones. Drug-resistant TB: about 1.27 lakh MDR/RR-TB cases notified in 2024.</p>
+  <aside class="notes"><p>0:03–0:09. Figures from the WHO Global TB Report 2025 as reported in November 2025; check the India TB Report for the latest national numbers. [INSERT: your district's notification rate.]</p></aside>
+</section>
+
+<section data-title="Agent and Transmission" data-src="Park 27e, Ch 5: Tuberculosis (agent, source, transmission)">
+  <h2 class="s">How TB Spreads</h2>
+  <div class="cols c2 g28">
+    <table class="t" style="font-size:24px"><tbody>
+      <tr><td>Agent</td><td><i>M. tuberculosis</i> (also <i>M. bovis</i>): acid-fast, slow-growing</td></tr>
+      <tr><td>Source</td><td>Mainly <b>sputum-positive pulmonary</b> cases; also cattle (bovine)</td></tr>
+      <tr><td>Spread</td><td><b>Droplet nuclei</b> in the air, from coughing, sneezing, talking</td></tr>
+      <tr><td>Incubation</td><td>Weeks to years; infection to primary lesion 3–6 weeks</td></tr>
+    </tbody></table>
+    <div class="panel am"><span class="kicker">Infectiousness</span><p style="font-size:26px">An untreated sputum-positive patient infects about <b>10–15 people a year</b>. Infectivity drops sharply within <b>2 weeks</b> of effective treatment.</p></div>
+  </div>
+  <aside class="notes"><p>0:09–0:15. Droplet nuclei are 1–5 µm and stay airborne for hours; ventilation and sunlight reduce risk. Extrapulmonary TB is rarely infectious.</p></aside>
+</section>
+
+<section data-title="Natural History" data-tab="Step Through" data-src="Park 27e, Ch 5: Natural history of tuberculosis; WHO">
+  <h2 class="xs">From Exposure to Disease</h2>
+  <svg viewBox="0 0 1300 420" style="width:1300px;height:420px" aria-label="Natural history of TB">
+    <g font-family="IBM Plex Sans" text-anchor="middle">
+      <rect x="40" y="170" width="220" height="90" rx="14" fill="#ECEEE7"/><text x="150" y="222" font-size="24">Exposure</text>
+      <g class="frag"><path d="M260 215 h80" stroke="#15201B" stroke-width="3"/><rect x="340" y="80" width="250" height="90" rx="14" fill="#FAFBF7" stroke="#15201B" stroke-width="2"/><text x="465" y="120" font-size="22">No infection</text><text x="465" y="150" font-size="18" fill="#4B5A52">cleared</text>
+      <rect x="340" y="260" width="250" height="90" rx="14" fill="#F0E2D2"/><text x="465" y="300" font-size="22">TB infection</text><text x="465" y="330" font-size="18" fill="#4B5A52">latent; not infectious</text></g>
+      <g class="frag"><path d="M590 305 h80" stroke="#15201B" stroke-width="3"/><rect x="670" y="200" width="290" height="90" rx="14" fill="#DCEAE5"/><text x="815" y="240" font-size="22">~90–95% never ill</text><text x="815" y="270" font-size="18" fill="#4B5A52">lifelong containment</text>
+      <rect x="670" y="320" width="290" height="90" rx="14" fill="#A23B2B"/><text x="815" y="360" font-size="22" fill="#fff">~5–10% TB disease</text><text x="815" y="390" font-size="18" fill="#fff">half within 2 years</text></g>
+      <g class="frag"><path d="M960 365 h60" stroke="#15201B" stroke-width="3"/><rect x="1020" y="320" width="250" height="90" rx="14" fill="#BE651F"/><text x="1145" y="360" font-size="22" fill="#fff">Infectious if</text><text x="1145" y="390" font-size="20" fill="#fff">pulmonary</text></g>
+    </g>
+  </svg>
+  <aside class="notes"><p>0:15–0:25. HIV raises the annual risk of progression to about 10% per year (versus 5–10% over a lifetime). India estimates that a large share of the population has TB infection; quote the latest ICMR national prevalence survey figure if you wish.</p></aside>
+</section>
+
+<section data-title="Risk Factors" data-tab="Tap to Reveal" data-src="WHO Global TB Report 2025 (attributable risk factors); Park 27e, Ch 5">
+  <h2 class="xs">What Turns Infection Into Disease?</h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:160px"><span class="q">Undernutrition</span><span class="a"><b>The largest attributable risk factor in India</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">HIV infection</span><span class="a"><b>Strongest individual risk</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Diabetes</span><span class="a"><b>About 2–3 times the risk</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Smoking and alcohol</span><span class="a"><b>Raise risk and worsen outcome</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Silicosis</span><span class="a"><b>Miners and stone workers</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Overcrowding, poverty</span><span class="a"><b>More exposure, worse access</b></span></button>
+  </div>
+  <aside class="notes"><p>0:25–0:31. This is why Ni-kshay Poshan Yojana and Ni-kshay Mitra food support matter. Ask: which of these apply to the opening case?</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Finding Cases">
+  <div class="big-n">2</div>
+  <h2>Find Them <em>Early</em>, Test Them <em>Right</em></h2>
+  <p>Presumptive TB and the NTEP diagnostic pathway.</p>
+  <aside class="notes"><p>0:31.</p></aside>
+</section>
+
+<section data-title="Presumptive TB" data-src="Central TB Division, NTEP: definition of presumptive TB">
+  <h2 class="s">Who Is a <em>Presumptive</em> TB Patient?</h2>
+  <div class="cols c2 g28">
+    <div class="panel tl"><span class="kicker">Pulmonary</span><p style="font-size:25px">Any of: <b>cough for 2 weeks or more</b>, fever for 2 weeks or more, significant weight loss, haemoptysis, or any abnormality on chest X-ray.</p></div>
+    <div class="panel am"><span class="kicker">Any Duration</span><p style="font-size:25px">In vulnerable groups (PLHIV, diabetes, contacts, malnourished, elderly, prisoners, miners), <b>any</b> cough or symptom counts.</p></div>
+  </div>
+  <p class="small mt30">Case finding: <b>passive</b> (people who come to the clinic) and <b>active</b> (house-to-house searches in high-risk groups).</p>
+  <aside class="notes"><p>0:31–0:37. Screening for presumptive TB in the community often uses the 4-symptom screen: cough, fever, weight loss, night sweats.</p></aside>
+</section>
+
+<section data-title="Diagnosis" data-tab="Step Through" data-src="NTEP integrated diagnostic algorithm (2021)">
+  <h2 class="xs">The Diagnostic Pathway</h2>
+  <ol class="steps" style="font-size:27px;gap:10px">
+    <li><span>Sputum for <b>NAAT</b> (CBNAAT or Truenat) <b>upfront</b> for all presumptive TB: detects TB and rifampicin resistance in hours</span></li>
+    <li class="frag"><span>Where NAAT is not available: sputum smear microscopy, and send sample to a NAAT site</span></li>
+    <li class="frag"><span>Rifampicin-resistant: test further (line probe assay, liquid culture) and start DR-TB treatment</span></li>
+    <li class="frag"><span>Chest X-ray as a sensitive screen; clinical diagnosis if tests are negative but suspicion high</span></li>
+    <li class="frag"><span>Notify every case on <b>Ni-kshay</b> (mandatory, public and private)</span></li>
+  </ol>
+  <aside class="notes"><p>0:37–0:45. Universal drug susceptibility testing (UDST) means every diagnosed patient should get a rifampicin-resistance test. TB notification is mandatory (since 2012); private sector included.</p></aside>
+</section>
+
+<section data-title="Tuberculin Test and BCG" data-src="Park 27e, Ch 5: Tuberculin test; BCG vaccination; MoHFW UIP">
+  <h2 class="s">Tuberculin Test and <em>BCG</em></h2>
+  <div class="cols c2 g28">
+    <div class="panel"><span class="kicker">Mantoux (Tuberculin) Test</span><p style="font-size:24px">5 TU PPD (or 2 TU RT-23) intradermally; read induration at <b>48–72 hours</b>. ≥ 10 mm positive. Shows infection, not disease; false negatives in malnutrition, HIV, measles. IGRA is the blood-test alternative.</p></div>
+    <div class="panel tl"><span class="kicker">BCG</span><p style="font-size:24px">Live attenuated <i>M. bovis</i>; <b>at birth</b> (up to 1 year), 0.1 ml (0.05 ml under 1 month) intradermal, left upper arm. Protects against <b>severe childhood TB</b> (miliary, meningitis), much less against adult pulmonary TB.</p></div>
+  </div>
+  <aside class="notes"><p>0:45–0:50. BCG reaction: papule at 2–3 weeks, ulcer, scar by 6–12 weeks. Adult BCG vaccination was tried in some states in 2024 as part of the 100-day campaign: check the current status.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on NTEP and Park 27e">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="3"><p style="font-size:29px">The first-line diagnostic test for presumptive TB under NTEP is:</p>
+      <button class="opt"><span class="l">A</span>Mantoux test</button><button class="opt"><span class="l">B</span>Chest X-ray only</button><button class="opt"><span class="l">C</span>Liquid culture</button><button class="opt"><span class="l">D</span>NAAT (CBNAAT/Truenat)</button>
+      <p class="fb" data-fb="NAAT upfront: detects TB and rifampicin resistance."></p></div>
+    <div class="mcq" data-ans="1"><p style="font-size:29px">Lifetime risk of disease after TB infection (HIV-negative) is about:</p>
+      <button class="opt"><span class="l">A</span>50%</button><button class="opt"><span class="l">B</span>5–10%</button><button class="opt"><span class="l">C</span>1%</button><button class="opt"><span class="l">D</span>90%</button>
+      <p class="fb" data-fb="About 5–10%, half of it within 2 years of infection."></p></div>
+  </div>
+  <aside class="notes"><p>0:50–0:55.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>India: about a quarter of the world's TB; incidence <b>187/lakh</b> (2024).</span></li>
+    <li><span>Spread by <b>droplet nuclei</b> from sputum-positive cases.</span></li>
+    <li><span>Only <b>5–10%</b> of the infected fall ill; undernutrition and HIV tip the balance.</span></li>
+    <li><span>Presumptive TB: cough ≥ 2 weeks, or <b>any</b> symptom in vulnerable groups.</span></li>
+    <li><span><b>NAAT upfront</b>; notify every case on Ni-kshay.</span></li>
+  </ol>
+  <aside class="notes"><p>0:55–0:60. Next: NTEP treatment and programme.</p></aside>
+</section>
