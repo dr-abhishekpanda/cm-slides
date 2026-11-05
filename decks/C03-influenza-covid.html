@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Influenza, Avian Flu and COVID-19</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="One-hour interactive lecture on seasonal and pandemic influenza, avian influenza and COVID-19: virology, epidemiology, triage, surveillance and prevention.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>/* CM Slides engine · EWS brand · 1600x900 worksheet stage, scaled to fit.
+   Layout: graph-paper sheet, amber margin rule, running head with page number,
+   deep-teal section sheets, taped clippings for textbook quotes. */
+:root{
+  --paper:#F4F5F1; --paper-2:#ECEEE7; --card:#FAFBF7;
+  --ink:#15201B; --ink-soft:#4B5A52; --ink-faint:#7B877E;
+  --line:#D7DCD1; --line-soft:#E4E7DD;
+  --teal:#0C5E4E; --teal-deep:#08493C; --teal-tint:#DCEAE5;
+  --amber:#BE651F; --amber-tint:#F0E2D2; --amber-soft:#E9B98D;
+  --danger:#A23B2B; --info:#3D6E7A;
+  --surround:#18231E;
+  --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-body:"IBM Plex Sans",Calibri,system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",Consolas,ui-monospace,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--surround);color:var(--ink);font-family:var(--font-body);overflow:hidden;
+  padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+#viewport{position:fixed;inset:0;bottom:56px;display:grid;place-items:center;overflow:hidden}
+#stage{width:1600px;height:900px;position:relative;transform-origin:center center;flex:none}
+.slide{position:absolute;inset:0;background:var(--paper);overflow:hidden;display:none;
+  padding:112px 120px 76px 168px;font-size:36px;line-height:1.36}
+.slide.active{display:block;animation:sheetIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes sheetIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.slide::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(215,220,209,.55) 1px,transparent 1px),linear-gradient(to bottom,rgba(215,220,209,.55) 1px,transparent 1px);
+  background-size:34px 34px;
+  -webkit-mask-image:radial-gradient(130% 100% at 75% 0%,#000 35%,transparent 85%);mask-image:radial-gradient(130% 100% at 75% 0%,#000 35%,transparent 85%)}
+.slide::after{content:"";position:absolute;top:0;bottom:0;left:120px;width:2px;background:var(--amber);opacity:.35;pointer-events:none}
+.slide > *{position:relative;z-index:1}
+.run{position:absolute!important;top:40px;left:168px;right:120px;display:flex;justify-content:space-between;gap:30px;
+  font-family:var(--font-mono);font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+.run b{color:var(--teal);font-weight:500}
+.foot{position:absolute!important;left:168px;right:120px;bottom:26px;display:flex;flex-direction:column;gap:2px;
+  font-family:var(--font-mono);font-size:15px;letter-spacing:.04em;color:var(--ink-faint);line-height:1.35}
+.foot span::before{color:var(--amber)}
+.foot .src::before{content:"SOURCE · "}
+.foot .img::before{content:"IMAGE · "}
+.has-tab .foot{right:520px}
+
+/* type */
+h1,h2,h3{font-family:var(--font-display);font-weight:450;margin:0;text-wrap:balance;font-variation-settings:"opsz" 144}
+h1{font-size:118px;line-height:.96;letter-spacing:-.035em}
+h2{font-size:66px;line-height:1.04;letter-spacing:-.022em;margin-bottom:30px;max-width:1300px}
+h3{font-size:40px;line-height:1.1;letter-spacing:-.012em}
+h2.s{font-size:54px} h2.xs{font-size:46px;margin-bottom:22px}
+em{font-style:italic;color:var(--teal)}
+.am{color:var(--amber)} .tl{color:var(--teal)} .dg{color:var(--danger)}
+p{margin:0 0 18px;max-width:1180px}
+.lede{font-size:40px;color:var(--ink-soft);line-height:1.3}
+.small{font-size:27px;color:var(--ink-soft)}
+.tiny{font-size:22px;color:var(--ink-soft)}
+.mono{font-family:var(--font-mono)}
+.kicker{font-family:var(--font-mono);font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;display:block}
+ul.clean{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+ul.clean li{position:relative;padding-left:40px}
+ul.clean li::before{content:"";position:absolute;left:0;top:.42em;width:15px;height:15px;border:2.5px solid var(--teal);border-radius:50%}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:st}
+ol.steps li{position:relative;padding-left:64px;counter-increment:st}
+ol.steps li::before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:.45em;font-family:var(--font-mono);font-size:22px;line-height:1;color:var(--amber)}
+.big-num{font-family:var(--font-display);font-size:120px;line-height:.9;letter-spacing:-.03em;color:var(--teal)}
+.stat{display:flex;flex-direction:column;gap:6px}
+.stat .n{font-family:var(--font-display);font-size:84px;line-height:.95;color:var(--teal);letter-spacing:-.02em}
+.stat .l{font-size:24px;color:var(--ink-soft);line-height:1.25}
+
+/* fragments */
+.frag{transition:opacity .35s ease,transform .35s ease}
+.frag:not(.on){opacity:0;transform:translateY(12px);pointer-events:none}
+
+/* title sheet */
+.slide.title h1{margin-top:70px;max-width:800px}
+.slide.title h1.long{font-size:88px}
+.slide.title .sub{font-size:32px;color:var(--ink-soft);margin-top:30px;max-width:780px;line-height:1.3}
+.slide.title .codes{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;max-width:900px}
+.slide.title .by{position:absolute!important;left:168px;bottom:64px;font-family:var(--font-mono);font-size:19px;letter-spacing:.03em;color:var(--ink-soft);line-height:1.6}
+.slide.title .by b{color:var(--ink);font-weight:500}
+.slide.title .tag{position:absolute!important;right:120px;bottom:64px;font-family:var(--font-mono);font-size:22px;letter-spacing:.14em;color:var(--amber)}
+.slide.title .art{position:absolute!important;right:110px;top:140px;width:560px;height:560px}
+
+/* section sheet */
+.slide.section{background:var(--teal-deep);color:#EAF2EE}
+.slide.section::before{background-image:linear-gradient(to right,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.07) 1px,transparent 1px);-webkit-mask-image:none;mask-image:none}
+.slide.section::after{background:var(--amber-soft);opacity:.5}
+.slide.section .run{color:rgba(234,242,238,.55)} .slide.section .run b{color:var(--amber-soft)}
+.slide.section .big-n{position:absolute;right:90px;bottom:-80px;font-family:var(--font-display);font-size:640px;line-height:1;font-style:italic;font-weight:300;color:transparent;-webkit-text-stroke:2px rgba(233,185,141,.55)}
+.slide.section h2{font-size:104px;color:#F4F5F1;margin-top:150px;max-width:950px}
+.slide.section p{color:rgba(234,242,238,.82);font-size:36px;max-width:820px}
+.slide.section em{color:var(--amber-soft)}
+
+/* clipping quote */
+.clip{background:var(--card);border:1px solid var(--line);padding:50px 60px 46px;max-width:1240px;transform:rotate(-.6deg);
+  box-shadow:0 2px 3px rgba(21,32,27,.05),0 30px 60px -30px rgba(21,32,27,.35);position:relative}
+.clip::before{content:"";position:absolute;top:-18px;left:80px;width:150px;height:36px;background:rgba(190,101,31,.22);transform:rotate(-3deg)}
+.clip blockquote{margin:0;font-family:var(--font-display);font-size:46px;line-height:1.24;font-style:italic;font-weight:380;letter-spacing:-.01em}
+.clip.sm blockquote{font-size:36px}
+.clip .who{display:block;margin-top:22px;font-family:var(--font-mono);font-size:19px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
+
+/* tab (interaction cue) */
+.tab{position:absolute!important;bottom:0;right:120px;background:var(--amber);color:#fff;font-family:var(--font-mono);font-size:18px;letter-spacing:.18em;text-transform:uppercase;padding:12px 20px;border-radius:8px 8px 0 0}
+
+/* buttons, chips */
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-body);font-weight:600;font-size:26px;padding:14px 26px;border-radius:100px;border:2px solid var(--teal);background:transparent;color:var(--teal);cursor:pointer;transition:background .15s,color .15s,transform .1s}
+.btn:hover{background:var(--teal);color:var(--paper)}
+.btn:active{transform:translateY(1px)}
+.btn.solid{background:var(--teal);color:var(--paper)}
+.btn.amber{border-color:var(--amber);color:var(--amber)} .btn.amber:hover{background:var(--amber);color:#fff}
+.btn.sm{font-size:20px;padding:9px 18px}
+.chip{font-family:var(--font-mono);font-size:19px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;background:var(--teal-tint);color:var(--teal);display:inline-block}
+.chip.am{background:var(--amber-tint);color:var(--amber)}
+.chip.dg{background:#F3DDD8;color:var(--danger)}
+
+/* grids & panels */
+.cols{display:grid;gap:40px}
+.c2{grid-template-columns:1fr 1fr} .c3{grid-template-columns:repeat(3,1fr)} .c4{grid-template-columns:repeat(4,1fr)}
+.c64{grid-template-columns:1.5fr 1fr} .c46{grid-template-columns:1fr 1.5fr} .c55{grid-template-columns:1.1fr 1fr}
+.mid{align-items:center} .top{align-items:start}
+.g20{gap:20px} .g28{gap:28px}
+.panel{border:1.5px solid var(--line);background:var(--card);border-radius:14px;padding:26px 30px}
+.panel h3{margin-bottom:10px;font-size:36px}
+.panel p,.panel li{font-size:26px;color:var(--ink-soft);margin:0}
+.panel.tl{border-color:var(--teal);background:var(--teal-tint)}
+.panel.am{border-color:var(--amber);background:var(--amber-tint)}
+.rule{border-top:2px solid var(--ink);padding-top:12px}
+.mt10{margin-top:10px}.mt20{margin-top:20px}.mt30{margin-top:30px}.mt40{margin-top:40px}
+
+/* figures */
+.fig{margin:0;display:flex;flex-direction:column;gap:10px}
+.fig img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;object-fit:cover}
+.fig figcaption{font-family:var(--font-mono);font-size:16px;letter-spacing:.04em;color:var(--ink-faint)}
+.photo{transform:rotate(.8deg);background:var(--card);padding:12px 12px 14px;border:1px solid var(--line);box-shadow:0 24px 40px -26px rgba(21,32,27,.45)}
+.photo img{border-radius:3px;border:0}
+svg text{font-family:"IBM Plex Sans",Calibri,sans-serif}
+
+/* reveal cards */
+.reveal{cursor:pointer;text-align:left;border:1.5px solid var(--line);background:var(--card);border-radius:14px;padding:26px 30px;display:flex;flex-direction:column;gap:12px;min-height:260px}
+.reveal:hover{border-color:var(--teal)}
+.reveal .q{font-size:30px;line-height:1.28}
+.reveal .a{margin-top:auto;font-family:var(--font-mono);font-size:22px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.reveal .a::before{content:"Tap to reveal";}
+.reveal.open .a::before{content:none}
+.reveal .a b{display:none;font-weight:600}
+.reveal.open{border-color:var(--teal);background:var(--teal-tint)}
+.reveal.open .a{color:var(--teal)} .reveal.open .a b{display:inline}
+.reveal .why{display:none;font-size:23px;color:var(--ink-soft)}
+.reveal.open .why{display:block}
+
+/* hotspots (tap a label to show it) */
+.hot{cursor:pointer;border:2px dashed var(--amber);background:var(--card);border-radius:10px;padding:8px 14px;font-size:24px;text-align:left}
+.hot .h{color:var(--ink-faint);font-family:var(--font-mono);font-size:18px;letter-spacing:.1em;text-transform:uppercase}
+.hot .v{display:none}
+.hot.open{border-style:solid;border-color:var(--teal);background:var(--teal-tint)}
+.hot.open .h{display:none} .hot.open .v{display:inline}
+
+/* tables */
+table.t{border-collapse:collapse;width:100%;font-size:27px}
+table.t th{font-family:var(--font-mono);font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:500;text-align:left;padding:11px 18px;border-bottom:2px solid var(--ink)}
+table.t td{padding:12px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t td:first-child{color:var(--teal)}
+table.t.num td{font-variant-numeric:tabular-nums}
+
+/* MCQ */
+.mcq{display:grid;gap:12px}
+.mcq .opt{display:flex;gap:18px;align-items:center;text-align:left;border:1.5px solid var(--line);background:var(--card);border-radius:12px;padding:13px 22px;font-size:27px;cursor:pointer}
+.mcq .opt .l{font:600 21px var(--font-mono);width:42px;height:42px;border-radius:50%;border:2px solid var(--ink-faint);display:grid;place-items:center;flex:none;color:var(--ink-soft)}
+.mcq .opt.right{border-color:var(--teal);background:var(--teal-tint)} .mcq .opt.right .l{background:var(--teal);border-color:var(--teal);color:#fff}
+.mcq .opt.wrong{border-color:var(--danger);opacity:.7} .mcq .opt.wrong .l{background:var(--danger);border-color:var(--danger);color:#fff}
+.mcq .fb{font-size:24px;color:var(--ink-soft);min-height:64px;margin-top:6px}
+
+/* sliders */
+.ctl{display:grid;gap:8px;margin-bottom:20px}
+.ctl label{font-family:var(--font-mono);font-size:19px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:flex;justify-content:space-between}
+.ctl label b{color:var(--teal);font-size:26px;letter-spacing:0}
+input[type=range]{width:100%;accent-color:var(--teal);height:34px}
+input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);padding:6px}
+
+/* poll */
+.poll{position:absolute!important;right:120px;bottom:70px;display:none;gap:16px;align-items:center;background:var(--card);border:1.5px dashed var(--amber);border-radius:12px;padding:14px 18px;font-family:var(--font-mono);font-size:16px;color:var(--ink-soft);max-width:420px}
+.poll.on{display:flex}
+.poll .qr{width:120px;height:120px;background:#fff;flex:none;display:grid;place-items:center}
+.poll .qr img,.poll .qr canvas{width:120px!important;height:120px!important}
+
+/* chrome */
+#bar{position:fixed;left:0;right:0;bottom:0;height:56px;display:flex;align-items:center;gap:10px;background:var(--surround);color:#C9D3CD;
+  font-family:var(--font-mono);font-size:13px;letter-spacing:.06em;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
+#bar button{background:transparent;border:1px solid #3A4A42;color:#DDE5E0;border-radius:8px;height:36px;min-width:40px;padding:0 10px;cursor:pointer;font-family:var(--font-mono);font-size:13px}
+#bar button:hover{border-color:var(--amber-soft);color:#fff}
+#bar .grow{flex:1;min-width:0;height:4px;background:#2B3832;border-radius:4px;overflow:hidden}
+#prog{height:100%;width:0;background:var(--amber-soft);transition:width .3s}
+#count,#clock{white-space:nowrap;font-variant-numeric:tabular-nums}
+#clock{cursor:pointer}
+#notes{position:fixed;left:0;right:0;bottom:56px;max-height:38vh;overflow:auto;background:#101814;color:#DDE5E0;border-top:2px solid var(--amber-soft);
+  font-family:var(--font-body);font-size:17px;line-height:1.55;padding-block:18px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));z-index:5}
+#notes h4{margin:0 0 6px;font:500 12px var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--amber-soft)}
+#notes p{margin:0 0 8px;max-width:110ch}
+#toc{position:fixed;inset:0 0 56px 0;background:rgba(16,24,20,.96);z-index:6;overflow:auto;padding-block:40px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+#toc ol{max-width:900px;margin:0 auto;columns:2;column-gap:40px;font-family:var(--font-body);color:#DDE5E0;font-size:16px}
+#toc li{margin-bottom:6px;break-inside:avoid}
+#toc button{background:none;border:0;color:inherit;cursor:pointer;text-align:left;padding:2px 0;font-size:16px}
+#toc button:hover{color:var(--amber-soft)}
+.slide aside.notes{display:none!important}
+@media (max-width:640px){#bar .hide-sm{display:none} #toc ol{columns:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{
+  @page{size:1600px 900px;margin:0}
+  body{overflow:visible;background:#fff} #bar,#notes,#toc{display:none!important}
+  #viewport{position:static;display:block} #stage{transform:none!important;width:1600px;height:auto}
+  .slide{display:block!important;position:relative;height:900px;page-break-after:always;animation:none}
+  .frag{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+<section class="slide title" data-title="Title"><div class="run"><span><b>Community Medicine</b> · Communicable Diseases</span><span class="pn"></span></div><svg class='art' viewBox='0 0 560 560' aria-hidden='true'><circle cx='280' cy='280' r='140' fill='#DCEAE5' stroke='#0C5E4E' stroke-width='5'/><g stroke='#BE651F' stroke-width='6' stroke-linecap='round'><line x1='280' y1='140' x2='280' y2='100'/><line x1='280' y1='420' x2='280' y2='460'/><line x1='140' y1='280' x2='100' y2='280'/><line x1='420' y1='280' x2='460' y2='280'/><line x1='181' y1='181' x2='153' y2='153'/><line x1='379' y1='379' x2='407' y2='407'/><line x1='379' y1='181' x2='407' y2='153'/><line x1='181' y1='379' x2='153' y2='407'/></g></svg><h1 class="long">Influenza, Avian Flu and <em>COVID-19</em></h1><p class="sub">Antigenic Drift and Shift, Pandemics, India's Categorisation for Oseltamivir, Surveillance and Vaccination</p><div class="codes"><span class="chip">CM 8.1</span><span class="chip">CM 18.3</span><span class="chip">CM 20.2</span></div><div class="by"><b>Prepared by:</b> Dr. Abhishek Panda, MD Community Medicine<br><b>Email:</b> support@dr-abhishekpanda-cm.app</div><div class="tag">#CM-APP</div><aside class="notes"><p>60-minute plan: hook 3 min, virus and drift/shift 12, epidemiology 8, triage 10, avian flu 7, COVID-19 12, check 8.</p><p>Keys: &rarr; / Space next, &larr; back, N notes, O contents, F full screen, B blank screen. Click the clock to start the 60-minute timer.</p></aside></section>
+<section class="slide has-tab" data-title="The Fever Clinic"><div class="run"><span><b>Influenza and COVID-19</b> · Opening Case</span><span class="pn"></span></div>
+  <h2 class="s">It's July. Your OPD Has <em>80 Patients</em> With Fever, Cough and Sore Throat.</h2>
+  <p class="lede">One is a 28-week pregnant woman. One is a breathless 65-year-old diabetic. Most are young and mildly ill.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">Who gets tested? Who gets oseltamivir? Who gets admitted?</p>
+  <aside class="notes"><p>0:00–0:03. Answer with India's A/B/C categorisation later in the lecture.</p></aside>
+<div class="foot"><span class="src">Teaching case</span></div><div class="tab">Think · Pair · Share</div></section>
+<section class="slide " data-title="The Virus"><div class="run"><span><b>Influenza and COVID-19</b> · The Virus</span><span class="pn"></span></div>
+  <h2 class="s">Influenza Viruses: A, B and C</h2>
+  <div class="cols c3 g28">
+    <div class="panel am"><span class="kicker">Type A</span><h3>Pandemics and Epidemics</h3><p>Humans, birds, pigs. Subtyped by surface antigens: <b>haemagglutinin (H)</b> and <b>neuraminidase (N)</b>, e.g. H1N1, H3N2, H5N1.</p></div>
+    <div class="panel"><span class="kicker">Type B</span><h3>Epidemics</h3><p>Humans only; no subtypes; milder, often in children.</p></div>
+    <div class="panel"><span class="kicker">Type C</span><h3>Mild, Sporadic</h3><p>Rarely causes significant disease.</p></div>
+  </div>
+  <p class="small mt30">H lets the virus <b>enter</b> cells; N lets new virus <b>leave</b> them (the target of oseltamivir).</p>
+  <aside class="notes"><p>0:03–0:07. Orthomyxovirus with a segmented RNA genome: segmentation is what makes reassortment (shift) possible.</p></aside>
+<div class="foot"><span class="src">Park 27e, Ch 5: Influenza (agent)</span></div></section>
+<section class="slide has-tab" data-title="Drift and Shift"><div class="run"><span><b>Influenza and COVID-19</b> · Drift and Shift</span><span class="pn"></span></div>
+  <h2 class="xs">Antigenic <em>Drift</em> vs Antigenic <em>Shift</em></h2>
+  <div class="cols c2 g28">
+    <div class="panel tl"><span class="kicker">Drift</span><h3>Small, Gradual Changes</h3><p>Point mutations in H and N genes. Partial immunity remains. Causes <b>yearly epidemics</b>; why the vaccine is updated every year. Types A and B.</p></div>
+    <div class="panel am"><span class="kicker">Shift</span><h3>Sudden, Major Change</h3><p>A new H (with or without N), usually by <b>reassortment</b> between human and animal viruses (pigs as "mixing vessels"). No immunity: <b>pandemics</b>. Type A only.</p></div>
+  </div>
+  <div class="cols c4 g20 mt30">
+    <button class="reveal" style="min-height:130px"><span class="q">1918</span><span class="a"><b>H1N1 "Spanish flu"</b></span></button>
+    <button class="reveal" style="min-height:130px"><span class="q">1957</span><span class="a"><b>H2N2 "Asian flu"</b></span></button>
+    <button class="reveal" style="min-height:130px"><span class="q">1968</span><span class="a"><b>H3N2 "Hong Kong flu"</b></span></button>
+    <button class="reveal" style="min-height:130px"><span class="q">2009</span><span class="a"><b>H1N1 pdm09 "swine flu"</b></span></button>
+  </div>
+  <aside class="notes"><p>0:07–0:15. The 1918 pandemic killed an estimated 20–50 million people worldwide; India was among the worst hit.</p></aside>
+<div class="foot"><span class="src">Park 27e, Ch 5: Influenza (antigenic variation)</span></div><div class="tab">Tap to Reveal</div></section>
+<section class="slide " data-title="Epidemiology"><div class="run"><span><b>Influenza and COVID-19</b> · Epidemiology</span><span class="pn"></span></div>
+  <h2 class="s">Epidemiology of Seasonal Influenza</h2>
+  <div class="cols c2 g28">
+    <table class="t" style="font-size:24px"><tbody>
+      <tr><td>Spread</td><td>Droplets, aerosols, fomites</td></tr>
+      <tr><td>Incubation</td><td><b>18–72 hours</b></td></tr>
+      <tr><td>Infectious</td><td>1–2 days before to about 5 days after onset (longer in children)</td></tr>
+      <tr><td>Subclinical</td><td>Common: silent spread</td></tr>
+      <tr><td>Season in India</td><td>Peaks in the <b>monsoon</b> and in <b>winter</b> (north)</td></tr>
+    </tbody></table>
+    <div class="panel"><span class="kicker">High-risk Groups</span><p style="font-size:25px">Pregnant women; children under 5; adults over 65; chronic heart, lung, kidney or liver disease; diabetes; immunosuppression; obesity.</p></div>
+  </div>
+  <aside class="notes"><p>0:15–0:20. Short incubation, subclinical infection and many animal hosts make influenza impossible to eradicate.</p></aside>
+<div class="foot"><span class="src">Park 27e, Ch 5: Influenza (epidemiology)</span></div></section>
+<section class="slide has-tab" data-title="Categorise the Patient"><div class="run"><span><b>Influenza and COVID-19</b> · Categorise the Patient</span><span class="pn"></span></div>
+  <h2 class="xs">India's A–B–C <em>Categorisation</em></h2>
+  <div class="cols c3 g28">
+    <div class="panel tl"><span class="kicker">Category A</span><p style="font-size:24px">Mild fever, cough, sore throat, body ache.<br><b>No test, no oseltamivir</b>; home isolation, symptomatic care; review in 24–48 h.</p></div>
+    <div class="panel am"><span class="kicker">Category B</span><p style="font-size:24px">A + high fever and severe sore throat, <b>or</b> A in a high-risk person.<br><b>Oseltamivir, no test needed</b>; home isolation.</p></div>
+    <div class="panel" style="border-color:var(--danger)"><span class="kicker" style="color:var(--danger)">Category C</span><p style="font-size:24px">Breathlessness, chest pain, drowsiness, low BP, haemoptysis, cyanosis; or worsening chronic disease.<br><b>Test, admit, oseltamivir</b>.</p></div>
+  </div>
+  <div class="cols c3 g20 mt30">
+    <button class="reveal" style="min-height:130px"><span class="q">20-year-old, mild fever and cough</span><span class="a"><b>A</b></span></button>
+    <button class="reveal" style="min-height:130px"><span class="q">28-week pregnant woman, fever and sore throat</span><span class="a"><b>B (high-risk)</b></span></button>
+    <button class="reveal" style="min-height:130px"><span class="q">65-year-old diabetic, breathless, SpO₂ 89%</span><span class="a"><b>C</b></span></button>
+  </div>
+  <aside class="notes"><p>0:20–0:30. Back to the opening case. Oseltamivir: 75 mg twice daily for 5 days in adults (weight-based in children). Check current NCDC guidance before teaching.</p></aside>
+<div class="foot"><span class="src">MoHFW/NCDC: Categorization of seasonal influenza cases</span></div><div class="tab">Tap to Reveal</div></section>
+<section class="slide " data-title="Prevention and Surveillance"><div class="run"><span><b>Influenza and COVID-19</b> · Prevention and Surveillance</span><span class="pn"></span></div>
+  <h2 class="s">Prevention and Surveillance</h2>
+  <div class="cols c3 g28">
+    <div class="panel tl"><span class="kicker">Vaccine</span><p>Inactivated, given <b>yearly</b>. WHO picks strains twice a year (Northern and Southern Hemisphere). Priority: health workers, pregnant women, elderly, chronic illness.</p></div>
+    <div class="panel"><span class="kicker">Personal Measures</span><p>Cough etiquette, hand hygiene, masks, staying home when ill, ventilation</p></div>
+    <div class="panel"><span class="kicker">Surveillance</span><p>WHO's <b>GISRS</b> network; in India, ILI and SARI surveillance under IDSP/IHIP; NIV Pune and regional labs</p></div>
+  </div>
+  <aside class="notes"><p>0:30–0:35.</p></aside>
+<div class="foot"><span class="src">Park 27e, Ch 5: Influenza (control); WHO Global Influenza Strategy</span></div></section>
+<section class="slide " data-title="Avian Influenza"><div class="run"><span><b>Influenza and COVID-19</b> · Avian Influenza</span><span class="pn"></span></div>
+  <h2 class="s">Avian Influenza (H5N1): The <em>Pandemic</em> We Fear</h2>
+  <div class="cols c55 top">
+    <ul class="clean small"><li>Spreads among wild birds and poultry; humans infected through close contact with sick or dead birds</li><li>Little sustained person-to-person spread, so far</li><li>Very high case fatality in reported human cases (about half)</li><li>Recent spread to mammals, including dairy cattle in the USA (2024)</li></ul>
+    <div class="panel am"><span class="kicker">Response in India</span><p style="font-size:24px">Culling and disinfection within a radius of the outbreak, surveillance zone, PPE and oseltamivir prophylaxis for cullers, ban on poultry movement, One Health coordination with animal husbandry.</p></div>
+  </div>
+  <aside class="notes"><p>0:35–0:42. India's culling radius and surveillance zone are set by the Department of Animal Husbandry action plan; check the current figures.</p></aside>
+<div class="foot"><span class="src">Park 27e, Ch 5: Bird flu; WHO avian influenza fact sheet</span></div></section>
+<section class="slide " data-title="COVID-19"><div class="run"><span><b>Influenza and COVID-19</b> · COVID-19</span><span class="pn"></span></div>
+  <h2 class="s">COVID-19: A Pandemic in Living Memory</h2>
+  <div class="cols c4 g20">
+    <div class="stat"><span class="n">2–14</span><span class="l">days incubation (median about 5; shorter with Omicron)</span></div>
+    <div class="stat"><span class="n">30 Jan 2020</span><span class="l">declared a <b>PHEIC</b> by WHO</span></div>
+    <div class="stat"><span class="n">5 May 2023</span><span class="l">PHEIC declared over</span></div>
+    <div class="stat"><span class="n">220 crore+</span><span class="l">vaccine doses given in India</span></div>
+  </div>
+  <div class="cols c3 g28 mt30">
+    <div class="panel"><p><b>Spread</b>: droplets and aerosols, especially indoors; pre-symptomatic transmission</p></div>
+    <div class="panel"><p><b>Control</b>: test–trace–isolate, masks, ventilation, vaccination, surge capacity</p></div>
+    <div class="panel"><p><b>Lessons</b>: surveillance, labs, oxygen, risk communication, protecting health workers</p></div>
+  </div>
+  <aside class="notes"><p>0:42–0:50. The 220 crore figure is the cumulative CoWIN count reported in 2023; verify. Discuss what India's health system learnt: genomic surveillance (INSACOG), oxygen plants, telemedicine (eSanjeevani).</p></aside>
+<div class="foot"><span class="src">WHO PHEIC statements (2020, 2023); MoHFW clinical guidance</span></div></section>
+<section class="slide has-tab" data-title="Quick Check"><div class="run"><span><b>Influenza and COVID-19</b> · Quick Check</span><span class="pn"></span></div>
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="1"><p style="font-size:29px">Influenza pandemics are caused by:</p>
+      <button class="opt"><span class="l">A</span>Antigenic drift</button><button class="opt"><span class="l">B</span>Antigenic shift</button><button class="opt"><span class="l">C</span>Type C virus</button><button class="opt"><span class="l">D</span>Vaccine failure</button>
+      <p class="fb" data-fb="Shift: a new H subtype with no population immunity."></p></div>
+    <div class="mcq" data-ans="1"><p style="font-size:29px">A pregnant woman with fever and sore throat is Category:</p>
+      <button class="opt"><span class="l">A</span>Category A</button><button class="opt"><span class="l">B</span>Category B</button><button class="opt"><span class="l">C</span>Category C</button><button class="opt"><span class="l">D</span>Not categorised</button>
+      <p class="fb" data-fb="Category B (high-risk group): oseltamivir without waiting for a test."></p></div>
+  </div>
+  <aside class="notes"><p>0:50–0:55.</p></aside>
+<div class="foot"><span class="src">Teaching questions based on Park 27e and MoHFW guidance</span></div><div class="tab">Tap an Option</div></section>
+<section class="slide " data-title="Take-Home"><div class="run"><span><b>Influenza and COVID-19</b> · Take-Home</span><span class="pn"></span></div>
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span><b>Drift</b> → yearly epidemics; <b>shift</b> → pandemics (type A only).</span></li>
+    <li><span>Incubation <b>18–72 hours</b>; many subclinical infections.</span></li>
+    <li><span>Category A: no drug · B: oseltamivir · C: test and admit.</span></li>
+    <li><span>Vaccinate yearly; protect pregnant women and the elderly.</span></li>
+    <li><span>H5N1 and COVID-19 show why <b>One Health</b> surveillance matters.</span></li>
+  </ol>
+  <aside class="notes"><p>0:55–0:60. Next: Diphtheria and pertussis.</p></aside>
+<div class="foot"><span class="src">Summary of this lecture</span></div></section>
+<section class="slide" data-title="References"><div class="run"><span><b>Influenza and COVID-19</b> · References</span><span class="pn"></span></div><h2 class="xs">References</h2><ol style="font-size:22px;line-height:1.42;padding-left:30px;max-width:1300px;display:grid;gap:9px"><li>Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 5: Epidemiology of Communicable Diseases (Influenza; Bird flu; COVID-19).</li><li>Ministry of Health and Family Welfare / NCDC. <i>Seasonal Influenza: Guidelines for Categorization of Seasonal Influenza Cases during Screening for Home Isolation, Testing, Treatment and Hospitalization</i>.</li><li>World Health Organization. <i>Global Influenza Strategy 2019–2030</i>; Influenza (seasonal) fact sheet.</li><li>World Health Organization. Statements on COVID-19 as a Public Health Emergency of International Concern (30 January 2020; ended 5 May 2023).</li><li>Ministry of Health and Family Welfare. <i>Clinical Guidance for Management of Adult COVID-19 Patients</i>; and COVID-19 vaccination guidelines.</li><li>NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topics 8 and 18.</li></ol><div class="by" style="position:absolute;left:168px;bottom:40px;font-family:var(--font-mono);font-size:17px;color:var(--ink-soft);line-height:1.6"><b>Prepared by:</b> Dr. Abhishek Panda, MD Community Medicine<br><b>Email:</b> support@dr-abhishekpanda-cm.app</div><div style="position:absolute;right:120px;bottom:40px;font-family:var(--font-mono);font-size:20px;letter-spacing:.14em;color:var(--amber)">#CM-APP</div></section>
+</div></div>
+<div id="notes" hidden></div>
+<div id="toc" hidden><ol id="tocList"></ol></div>
+<nav id="bar" aria-label="Slide controls">
+  <button id="bPrev" aria-label="Previous">&larr;</button><button id="bNext" aria-label="Next">&rarr;</button>
+  <span id="count"></span><div class="grow"><div id="prog"></div></div>
+  <span id="clock" title="Start or pause the 60-minute timer">00:00 / 60</span>
+  <button id="bToc" class="hide-sm" title="Contents (O)">Contents</button>
+  <button id="bNotes" class="hide-sm" title="Speaker notes (N)">Notes</button>
+  <button id="bFs" title="Full screen (F)">&#x26F6;</button>
+</nav>
+<script>window.POLL_URL="";</script>
+<script>/* CM Slides engine: navigation, steps, notes, contents, timer, and the shared widgets
+   (reveal cards, hotspots, MCQs, optional live-poll QR). Deck-specific widgets live in each deck. */
+(function(){
+  const stage=document.getElementById('stage'), vp=document.getElementById('viewport');
+  const slides=[...document.querySelectorAll('.slide')];
+  const N=slides.length; let cur=0;
+  slides.forEach((s,i)=>{const pn=s.querySelector('.pn'); if(pn) pn.textContent='Page '+String(i+1).padStart(2,'0');});
+
+  function fit(){const k=Math.min(vp.clientWidth/1600,vp.clientHeight/900);stage.style.transform='scale('+k+')';}
+  addEventListener('resize',fit); fit();
+
+  const frags=s=>[...s.querySelectorAll('.frag')];
+  function show(i,fromBack){
+    i=Math.max(0,Math.min(N-1,i));
+    slides[cur].classList.remove('active'); cur=i; const s=slides[cur]; s.classList.add('active');
+    frags(s).forEach(f=>f.classList.toggle('on',!!fromBack));
+    document.getElementById('count').textContent=(cur+1)+' / '+N;
+    document.getElementById('prog').style.width=((cur+1)/N*100)+'%';
+    const n=s.querySelector('aside.notes');
+    document.getElementById('notes').innerHTML='<h4>Page '+(cur+1)+' · '+(s.dataset.title||'')+'</h4>'+(n?n.innerHTML:'<p>No notes.</p>');
+    try{history.replaceState(null,'','#s'+(cur+1));}catch(e){}
+    s.dispatchEvent(new CustomEvent('slideshown'));
+  }
+  function next(){const h=frags(slides[cur]).find(f=>!f.classList.contains('on')); if(h){h.classList.add('on');return;} if(cur<N-1) show(cur+1);}
+  function prev(){const on=frags(slides[cur]).filter(f=>f.classList.contains('on')); if(on.length){on[on.length-1].classList.remove('on');return;} if(cur>0) show(cur-1,true);}
+  const fromHash=()=>{const m=/^#s(\d+)$/.exec(location.hash);return m?+m[1]-1:0;};
+  addEventListener('hashchange',()=>{const i=fromHash(); if(i!==cur) show(i,false);});
+
+  const black=document.createElement('div');black.style.cssText='position:fixed;inset:0;background:#000;z-index:9';black.hidden=true;document.body.appendChild(black);
+  black.addEventListener('click',()=>black.hidden=true);
+  addEventListener('keydown',e=>{
+    if(e.target.matches('input,textarea,select')) return;
+    const k=e.key;
+    if(['ArrowRight','PageDown',' '].includes(k)){e.preventDefault();next();}
+    else if(['ArrowLeft','PageUp'].includes(k)){e.preventDefault();prev();}
+    else if(k==='Home') show(0); else if(k==='End') show(N-1);
+    else if(k==='n'||k==='N') toggle('notes');
+    else if(k==='o'||k==='O') toggle('toc');
+    else if(k==='f'||k==='F') fs();
+    else if(k==='b'||k==='B'||k==='.') black.hidden=!black.hidden;
+    else if(k==='Escape'){document.getElementById('toc').hidden=true;black.hidden=true;}
+  });
+  document.getElementById('bNext').onclick=next; document.getElementById('bPrev').onclick=prev;
+  let sx=null; vp.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+  vp.addEventListener('touchend',e=>{if(sx==null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60)(dx<0?next:prev)();sx=null;});
+  function toggle(id){const n=document.getElementById(id);n.hidden=!n.hidden;}
+  document.getElementById('bNotes').onclick=()=>toggle('notes'); document.getElementById('bToc').onclick=()=>toggle('toc');
+  const tl=document.getElementById('tocList');
+  slides.forEach((s,i)=>{const li=document.createElement('li');const b=document.createElement('button');b.textContent=(i+1)+'. '+(s.dataset.title||'');b.onclick=()=>{show(i);toggle('toc');};li.appendChild(b);tl.appendChild(li);});
+  function fs(){try{if(!document.fullscreenElement)document.documentElement.requestFullscreen().catch(()=>{});else document.exitFullscreen();}catch(e){}}
+  document.getElementById('bFs').onclick=fs;
+
+  let t0=null,acc=0,tick=null;const ck=document.getElementById('clock');
+  const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(Math.floor(s%60)).padStart(2,'0');
+  ck.onclick=()=>{if(tick){acc+=(Date.now()-t0)/1000;clearInterval(tick);tick=null;}else{t0=Date.now();tick=setInterval(()=>{const s=acc+(Date.now()-t0)/1000;ck.textContent=fmt(s)+' / 60';ck.style.color=s>3600?'#E9B98D':'';},500);}};
+
+  /* shared widgets */
+  document.querySelectorAll('.reveal,.hot').forEach(b=>b.addEventListener('click',()=>b.classList.toggle('open')));
+  document.querySelectorAll('.mcq').forEach(q=>{
+    const ans=+q.dataset.ans, fb=q.querySelector('.fb');
+    q.querySelectorAll('.opt').forEach((o,i)=>o.addEventListener('click',()=>{
+      if(q.querySelector('.right')) return;
+      if(i===ans){o.classList.add('right'); if(fb) fb.textContent=fb.dataset.fb||'';}
+      else o.classList.add('wrong');
+    }));
+  });
+
+  /* optional live poll: set window.POLL_URL in the deck */
+  const POLL=window.POLL_URL||'';
+  if(POLL){document.querySelectorAll('[data-poll]').forEach(p=>p.classList.add('on'));
+    const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+    s.onload=()=>document.querySelectorAll('[data-poll] .qr').forEach(q=>new QRCode(q,{text:POLL,width:120,height:120}));
+    s.onerror=()=>document.querySelectorAll('[data-poll] .qr').forEach(q=>{q.textContent=POLL;q.style.fontSize='11px';q.style.wordBreak='break-all';});
+    document.head.appendChild(s);}
+
+  window.Deck={show,next,prev,slides};
+  show(fromHash());
+})();
+</script>
+</body>
+</html>
