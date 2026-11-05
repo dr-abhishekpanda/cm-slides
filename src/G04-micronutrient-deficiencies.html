@@ -1,0 +1,179 @@
+<!--meta
+{"short":"Micronutrient Deficiencies","part":"Nutrition","title":"Hidden Hunger: <em>Iron</em>, Iodine and Vitamin A","sub":"Nutritional Anaemia and Anaemia Mukt Bharat, Iodine Deficiency Disorders, Vitamin A Deficiency and Zinc",
+"codes":["CM 5.3"],
+"desc":"One-hour interactive lecture on micronutrient deficiencies of public health importance in India: anaemia (AMB), iodine deficiency disorders, vitamin A deficiency and zinc.",
+"notes":"60-minute plan: hook 3 min, anaemia 22, IDD 14, vitamin A 13, zinc and others 3, check 5.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><circle cx='180' cy='200' r='90' fill='#A23B2B' opacity='.85'/><circle cx='370' cy='220' r='70' fill='#C9A227'/><circle cx='270' cy='380' r='80' fill='#BE651F' opacity='.8'/><g fill='#FAFBF7' font-family='IBM Plex Mono' font-size='30' text-anchor='middle'><text x='180' y='210'>Fe</text><text x='370' y='230'>I</text><text x='270' y='392'>A</text></g></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 11: Nutrition and Health (Nutritional anaemia; IDD; Xerophthalmia).",
+"Ministry of Health and Family Welfare. <i>Anaemia Mukt Bharat: Intensified National Iron Plus Initiative, Operational Guidelines</i>. New Delhi; 2018.",
+"International Institute for Population Sciences. <i>National Family Health Survey (NFHS-5), 2019–21: India Report</i>. Mumbai: IIPS; 2021.",
+"Ministry of Health and Family Welfare. <i>Revised Policy Guidelines on National Iodine Deficiency Disorders Control Programme</i>. New Delhi; 2006.",
+"World Health Organization. <i>Haemoglobin Concentrations for the Diagnosis of Anaemia and Assessment of Severity</i>. Geneva: WHO; 2011 (updated guideline 2024).",
+"Sommer A, Davidson FR. Assessment and control of vitamin A deficiency: the Annecy Accords. <i>J Nutr</i> 2002;132:2845S–2850S.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 5."]}
+-->
+
+<section data-title="Hidden Hunger" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="NFHS-5 (2019–21), India">
+  <h2 class="s">Two of Every Three Indian Children Under 5 Are <em>Anaemic</em>.</h2>
+  <p class="lede">Most of them look perfectly normal.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:46px;font-style:italic;color:var(--amber);margin-top:26px">Why call it "hidden" hunger, and why does it matter?</p>
+  <aside class="notes"><p>0:00–0:03. Hidden hunger: micronutrient deficiency without obvious hunger or wasting. Effects: lower IQ and school performance, lower work capacity, maternal deaths, low birth weight, infections.</p></aside>
+</section>
+
+<section data-title="Anaemia Burden" data-src="NFHS-5 (2019–21), India fact sheet">
+  <h2 class="s">Anaemia in India: <em>NFHS-5</em></h2>
+  <div class="cols c4 g28">
+    <div class="stat"><span class="n dg">67.1%</span><span class="l">children 6–59 months</span></div>
+    <div class="stat"><span class="n">57.0%</span><span class="l">women 15–49 years</span></div>
+    <div class="stat"><span class="n">52.2%</span><span class="l">pregnant women</span></div>
+    <div class="stat"><span class="n">25.0%</span><span class="l">men 15–49 years</span></div>
+  </div>
+  <p class="small mt40">All four rose from NFHS-4 (2015–16). About half of anaemia is due to <b>iron deficiency</b>; the rest to other nutrients (folate, B12), infections (malaria, hookworm), haemoglobinopathies and chronic disease.</p>
+  <aside class="notes"><p>0:03–0:07. [INSERT: your state's NFHS-5 figures; update with NFHS-6 when released.] In tribal districts, remember sickle cell disease and thalassaemia as causes.</p></aside>
+</section>
+
+<section data-title="Grade the Anaemia" data-tab="Choose and Slide" data-src="WHO 2011 haemoglobin cut-offs (as used in Indian programmes)">
+  <h2 class="xs">Grade the Anaemia</h2>
+  <div class="cols top" style="grid-template-columns:1fr 1fr;gap:60px">
+    <div>
+      <div class="ctl"><label>Group</label><div style="display:flex;gap:10px;flex-wrap:wrap" id="aG"><button class="btn sm solid" data-v="c">Child 6–59 m</button><button class="btn sm" data-v="w">Non-pregnant woman</button><button class="btn sm" data-v="p">Pregnant woman</button><button class="btn sm" data-v="m">Man</button></div></div>
+      <div class="ctl mt20"><label for="aH">Haemoglobin, g/dL <b id="aHv"></b></label><input type="range" id="aH" min="4" max="16" step="0.1" value="9.5"></div>
+    </div>
+    <div class="panel" id="aR" style="min-height:280px"></div>
+  </div>
+  <aside class="notes"><p>0:07–0:12. Cut-offs (g/dL), WHO 2011: children 6–59 m and pregnant women: anaemia &lt;11, mild 10–10.9, moderate 7–9.9, severe &lt;7. Non-pregnant women: &lt;12; mild 11–11.9, moderate 8–10.9, severe &lt;8. Men: &lt;13; mild 11–12.9, moderate 8–10.9, severe &lt;8. WHO issued an updated guideline in 2024 with some changed cut-offs (e.g. 6–23 months): check before teaching.</p></aside>
+</section>
+
+<section data-title="Anaemia Mukt Bharat" data-src="MoHFW, Anaemia Mukt Bharat Operational Guidelines, 2018">
+  <h2 class="xs">Anaemia Mukt Bharat: <em>6 × 6 × 6</em></h2>
+  <div class="cols c3 g28">
+    <div class="panel"><span class="kicker">6 Target Groups</span><p style="font-size:24px">Children 6–59 m · 5–9 y · adolescents 10–19 y · women of reproductive age · pregnant women · lactating mothers</p></div>
+    <div class="panel tl"><span class="kicker">6 Interventions</span><p style="font-size:24px">Prophylactic IFA · deworming · year-round behaviour change communication · testing and treatment (digital Hb) · fortified foods in public programmes · addressing non-nutritional causes (malaria, haemoglobinopathies, fluorosis)</p></div>
+    <div class="panel"><span class="kicker">6 Institutional Mechanisms</span><p style="font-size:24px">Inter-ministerial coordination · national centre of excellence · convergence · supply chain · dashboard · AMB scorecard</p></div>
+  </div>
+  <aside class="notes"><p>0:12–0:16. Launched 2018 under POSHAN Abhiyaan. Target: 3 percentage points' reduction in anaemia prevalence per year.</p></aside>
+</section>
+
+<section data-title="Who Gets Which IFA" data-tab="Tap to Reveal" data-src="MoHFW, Anaemia Mukt Bharat Operational Guidelines, 2018">
+  <h2 class="xs">Who Gets Which IFA Dose?</h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:190px"><span class="q"><b>6–59 months</b></span><span class="a"><b>1 ml IFA syrup (20 mg iron + 100 µg folic acid), twice a week</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q"><b>5–9 years</b></span><span class="a"><b>Pink tablet (45 mg iron + 400 µg FA), weekly</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q"><b>10–19 years</b></span><span class="a"><b>Blue tablet (60 mg iron + 500 µg FA), weekly</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q"><b>Women 20–49, non-pregnant</b></span><span class="a"><b>Red tablet (60 mg iron + 500 µg FA), weekly</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q"><b>Pregnant women</b></span><span class="a"><b>Red tablet daily from 4th month, 180 days</b></span></button>
+    <button class="reveal" style="min-height:190px"><span class="q"><b>Lactating mothers</b></span><span class="a"><b>Red tablet daily for 180 days after delivery</b></span></button>
+  </div>
+  <p class="small mt20">Deworming with <b>albendazole</b> twice a year (National Deworming Day, February and August) for 1–19 years.</p>
+  <aside class="notes"><p>0:16–0:22. Delayed cord clamping (at least 3 minutes) is also part of AMB. Verify current doses against the latest AMB guidelines.</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Iodine">
+  <div class="big-n">2</div>
+  <h2>Iodine: The Most Preventable Cause of <em>Brain Damage</em></h2>
+  <p>Iodine deficiency disorders and salt iodisation.</p>
+  <aside class="notes"><p>0:22.</p></aside>
+</section>
+
+<section data-title="IDD Spectrum" data-src="Park 27e, Ch 11: Iodine deficiency disorders (spectrum by life stage)">
+  <h2 class="s">Iodine Deficiency Disorders Across Life</h2>
+  <table class="t" style="font-size:25px">
+    <thead><tr><th>Life stage</th><th>Disorders</th></tr></thead>
+    <tbody>
+      <tr><td>Foetus</td><td>Abortion, stillbirth, congenital anomalies, <b>neurological cretinism</b>, perinatal death</td></tr>
+      <tr><td>Neonate</td><td>Neonatal goitre, neonatal hypothyroidism</td></tr>
+      <tr><td>Child and adolescent</td><td>Goitre, impaired mental function, retarded physical development</td></tr>
+      <tr><td>Adult</td><td>Goitre and its complications, hypothyroidism, impaired mental function</td></tr>
+    </tbody>
+  </table>
+  <p class="small mt20">Goitre is only the tip: the main burden is <b>lost intellectual potential</b> in whole communities.</p>
+  <aside class="notes"><p>0:22–0:27. Goitrogens: cabbage, cauliflower, cassava (thiocyanates) add to deficiency.</p></aside>
+</section>
+
+<section data-title="NIDDCP" data-src="MoHFW, NIDDCP revised guidelines; FSS Regulations on iodised salt">
+  <h2 class="s">National Iodine Deficiency Disorders Control Programme</h2>
+  <div class="cols c2 g28">
+    <div>
+      <ul class="clean small"><li>Started 1962 as the National Goitre Control Programme; renamed <b>NIDDCP</b> in 1992</li><li>Universal salt iodisation; sale of non-iodised salt for human use is <b>banned</b></li><li>Iodine content: <b>≥ 30 ppm</b> at production, <b>≥ 15 ppm</b> at consumer level</li><li>Surveys, urinary iodine and salt monitoring (salt testing kits with ASHAs)</li></ul>
+    </div>
+    <div class="panel tl"><span class="kicker">IDD Is a Public Health Problem When</span><ul class="clean" style="font-size:24px;gap:10px"><li>Total goitre rate in school children ≥ <b>5%</b></li><li>Median urinary iodine &lt; <b>100 µg/L</b></li><li>Fewer than 90% of households use adequately iodised salt</li></ul></div>
+  </div>
+  <aside class="notes"><p>0:27–0:34. Double-fortified salt (iodine + iron) is also supplied through some public programmes.</p></aside>
+</section>
+
+<section class="section" data-title="Part 3: Vitamin A">
+  <div class="big-n">3</div>
+  <h2>Vitamin A: <em>Eyes</em> and Survival</h2>
+  <p>Xerophthalmia, prophylaxis and treatment.</p>
+  <aside class="notes"><p>0:34.</p></aside>
+</section>
+
+<section data-title="Xerophthalmia" data-tab="Tap to Reveal" data-src="Park 27e, Ch 11: Xerophthalmia (WHO classification)">
+  <h2 class="xs">WHO Classification of Xerophthalmia</h2>
+  <div class="cols c4 g20">
+    <button class="reveal" style="min-height:150px"><span class="q">XN</span><span class="a"><b>Night blindness</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">X1A</span><span class="a"><b>Conjunctival xerosis</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">X1B</span><span class="a"><b>Bitot's spots</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">X2</span><span class="a"><b>Corneal xerosis</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">X3A</span><span class="a"><b>Corneal ulcer/keratomalacia, &lt; ⅓ of cornea</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">X3B</span><span class="a"><b>Corneal ulcer/keratomalacia, ≥ ⅓ of cornea</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">XS</span><span class="a"><b>Corneal scar</b></span></button>
+    <button class="reveal" style="min-height:150px"><span class="q">XF</span><span class="a"><b>Xerophthalmic fundus</b></span></button>
+  </div>
+  <p class="small mt20">Night blindness is the <b>earliest</b> symptom; X2 and X3 are emergencies that can blind within days.</p>
+  <aside class="notes"><p>0:34–0:40. Public health problem if (2–5 y): XN &gt; 1%, X1B &gt; 0.5%, X2+X3A+X3B &gt; 0.01%, XS &gt; 0.05%, or serum retinol &lt; 10 µg/dL in &gt; 5%.</p></aside>
+</section>
+
+<section data-title="Vitamin A Prophylaxis" data-src="MoHFW, Vitamin A supplementation schedule (Universal Immunization Programme)">
+  <h2 class="s">Vitamin A: Prevent and <em>Treat</em></h2>
+  <div class="cols c2 g28">
+    <div class="panel tl"><span class="kicker">Prophylaxis (UIP)</span><p style="font-size:25px"><b>1 lakh IU</b> at 9 months, with MR vaccine.<br><b>2 lakh IU</b> every 6 months from 16–18 months up to 5 years.<br>Total: <b>9 doses</b>.</p></div>
+    <div class="panel am"><span class="kicker">Treatment of Xerophthalmia</span><p style="font-size:25px">Over 1 year: <b>2 lakh IU</b> orally on day 0, day 1 and day 14 (or at any worsening).<br>6–12 months: half the dose. Under 6 months: a quarter.</p></div>
+  </div>
+  <p class="small mt30">Also: breastfeeding, green leafy vegetables, yellow and orange fruits, measles vaccination, and treating diarrhoea.</p>
+  <aside class="notes"><p>0:40–0:48. Vitamin A supplementation also reduces childhood mortality, particularly from measles and diarrhoea. Verify the schedule against the current UIP handbook.</p></aside>
+</section>
+
+<section data-title="Zinc and Others" data-src="IAP/MoHFW diarrhoea management guidelines; Park 27e, Ch 11">
+  <h2 class="s">Other Micronutrients to Remember</h2>
+  <div class="cols c3 g28">
+    <div class="panel"><span class="kicker">Zinc</span><p>Growth faltering, diarrhoea, poor wound healing. <b>Zinc for 14 days</b> in every child with diarrhoea: 10 mg/day under 6 months, 20 mg/day above.</p></div>
+    <div class="panel"><span class="kicker">Vitamin D</span><p>Rickets and osteomalacia, and widespread low levels in Indian adults despite sunshine.</p></div>
+    <div class="panel"><span class="kicker">Folate and B12</span><p>Megaloblastic anaemia; folate before conception prevents <b>neural tube defects</b>.</p></div>
+  </div>
+  <aside class="notes"><p>0:48–0:51.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on AMB and NIDDCP guidelines">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="2"><p style="font-size:29px">Under Anaemia Mukt Bharat, adolescents (10–19 y) receive:</p>
+      <button class="opt"><span class="l">A</span>Pink tablet weekly</button><button class="opt"><span class="l">B</span>Red tablet daily</button><button class="opt"><span class="l">C</span>Blue tablet weekly</button><button class="opt"><span class="l">D</span>IFA syrup biweekly</button>
+      <p class="fb" data-fb="Blue tablet (60 mg iron + 500 µg folic acid) once a week."></p></div>
+    <div class="mcq" data-ans="0"><p style="font-size:29px">Minimum iodine content of salt at consumer level:</p>
+      <button class="opt"><span class="l">A</span>15 ppm</button><button class="opt"><span class="l">B</span>30 ppm</button><button class="opt"><span class="l">C</span>5 ppm</button><button class="opt"><span class="l">D</span>50 ppm</button>
+      <p class="fb" data-fb="15 ppm at consumer level; 30 ppm at production."></p></div>
+  </div>
+  <aside class="notes"><p>0:51–0:55.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>Anaemia affects <b>two in three</b> young children and <b>over half</b> of women.</span></li>
+    <li><span>AMB: <b>6 groups × 6 interventions × 6 mechanisms</b>; colour-coded IFA.</span></li>
+    <li><span>Iodised salt: <b>30 ppm</b> at production, <b>15 ppm</b> at home.</span></li>
+    <li><span>Night blindness is the first sign; <b>9 doses</b> of vitamin A by age 5.</span></li>
+    <li><span>Zinc for 14 days with every episode of childhood diarrhoea.</span></li>
+  </ol>
+  <aside class="notes"><p>0:55–0:60. Next: Diet planning and therapeutic diets.</p></aside>
+</section>
+
+<script>
+const C={c:[11,10,7,'children 6–59 months'],p:[11,10,7,'pregnant women'],w:[12,11,8,'non-pregnant women'],m:[13,11,8,'men']};let g='c';
+document.querySelectorAll('#aG button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#aG button').forEach(x=>x.classList.remove('solid'));b.classList.add('solid');g=b.dataset.v;A();}));
+function A(){const h=+document.getElementById('aH').value,c=C[g];document.getElementById('aHv').textContent=h.toFixed(1);let r;
+if(h>=c[0])r=['No anaemia','#0C5E4E'];else if(h>=c[1])r=['Mild anaemia','#C9A227'];else if(h>=c[2])r=['Moderate anaemia','#BE651F'];else r=['Severe anaemia','#A23B2B'];
+document.getElementById('aR').innerHTML=`<span class="kicker">${c[3]}</span><div class="big-num" style="font-size:70px;color:${r[1]}">${r[0]}</div><p style="font-size:24px;margin-top:14px">Cut-off for anaemia: Hb below <b>${c[0]} g/dL</b>. Severe: below ${c[2]} g/dL.</p>`;}
+document.getElementById('aH').addEventListener('input',A);A();
+</script>
