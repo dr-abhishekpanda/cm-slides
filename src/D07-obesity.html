@@ -1,0 +1,146 @@
+<!--meta
+{"short":"Obesity","part":"Non-communicable Diseases","title":"<em>Obesity</em>","sub":"Definition, Measurement With BMI, Waist and Waist-hip Ratio, Asian Cut-offs, Causes, Hazards and Prevention",
+"codes":["CM 8.2"],
+"desc":"One-hour interactive lecture on obesity: definition, measurement (BMI calculator with WHO and Indian cut-offs, waist circumference, waist-hip ratio), burden in India, causes, health hazards, and prevention and management at individual and population level.",
+"notes":"60-minute plan: hook 3 min, definition 5, measurement 15, burden 6, causes 8, hazards 6, prevention 12, close 5.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><rect x='140' y='380' width='280' height='40' rx='10' fill='#15201B'/><rect x='170' y='340' width='220' height='40' rx='8' fill='#F4F5F1' stroke='#15201B' stroke-width='4'/><path d='M230 340 L280 250 L330 340' fill='none' stroke='#A23B2B' stroke-width='6'/><circle cx='280' cy='250' r='10' fill='#A23B2B'/><ellipse cx='280' cy='170' rx='90' ry='60' fill='#E9C9A7'/></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 6: Obesity.",
+"Misra A, et al. Consensus statement for diagnosis of obesity, abdominal obesity and the metabolic syndrome for Asian Indians. <i>J Assoc Physicians India</i>. 2009;57:163–70.",
+"WHO Expert Consultation. Appropriate body-mass index for Asian populations. <i>Lancet</i>. 2004;363:157–63.",
+"International Institute for Population Sciences. <i>National Family Health Survey (NFHS-5), 2019–21: India</i>.",
+"Anjana RM, et al. ICMR-INDIAB-17. <i>Lancet Diabetes Endocrinol</i>. 2023;11(7):474–89.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 8."]}
+-->
+
+<section data-title="Normal BMI?" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="Teaching case">
+  <h2 class="s">"My BMI Is <em>Normal</em>, Doctor"</h2>
+  <p class="lede">A 38-year-old office worker: BMI 24, waist 96 cm. He has just been told his sugar is in the prediabetes range.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">Normal for whom? What did the BMI miss?</p>
+  <aside class="notes"><p>0:00–0:03. Asian Indians have more body fat and more abdominal fat at the same BMI. By Indian cut-offs, BMI 24 is overweight and a waist of 96 cm is abdominal obesity. Waist circumference is the better predictor of diabetes risk.</p></aside>
+</section>
+
+<section data-title="Definition" data-src="Park 27e, Ch 6: Obesity">
+  <h2 class="s">What Is <em>Obesity?</em></h2>
+  <div class="clip sm"><blockquote>"an abnormal growth of the adipose tissue due to an enlargement of fat cell size (hypertrophic obesity) or an increase in fat cell number (hyperplastic obesity) or a combination of both"</blockquote><span class="who">Definition</span></div>
+  <div class="cols c2 g28 mt20">
+    <div class="panel"><span class="kicker">Overweight Is Not Always Fat</span><p style="font-size:24px">Muscle or fluid can also raise weight; obesity means <b>excess fat</b>.</p></div>
+    <div class="panel tl"><span class="kicker">Where the Fat Is Matters</span><p style="font-size:24px"><b>Abdominal (visceral)</b> fat drives insulin resistance, diabetes and heart disease.</p></div>
+  </div>
+  <aside class="notes"><p>0:03–0:08. Other measures: skinfold thickness, bioelectrical impedance, DEXA (research). For field use: BMI and waist.</p></aside>
+</section>
+
+<section data-title="BMI Calculator" data-tab="Move the Sliders" data-src="WHO 2004 (Lancet); Misra et al., JAPI 2009 (Indian consensus)">
+  <h2 class="xs">Work Out the <em>BMI</em></h2>
+  <div class="cols c2 g28">
+    <div>
+      <div class="ctl"><label for="oW">Weight, kg <b id="oWv"></b></label><input type="range" id="oW" min="35" max="130" value="70"></div>
+      <div class="ctl"><label for="oH">Height, cm <b id="oHv"></b></label><input type="range" id="oH" min="135" max="195" value="170"></div>
+      <p class="tiny">BMI = weight (kg) ÷ height (m)². Example: 70 kg, 1.75 m → 22.9.</p>
+    </div>
+    <div class="cols c2 g20">
+      <div class="panel" style="text-align:center;grid-column:1/-1"><span class="kicker">BMI, kg/m²</span><div class="big-num" id="oB" style="font-size:80px"></div></div>
+      <div class="panel" style="text-align:center"><span class="kicker">WHO</span><p id="oG" style="font-size:24px;font-weight:600"></p></div>
+      <div class="panel tl" style="text-align:center"><span class="kicker">Indian Cut-offs</span><p id="oI" style="font-size:24px;font-weight:600"></p></div>
+    </div>
+  </div>
+  <aside class="notes"><p>0:08–0:16. WHO: under 18.5 underweight; 18.5–24.9 normal; 25–29.9 overweight (pre-obese); 30 or more obese (Park adds a subdivision at 35–39.9). Indian consensus (2009): 18.0–22.9 normal; 23–24.9 overweight; 25 or more obese. WHO (2004) suggested 23 and 27.5 as public health action points for Asians.</p></aside>
+</section>
+
+<section data-title="Waist" data-tab="Tap to Reveal" data-src="Park 27e, Ch 6: Waist circumference and WHR; Misra et al., JAPI 2009">
+  <h2 class="xs">Measure the <em>Waist</em></h2>
+  <div class="cols c2 g28 top">
+    <div class="panel"><span class="kicker">How</span><p style="font-size:24px">Midpoint between the lower border of the rib cage and the iliac crest, at the end of a normal breath.</p></div>
+    <div class="cols c2 g20">
+      <button class="reveal" style="min-height:160px"><span class="q">Western cut-off</span><span class="a"><b>Men 102 cm, women 88 cm or more</b></span></button>
+      <button class="reveal" style="min-height:160px"><span class="q">Indian cut-off</span><span class="a"><b>Men 90 cm, women 80 cm or more</b></span></button>
+      <button class="reveal" style="min-height:160px"><span class="q">Waist-hip ratio, high risk</span><span class="a"><b>Men 0.90, women 0.85 or more</b></span></button>
+      <button class="reveal" style="min-height:160px"><span class="q">Our patient: 96 cm</span><span class="a"><b>Abdominal obesity by Indian cut-off</b></span></button>
+    </div>
+  </div>
+  <aside class="notes"><p>0:16–0:23. Park: waist circumference correlates with BMI and WHR, is unrelated to height, and approximates intra-abdominal fat. Waist and WHR predict type 2 diabetes better than BMI.</p></aside>
+</section>
+
+<section data-title="Burden" data-src="NFHS-5 (2019–21); ICMR-INDIAB-17 (2023)">
+  <h2 class="s">India Is Getting <em>Heavier</em></h2>
+  <div class="cols c3 g20">
+    <div class="stat"><span class="n">24.0%</span><span class="l">of women 15–49 overweight or obese (BMI 25+), NFHS-5</span></div>
+    <div class="stat"><span class="n">22.9%</span><span class="l">of men 15–49, NFHS-5</span></div>
+    <div class="stat"><span class="n am">39.5%</span><span class="l">of adults have abdominal obesity (ICMR-INDIAB)</span></div>
+  </div>
+  <p class="small mt40">The same districts often have stunted children and overweight mothers: the <b>double burden</b> of malnutrition.</p>
+  <aside class="notes"><p>0:23–0:29. NFHS-5 used WHO cut-offs (BMI 25+); by Indian cut-offs the proportion would be higher. Check the NFHS-5 fact sheet for your state. [INSERT: your state's NFHS-5 overweight/obesity figures]</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Causes and Prevention">
+  <div class="big-n">2</div>
+  <h2>Energy In,<br>Energy <em>Out</em></h2>
+  <p>Causes, hazards and prevention.</p>
+  <aside class="notes"><p>0:29.</p></aside>
+</section>
+
+<section data-title="Causes" data-tab="Tap to Reveal" data-src="Park 27e, Ch 6: Obesity (aetiological factors)">
+  <h2 class="xs">Why Do People Gain <em>Weight?</em></h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:160px"><span class="q">Intake</span><span class="a"><b>Energy-dense food, sugary drinks, large portions, eating out</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Output</span><span class="a"><b>Sedentary work, motor transport, screen time</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Genes</span><span class="a"><b>Family tendency; gene-environment interaction</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Life stages</span><span class="a"><b>Infancy, adolescence, pregnancy, menopause, middle age</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Medical</span><span class="a"><b>Hypothyroidism, Cushing's, steroids, some psychiatric drugs</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Social</span><span class="a"><b>Income rise, urbanisation, food marketing, stress, poor sleep</b></span></button>
+  </div>
+  <aside class="notes"><p>0:29–0:37. Endocrine causes are rare; most obesity is an energy imbalance shaped by environment.</p></aside>
+</section>
+
+<section data-title="Hazards" data-src="Park 27e, Ch 6: Obesity (hazards)">
+  <h2 class="s">What Obesity <em>Brings</em></h2>
+  <div class="cols c3 g20">
+    <div class="panel" style="border-color:var(--danger)"><span class="kicker">Metabolic</span><p style="font-size:23px">Type 2 diabetes, dyslipidaemia, fatty liver, gallstones</p></div>
+    <div class="panel am"><span class="kicker">Heart and Vessels</span><p style="font-size:23px">Hypertension, CHD, stroke</p></div>
+    <div class="panel"><span class="kicker">Others</span><p style="font-size:23px">Osteoarthritis, sleep apnoea, PCOS, some cancers, low self-esteem</p></div>
+  </div>
+  <aside class="notes"><p>0:37–0:42. Ask: which of these does your patient (the opening case) already show?</p></aside>
+</section>
+
+<section data-title="Prevention" data-tab="Step Through" data-src="Park 27e, Ch 6: Obesity (prevention and treatment); FSSAI Eat Right India">
+  <h2 class="xs">Prevention and <em>Management</em></h2>
+  <div class="cols c2 g28 top">
+    <div class="panel tl"><span class="kicker">Population</span><ul class="clean small"><li>Healthy school food; daily play and PE</li><li>Limit marketing of junk food to children</li><li>Walkable streets, parks, cycle lanes</li><li>Eat Right India; Fit India</li></ul></div>
+    <div class="panel frag"><span class="kicker">Individual</span><ul class="clean small"><li>Diet: modest calorie deficit; less sugar and fried food</li><li>Activity: 150–300 minutes a week</li><li>Behaviour: self-monitoring, sleep, family support</li><li>Drugs or surgery for severe obesity with complications</li></ul></div>
+  </div>
+  <p class="small mt20 frag">Losing just 5–10% of body weight improves BP, sugar and lipids.</p>
+  <aside class="notes"><p>0:42–0:55. Primordial prevention begins in childhood: breastfeeding, avoiding sugary drinks, active play. Weighing and measuring waist at every NCD screening makes obesity visible.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on Park 27e and the Indian consensus">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="2"><p style="font-size:29px">By Indian cut-offs, a BMI of 24 is:</p>
+      <button class="opt"><span class="l">A</span>Normal</button><button class="opt"><span class="l">B</span>Obese</button><button class="opt"><span class="l">C</span>Overweight</button><button class="opt"><span class="l">D</span>Underweight</button>
+      <p class="fb" data-fb="23–24.9 is overweight for Asian Indians."></p></div>
+    <div class="mcq" data-ans="0"><p style="font-size:29px">Abdominal obesity in Indian women starts at a waist of:</p>
+      <button class="opt"><span class="l">A</span>80 cm</button><button class="opt"><span class="l">B</span>88 cm</button><button class="opt"><span class="l">C</span>90 cm</button><button class="opt"><span class="l">D</span>102 cm</button>
+      <p class="fb" data-fb="80 cm women, 90 cm men."></p></div>
+  </div>
+  <aside class="notes"><p>0:55–0:58.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>BMI = kg ÷ m². Indians: <b>23</b> overweight, <b>25</b> obese.</span></li>
+    <li><span>Waist: <b>90</b> cm men, <b>80</b> cm women.</span></li>
+    <li><span>About <b>1 in 4</b> Indian adults is overweight or obese.</span></li>
+    <li><span>Abdominal fat drives diabetes and heart disease.</span></li>
+    <li><span>Prevention starts in <b>childhood</b> and in the environment.</span></li>
+  </ol>
+  <aside class="notes"><p>0:58–0:60. Next: Blindness and visual impairment.</p></aside>
+</section>
+
+<script>
+(function(){const $=i=>document.getElementById(i);
+function O(){const w=+$('oW').value,h=+$('oH').value/100;$('oWv').textContent=w;$('oHv').textContent=Math.round(h*100);
+const b=w/(h*h);$('oB').textContent=b.toFixed(1);
+$('oG').textContent=b<18.5?'Underweight':b<25?'Normal':b<30?'Overweight':b<35?'Obese class I':b<40?'Obese class II':'Obese class III';
+$('oI').textContent=b<18?'Underweight':b<23?'Normal':b<25?'Overweight':'Obese';}
+['oW','oH'].forEach(i=>$(i).addEventListener('input',O));O();})();
+</script>
