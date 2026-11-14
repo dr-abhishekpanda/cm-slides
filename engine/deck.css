@@ -214,3 +214,7 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
   .slide{display:block!important;position:relative;height:900px;page-break-after:always;animation:none}
   .frag{opacity:1!important;transform:none!important}
 }
+/* form controls for risk scores */
+.slide select{font:inherit;font-size:20px;padding:6px 10px;border:1.5px solid var(--teal);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+.form{display:grid;gap:12px;font-size:21px}
+.form label{display:grid;grid-template-columns:1fr 330px;align-items:center;gap:14px}

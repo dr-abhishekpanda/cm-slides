@@ -1,0 +1,139 @@
+<!--meta
+{"short":"Hypertension","part":"Non-communicable Diseases","title":"<em>Hypertension</em>","sub":"Classification, the Rule of Halves, Risk Factors, Measurement, Prevention and the India Hypertension Control Initiative",
+"codes":["CM 8.2"],
+"desc":"One-hour interactive lecture on hypertension: burden in India, a blood pressure classifier, the rule of halves with a care-cascade slider, risk factors, correct measurement, population and high-risk prevention, and the India Hypertension Control Initiative.",
+"notes":"60-minute plan: hook 3 min, burden 6, classification 8, rule of halves 10, risk factors 10, measurement 6, prevention and IHCI 12, close 5.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><circle cx='280' cy='290' r='160' fill='#F4F5F1' stroke='#15201B' stroke-width='5'/><path d='M150 330 A 140 140 0 0 1 410 330' fill='none' stroke='#DCEAE5' stroke-width='22'/><path d='M330 210 A 140 140 0 0 1 410 330' fill='none' stroke='#A23B2B' stroke-width='22'/><line x1='280' y1='300' x2='370' y2='220' stroke='#15201B' stroke-width='8' stroke-linecap='round'/><circle cx='280' cy='300' r='14' fill='#15201B'/></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 6: Hypertension.",
+"Anjana RM, et al. ICMR-INDIAB-17. <i>Lancet Diabetes Endocrinol</i>. 2023;11(7):474–89.",
+"International Institute for Population Sciences. <i>National Family Health Survey (NFHS-5), 2019–21: India</i>.",
+"Indian Council of Medical Research; MoHFW; WHO. <i>India Hypertension Control Initiative</i>: treatment protocols and progress reports.",
+"Ministry of Health and Family Welfare. <i>NP-NCD Operational Guidelines 2023–2030</i>.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 8."]}
+-->
+
+<section data-title="The Headache" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="Teaching case">
+  <h2 class="s">"I Take the Tablet Only When I Get a <em>Headache</em>"</h2>
+  <p class="lede">A 52-year-old shopkeeper. BP 168/102 today. He was diagnosed three years ago and has never had it checked since.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">Where did the system lose him,<br>and how do we keep him?</p>
+  <aside class="notes"><p>0:00–0:03. Diagnosed but not controlled: the third half in the rule of halves. Retention on treatment is where most programmes fail. Return to this at the IHCI slide.</p></aside>
+</section>
+
+<section data-title="Burden" data-src="ICMR-INDIAB-17 (2023); NFHS-5 (2019–21)">
+  <h2 class="s">One in Three Indian <em>Adults</em></h2>
+  <div class="cols c3 g20">
+    <div class="stat"><span class="n">35.5%</span><span class="l">of adults (20+) have hypertension, ICMR-INDIAB 2023</span></div>
+    <div class="stat"><span class="n am">~24%</span><span class="l">of men aged 15+ had raised BP in NFHS-5 (women ~21%)</span></div>
+    <div class="stat"><span class="n tl">Silent</span><span class="l">most have no symptoms until a stroke or heart attack</span></div>
+  </div>
+  <p class="small mt40">Hypertension is the leading single risk factor for death worldwide, through stroke, heart disease and kidney failure.</p>
+  <aside class="notes"><p>0:03–0:09. The two surveys use different ages and definitions, so they give different figures. ICMR-INDIAB used JNC-8 criteria. NFHS-5 counts measured raised BP (≥140/90) or current medication. Check NFHS-5 fact-sheet figures before teaching.</p></aside>
+</section>
+
+<section data-title="Classify the BP" data-tab="Move the Sliders" data-src="Park 27e, Ch 6: Classification of blood pressure measurements">
+  <h2 class="xs">Classify the <em>Reading</em></h2>
+  <div class="cols c2 g28">
+    <div>
+      <div class="ctl"><label for="bS">Systolic, mm Hg <b id="bSv"></b></label><input type="range" id="bS" min="90" max="200" value="146"></div>
+      <div class="ctl"><label for="bD">Diastolic, mm Hg <b id="bDv"></b></label><input type="range" id="bD" min="50" max="130" value="88"></div>
+      <p class="tiny">When systolic and diastolic fall in different categories, take the higher one.</p>
+    </div>
+    <div class="panel" style="text-align:center" id="bPanel"><span class="kicker">Category</span><div class="big-num" id="bC" style="font-size:56px;line-height:1.1"></div><p id="bT" style="font-size:22px;margin-top:10px"></p></div>
+  </div>
+  <aside class="notes"><p>0:09–0:17. Park's table: optimal under 120 and under 80; normal under 130 and/or under 85; high normal 130–139 and/or 85–89; grade 1 140–159 and/or 90–99; grade 2 160 or more and/or 100 or more; hypertensive crisis 180 or more and/or 110 or more; isolated systolic hypertension 140 or more with diastolic under 90. Diagnosis needs repeated readings on separate occasions.</p></aside>
+</section>
+
+<section data-title="Rule of Halves" data-tab="Move the Sliders" data-src="Park 27e, Ch 6: Hypertension ('rule of halves')">
+  <h2 class="xs">The Rule of <em>Halves</em></h2>
+  <div class="clip sm" style="margin-bottom:22px;max-width:1300px"><blockquote>"only about half of the hypertensive subjects… were aware of the condition, only about half of those aware… were being treated, and only about half of those treated were considered adequately treated"</blockquote></div>
+  <div class="cols c2 g28">
+    <div>
+      <div class="ctl"><label for="hA">Aware, % <b id="hAv"></b></label><input type="range" id="hA" min="10" max="100" value="50"></div>
+      <div class="ctl"><label for="hT">Of those, treated, % <b id="hTv"></b></label><input type="range" id="hT" min="10" max="100" value="50"></div>
+      <div class="ctl"><label for="hC">Of those, controlled, % <b id="hCv"></b></label><input type="range" id="hC" min="10" max="100" value="50"></div>
+    </div>
+    <div class="panel tl" style="text-align:center"><span class="kicker">Of 100 People With Hypertension</span><div class="big-num" id="hR" style="font-size:80px"></div><p style="font-size:22px">are controlled</p><p id="hX" style="font-size:20px;margin-top:6px"></p></div>
+  </div>
+  <aside class="notes"><p>0:17–0:27. Park calls hypertension an "iceberg" disease. Ask students to set the sliders to what they think India's numbers are, then compare with ICMR-INDIAB or NFHS-5 data on awareness, treatment and control. [INSERT: awareness, treatment and control figures for your state, if available]</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Causes and Prevention">
+  <div class="big-n">2</div>
+  <h2>Salt, Weight and<br><em>Follow-up</em></h2>
+  <p>Risk factors, measurement and control.</p>
+  <aside class="notes"><p>0:27.</p></aside>
+</section>
+
+<section data-title="Risk Factors" data-tab="Tap to Reveal" data-src="Park 27e, Ch 6: Risk factors of hypertension">
+  <h2 class="xs">What Raises <em>Blood Pressure?</em></h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:170px"><span class="q">Age</span><span class="a"><b>BP rises with age, more in those who start higher</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Genes</span><span class="a"><b>Runs in families; polygenic</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Salt</span><span class="a"><b>High intake (7–8 g a day or more) raises BP; low-salt societies have almost none</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Weight</span><span class="a"><b>Obesity, especially central; weight loss lowers BP</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Alcohol</span><span class="a"><b>Heavy drinking raises BP</b></span></button>
+    <button class="reveal" style="min-height:170px"><span class="q">Life</span><span class="a"><b>Inactivity, stress, low potassium and fibre in diet</b></span></button>
+  </div>
+  <aside class="notes"><p>0:27–0:35. Park cites Japan (sodium intake over 400 mmol a day, high hypertension) versus populations taking under 60 mmol a day with virtually no hypertension.</p></aside>
+</section>
+
+<section data-title="Measure It Right" data-tab="Step Through" data-src="IHCI and NP-NCD training materials">
+  <h2 class="xs">Measure It <em>Right</em></h2>
+  <ol class="steps" style="font-size:26px;gap:8px;max-width:1300px">
+    <li><span>No tea, coffee, smoking or exercise for 30 minutes; empty bladder</span></li>
+    <li class="frag"><span>Sit 5 minutes, back supported, feet flat, arm at heart level</span></li>
+    <li class="frag"><span>Correct <b>cuff size</b>: a small cuff on a large arm over-reads</span></li>
+    <li class="frag"><span>Take <b>two readings</b>, 1–2 minutes apart; record the average</span></li>
+    <li class="frag"><span>Confirm on another day before labelling hypertension</span></li>
+  </ol>
+  <aside class="notes"><p>0:35–0:41. Validated automated devices reduce observer bias and digit preference (readings ending in 0). Demonstrate with a student volunteer.</p></aside>
+</section>
+
+<section data-title="Prevention and IHCI" data-src="Park 27e, Ch 6: Prevention of hypertension; IHCI">
+  <h2 class="s">Prevent, Treat, <em>Keep</em> Them on Treatment</h2>
+  <div class="cols c2 g28">
+    <div class="panel"><span class="kicker">Population and Individual</span><ul class="clean small"><li>Salt <b>under 5 g</b> a day</li><li>Healthy weight; 150 minutes of activity a week</li><li>Less alcohol; no tobacco</li><li>Screen everyone <b>30+</b> (NP-NCD)</li></ul></div>
+    <div class="panel tl"><span class="kicker">India Hypertension Control Initiative (2017)</span><ul class="clean small"><li>Simple <b>standard treatment protocol</b></li><li>Reliable drug supply</li><li>Team-based care (nurses, CHOs)</li><li>Patient-centred follow-up; refills near home</li><li>Information system tracking control</li></ul></div>
+  </div>
+  <aside class="notes"><p>0:41–0:52. IHCI began in 2017 with ICMR, MoHFW, WHO and state governments, and has been scaled up across states. Back to the case: a protocol, a refill at the Ayushman Arogya Mandir and a follow-up call would keep him on treatment. Check the current IHCI coverage.</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on Park 27e">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="1"><p style="font-size:29px">BP 150/88 is classified as:</p>
+      <button class="opt"><span class="l">A</span>High normal</button><button class="opt"><span class="l">B</span>Grade 1 hypertension</button><button class="opt"><span class="l">C</span>Grade 2 hypertension</button><button class="opt"><span class="l">D</span>Normal</button>
+      <p class="fb" data-fb="Systolic 140–159: grade 1 (take the higher category)."></p></div>
+    <div class="mcq" data-ans="2"><p style="font-size:29px">By the rule of halves, of 100 hypertensives, about how many are controlled?</p>
+      <button class="opt"><span class="l">A</span>50</button><button class="opt"><span class="l">B</span>25</button><button class="opt"><span class="l">C</span>12</button><button class="opt"><span class="l">D</span>2</button>
+      <p class="fb" data-fb="½ x ½ x ½ = about 12."></p></div>
+  </div>
+  <aside class="notes"><p>0:52–0:56.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>About <b>1 in 3</b> Indian adults is hypertensive.</span></li>
+    <li><span>Grade 1 starts at <b>140/90</b>.</span></li>
+    <li><span>Rule of halves: only about <b>1 in 8</b> controlled.</span></li>
+    <li><span>Salt under <b>5 g</b>; measure correctly; screen 30+.</span></li>
+    <li><span>IHCI: protocol, drugs, <b>follow-up</b>.</span></li>
+  </ol>
+  <aside class="notes"><p>0:56–0:60. Next: Stroke and rheumatic heart disease.</p></aside>
+</section>
+
+<script>
+(function(){const $=i=>document.getElementById(i);
+function B(){const s=+$('bS').value,d=+$('bD').value;$('bSv').textContent=s;$('bDv').textContent=d;
+const lv=v=>v; const sc=s>=180?6:s>=160?5:s>=140?4:s>=130?3:s>=120?2:1; const dc=d>=110?6:d>=100?5:d>=90?4:d>=85?3:d>=80?2:1;
+let c=Math.max(sc,dc),name,tip;
+if(s>=140&&d<90&&c<6){name='Isolated systolic hypertension';tip='Common in older adults; treat'}
+else{name=['','Optimal','Normal','High normal','Grade 1 hypertension','Grade 2 hypertension','Hypertensive crisis'][c];
+tip=['','Healthy lifestyle','Healthy lifestyle; recheck periodically','Lifestyle advice; recheck','Confirm on another day; lifestyle ± drugs','Start treatment promptly','Urgent referral'][c];}
+$('bC').textContent=name;$('bT').textContent=tip;$('bC').className='big-num '+(c>=5||name.startsWith('Isolated')?'dg':c==4?'am':'tl');}
+['bS','bD'].forEach(i=>$(i).addEventListener('input',B));B();
+function H(){const a=+$('hA').value,t=+$('hT').value,c=+$('hC').value;$('hAv').textContent=a;$('hTv').textContent=t;$('hCv').textContent=c;
+const r=a*t*c/10000;$('hR').textContent=Number.isInteger(r)?r:r.toFixed(1);$('hX').innerHTML='Unaware: <b>'+(100-a)+'</b> · Aware, untreated: <b>'+Math.round(a*(100-t)/100)+'</b> · Treated, uncontrolled: <b>'+Math.round(a*t*(100-c)/10000)+'</b>';}
+['hA','hT','hC'].forEach(i=>$(i).addEventListener('input',H));H();})();
+</script>

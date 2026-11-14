@@ -1,0 +1,139 @@
+<!--meta
+{"short":"Diabetes Mellitus","part":"Non-communicable Diseases","title":"Diabetes <em>Mellitus</em>","sub":"Burden, Classification, Diagnostic Criteria, Risk Scoring With IDRS, Prevention and Care",
+"codes":["CM 8.2"],
+"desc":"One-hour interactive lecture on diabetes mellitus: definition, burden in India (ICMR-INDIAB), types, WHO diagnostic criteria with a glucose classifier, the Indian Diabetes Risk Score, screening, primary prevention, complications and care under NP-NCD.",
+"notes":"60-minute plan: hook 3 min, burden 8, types 6, diagnosis 12, risk score 10, prevention 10, complications and care 8, close 3.",
+"art":"<svg class='art' viewBox='0 0 560 560' aria-hidden='true'><path d='M280 110 C 230 200, 170 260, 170 330 a110 110 0 0 0 220 0 C 390 260, 330 200, 280 110z' fill='#A23B2B' opacity='.85'/><circle cx='245' cy='330' r='22' fill='#F4F5F1' opacity='.7'/></svg>",
+"refs":["Park K. <i>Park's Textbook of Preventive and Social Medicine</i>, 27th ed. Jabalpur: Banarsidas Bhanot; 2023. Chapter 6: Diabetes mellitus.",
+"Anjana RM, et al. ICMR-INDIAB-17. <i>Lancet Diabetes Endocrinol</i>. 2023;11(7):474–89.",
+"Mohan V, et al. A simplified Indian Diabetes Risk Score for screening for undiagnosed diabetic subjects. <i>J Assoc Physicians India</i>. 2005;53:759–63.",
+"Ministry of Health and Family Welfare. <i>National Guidelines for Diagnosis and Management of Gestational Diabetes Mellitus</i>, 2018.",
+"Knowler WC, et al. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. <i>N Engl J Med</i>. 2002;346:393–403.",
+"NMC. <i>Competency Based Undergraduate Curriculum for the Indian Medical Graduate</i>, Vol II, 2024. Community Medicine, Topic 8."]}
+-->
+
+<section data-title="The Foot Ulcer" data-run="Opening Case" data-tab="Think · Pair · Share" data-src="Teaching case">
+  <h2 class="s">A Painless Ulcer on the <em>Sole</em></h2>
+  <p class="lede">A 56-year-old farmer stepped on a thorn a month ago and felt nothing. His sugar is 312 mg/dL. He has never been tested before.</p>
+  <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">How long has he probably had diabetes,<br>and who else in his village has it?</p>
+  <aside class="notes"><p>0:00–0:03. Type 2 diabetes can be silent for years; complications at diagnosis mean late detection. Neuropathy plus a wound plus barefoot work: a classic route to amputation. Screening everyone 30+ finds such people earlier.</p></aside>
+</section>
+
+<section data-title="Definition and Burden" data-src="Park 27e, Ch 6: Diabetes mellitus; ICMR-INDIAB-17 (2023)">
+  <h2 class="s">A Metabolic <em>Epidemic</em></h2>
+  <div class="clip sm"><blockquote>"a group of metabolic disorders characterized and identified by the presence of hyperglycaemia in the absence of treatment"</blockquote><span class="who">Definition</span></div>
+  <div class="cols c3 g20 mt20">
+    <div class="stat"><span class="n">11.4%</span><span class="l">of Indian adults have diabetes (about 10 crore)</span></div>
+    <div class="stat"><span class="n am">15.3%</span><span class="l">have prediabetes</span></div>
+    <div class="stat"><span class="n tl">Urban &gt; rural</span><span class="l">but rural rates are rising fast</span></div>
+  </div>
+  <aside class="notes"><p>0:03–0:11. ICMR-INDIAB-17 (adults 20+, 2008–2020 data). Prevalence varies widely between states, highest in Goa, Puducherry and Kerala; the states with low prevalence now have high prediabetes, which predicts a future rise. Long-term effects: retinopathy, nephropathy, neuropathy, and higher risk of heart disease and stroke.</p></aside>
+</section>
+
+<section data-title="Types" data-tab="Tap to Reveal" data-src="Park 27e, Ch 6: Classification of diabetes">
+  <h2 class="xs">Which <em>Type?</em></h2>
+  <div class="cols c2 g20">
+    <button class="reveal" style="min-height:160px"><span class="q">Thin 12-year-old, weight loss, ketosis</span><span class="a"><b>Type 1: autoimmune β-cell destruction; needs insulin for life</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">45-year-old, central obesity, family history</span><span class="a"><b>Type 2: insulin resistance + relative deficiency; about 90% of cases</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Pregnant woman, high sugar on OGTT</span><span class="a"><b>Gestational diabetes: high later risk of type 2 for mother and child</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">After pancreatitis, steroids</span><span class="a"><b>Other specific types</b></span></button>
+  </div>
+  <aside class="notes"><p>0:11–0:17. Type 1 incidence peaks at 10–14 years. Indians develop type 2 diabetes at younger ages and lower BMI than Europeans ("thin-fat" phenotype).</p></aside>
+</section>
+
+<section data-title="Diagnose" data-tab="Move the Sliders" data-src="Park 27e, Ch 6: Diagnostic criteria (WHO)">
+  <h2 class="xs">Read the <em>Glucose</em> Test</h2>
+  <div class="cols c2 g28">
+    <div>
+      <div class="ctl"><label for="gF">Fasting plasma glucose, mg/dL <b id="gFv"></b></label><input type="range" id="gF" min="70" max="200" value="118"></div>
+      <div class="ctl"><label for="g2">2-hour plasma glucose after 75 g, mg/dL <b id="g2v"></b></label><input type="range" id="g2" min="80" max="300" value="165"></div>
+      <p class="tiny">HbA1c 6.5% or more also diagnoses diabetes. Random glucose 200+ with symptoms is diagnostic.</p>
+    </div>
+    <div class="panel" style="text-align:center"><span class="kicker">Result</span><div class="big-num" id="gR" style="font-size:52px;line-height:1.1"></div><p id="gT" style="font-size:22px;margin-top:10px"></p></div>
+  </div>
+  <aside class="notes"><p>0:17–0:27. WHO: diabetes if fasting ≥126 mg/dL (7.0 mmol/L) or 2-hour ≥200 mg/dL (11.1 mmol/L). Impaired fasting glucose 110–125 (6.1–6.9); impaired glucose tolerance 2-hour 140–199 (7.8–11.0). Without symptoms, confirm with a repeat test. Pregnancy in India: single-step 75 g OGTT, 2-hour ≥140 mg/dL = GDM (national guideline, 2018).</p></aside>
+</section>
+
+<section data-title="IDRS" data-tab="Choose and See" data-src="Mohan V et al., JAPI 2005 (Indian Diabetes Risk Score)">
+  <h2 class="xs">Who Should Be Tested? <em>IDRS</em></h2>
+  <div class="cols c2 g28 top">
+    <div id="idrs" class="form" style="font-size:22px">
+      <label>Age <select><option value="0">Under 35</option><option value="20">35–49</option><option value="30">50 or more</option></select></label>
+      <label>Waist <select><option value="0">F &lt;80 / M &lt;90 cm</option><option value="10">F 80–89 / M 90–99 cm</option><option value="20">F 90+ / M 100+ cm</option></select></label>
+      <label>Physical activity <select><option value="0">Exercise + strenuous work</option><option value="20">Exercise or strenuous work</option><option value="30">Sedentary, no exercise</option></select></label>
+      <label>Family history <select><option value="0">Neither parent</option><option value="10">One parent</option><option value="20">Both parents</option></select></label>
+    </div>
+    <div class="panel tl" style="text-align:center"><span class="kicker">IDRS</span><div class="big-num" id="idS">0</div><p id="idT" style="font-size:24px;margin-top:10px"></p></div>
+  </div>
+  <aside class="notes"><p>0:27–0:37. Score 60 or more: high risk, test now; 30–50 moderate; under 30 low. IDRS needs no blood test, so health workers can use it door to door. Check the scoring against the original paper (Mohan et al., 2005) before teaching.</p></aside>
+</section>
+
+<section class="section" data-title="Part 2: Prevention and Care">
+  <div class="big-n">2</div>
+  <h2>Delay It, Find It,<br><em>Control</em> It</h2>
+  <p>Prevention, complications and care.</p>
+  <aside class="notes"><p>0:37.</p></aside>
+</section>
+
+<section data-title="Prevention" data-src="Knowler et al., NEJM 2002; Park 27e, Ch 6">
+  <h2 class="s">Type 2 Diabetes Can Be <em>Delayed</em></h2>
+  <div class="cols c2 g28">
+    <div class="stat"><span class="n tl">58%</span><span class="l">fewer new cases with lifestyle change in people with IGT (Diabetes Prevention Program, USA)</span></div>
+    <div class="panel"><span class="kicker">What Works</span><ul class="clean small"><li>Lose <b>5–7%</b> of body weight</li><li><b>150 minutes</b> of brisk walking a week</li><li>Less refined rice, sugar, sweet drinks; more fibre</li><li>No tobacco</li></ul></div>
+  </div>
+  <p class="small mt20">Similar benefit was shown in Indian adults with IGT (Indian Diabetes Prevention Programme, Chennai).</p>
+  <aside class="notes"><p>0:37–0:45. Park notes there is no practical high-risk strategy for type 1 diabetes. For type 2, the population strategy (activity, diet, weight) and the high-risk strategy (screening and lifestyle for prediabetes) go together.</p></aside>
+</section>
+
+<section data-title="Complications and Care" data-tab="Tap to Reveal" data-src="NP-NCD Operational Guidelines; Park 27e, Ch 6">
+  <h2 class="xs">Screen for <em>Complications</em> Every Year</h2>
+  <div class="cols c3 g20">
+    <button class="reveal" style="min-height:160px"><span class="q">Eyes</span><span class="a"><b>Dilated fundus exam: diabetic retinopathy</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Kidneys</span><span class="a"><b>Urine albumin, serum creatinine</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Feet</span><span class="a"><b>Monofilament test, pulses; footwear advice</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Heart</span><span class="a"><b>BP and lipids; statin for most adults over 40</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Control</span><span class="a"><b>HbA1c every 3–6 months; target around 7%</b></span></button>
+    <button class="reveal" style="min-height:160px"><span class="q">Where</span><span class="a"><b>Ayushman Arogya Mandir follow-up; free drugs; NCD clinic referral</b></span></button>
+  </div>
+  <aside class="notes"><p>0:45–0:55. Back to the case: annual foot examination and footwear advice would likely have prevented his ulcer. Diabetes is also a major risk factor for TB (link to NTEP bidirectional screening).</p></aside>
+</section>
+
+<section data-title="Quick Check" data-tab="Tap an Option" data-src="Teaching questions based on Park 27e">
+  <h2 class="xs">Quick Check</h2>
+  <div class="cols c2 g28 top">
+    <div class="mcq" data-ans="3"><p style="font-size:29px">Fasting glucose 118 mg/dL means:</p>
+      <button class="opt"><span class="l">A</span>Normal</button><button class="opt"><span class="l">B</span>Diabetes</button><button class="opt"><span class="l">C</span>Impaired glucose tolerance</button><button class="opt"><span class="l">D</span>Impaired fasting glucose</button>
+      <p class="fb" data-fb="IFG: 110–125 mg/dL (WHO)."></p></div>
+    <div class="mcq" data-ans="1"><p style="font-size:29px">An IDRS of 60 or more means:</p>
+      <button class="opt"><span class="l">A</span>Diabetes is confirmed</button><button class="opt"><span class="l">B</span>High risk: test blood glucose</button><button class="opt"><span class="l">C</span>Low risk</button><button class="opt"><span class="l">D</span>Start insulin</button>
+      <p class="fb" data-fb="A risk score selects people for testing; it does not diagnose."></p></div>
+  </div>
+  <aside class="notes"><p>0:55–0:58.</p></aside>
+</section>
+
+<section data-title="Take-Home" data-src="Summary of this lecture">
+  <h2 class="xs">Take-Home</h2>
+  <ol class="steps" style="font-size:33px;max-width:1260px;margin-top:20px">
+    <li><span>About <b>1 in 9</b> Indian adults has diabetes; 1 in 7 prediabetes.</span></li>
+    <li><span>Fasting <b>≥126</b> or 2-hour <b>≥200</b> mg/dL: diabetes.</span></li>
+    <li><span><b>IDRS</b> picks who to test.</span></li>
+    <li><span>Weight loss and walking delay type 2.</span></li>
+    <li><span>Check <b>eyes, kidneys, feet</b> every year.</span></li>
+  </ol>
+  <aside class="notes"><p>0:58–0:60. Next: Obesity.</p></aside>
+</section>
+
+<script>
+(function(){const $=i=>document.getElementById(i);
+function G(){const f=+$('gF').value,t=+$('g2').value;$('gFv').textContent=f;$('g2v').textContent=t;let r,c,tip;
+if(f>=126||t>=200){r='Diabetes';c='dg';tip='Confirm with a repeat test if no symptoms'}
+else if(f>=110&&t>=140){r='IFG and IGT';c='am';tip='Prediabetes: lifestyle change; retest yearly'}
+else if(t>=140){r='Impaired glucose tolerance';c='am';tip='Prediabetes: lifestyle change; retest yearly'}
+else if(f>=110){r='Impaired fasting glucose';c='am';tip='Prediabetes: lifestyle change; retest yearly'}
+else{r='Normal';c='tl';tip='Rescreen as per programme'}
+$('gR').textContent=r;$('gR').className='big-num '+c;$('gT').textContent=tip;}
+['gF','g2'].forEach(i=>$(i).addEventListener('input',G));G();
+const box=$('idrs');function I(){let s=0;box.querySelectorAll('select').forEach(x=>s+=+x.value);$('idS').textContent=s;
+$('idT').innerHTML=s>=60?'<b class="dg">High risk</b>: test blood glucose now':s>=30?'<b class="am">Moderate risk</b>: test; lifestyle advice':'<b class="tl">Low risk</b>: health advice';}
+box.querySelectorAll('select').forEach(x=>{x.addEventListener('change',I);x.addEventListener('click',e=>e.stopPropagation());});I();})();
+</script>
