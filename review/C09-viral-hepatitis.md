@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. **Corrections made:** Incubation periods changed to Park's: hepatitis A 10–50 days, B 30–180 days, E 3–8 weeks. Check against 28e if you teach from it.
 - **Burden (page 5 notes).** NVHCP estimates about 40 million with chronic hepatitis B and 6–12 million with hepatitis C. HBsAg prevalence varies between studies (2–8%).
 - **Needle-stick risks (page 6 notes).** Approximate per-exposure risks (HBV up to 30%, HCV about 1.8%, HIV about 0.3%).
 - **NVHCP regimens (page 10).** Check the current NVHCP technical guidelines for DAA regimens.

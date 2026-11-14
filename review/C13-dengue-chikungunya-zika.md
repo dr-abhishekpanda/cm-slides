@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. **Corrections made:** Dengue incubation changed to Park's 3–10 days (commonly 5–6). Park says NS1 is detectable up to 6 days; the slide keeps the NCVBDC "days 1–5". Check against 28e if you teach from it.
 - **Dengue 2024 (page 3).** NCVBDC: 2,33,519 cases and 297 deaths. Update each year.
 - **Larval index thresholds (calculator, page 7).** Rule-of-thumb thresholds (HI 10%, BI 20, BI 50, BI 5) vary between sources; check the NCVBDC guidance you follow.
 - **Zika outbreak years (page 10).** Check against NCDC alerts (Gujarat 2017 is not listed on this slide; it appears in C24).

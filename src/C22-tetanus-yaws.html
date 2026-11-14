@@ -25,7 +25,7 @@
       <tr><td>Agent</td><td><i>Clostridium tetani</i>; spores survive years in soil; toxin <b>tetanospasmin</b></td></tr>
       <tr><td>Source</td><td>Soil, dust, animal and human faeces</td></tr>
       <tr><td>Entry</td><td>Wounds, burns, unclean delivery and cord care, injections, ear infections</td></tr>
-      <tr><td>Incubation</td><td>Usually <b>6–10 days</b> (3–21)</td></tr>
+      <tr><td>Incubation</td><td>Usually <b>6–10 days</b> (1 day to several months)</td></tr>
     </tbody></table>
     <div class="panel am"><span class="kicker">No Herd Immunity</span><p style="font-size:24px">Tetanus does not spread person to person, so every individual must be immunised. Recovery does <b>not</b> give immunity.</p></div>
   </div>
@@ -68,13 +68,13 @@
       </div>
       <span class="kicker">Wound</span>
       <div class="cols c2 g20" id="tWnd" style="margin-top:10px">
-        <button class="btn sm" data-v="c">Clean, minor</button>
-        <button class="btn sm" data-v="t">Tetanus-prone</button>
+        <button class="btn sm" data-v="c">Clean, under 6 hours old</button>
+        <button class="btn sm" data-v="t">Other wounds</button>
       </div>
     </div>
     <div class="panel tl" style="min-height:300px"><span class="kicker">Recommendation</span><p id="tOut" style="font-size:30px;line-height:1.4">Choose both.</p></div>
   </div>
-  <aside class="notes"><p>0:28–0:40. Tetanus-prone: over 6 hours old, puncture, devitalised tissue, contaminated with soil or faeces, burns, compound fractures. Simplified from the standard table: class 1 (within 5 years): nothing; class 2 (5–10 years): clean, nothing; tetanus-prone, one booster; class 3 (over 10 years): one booster; tetanus-prone, booster (immunoglobulin if very contaminated per some guidelines); class 4: full course, and for tetanus-prone also human tetanus immunoglobulin 250 IU IM at a different site. Always clean and debride the wound.</p></aside>
+  <aside class="notes"><p>0:28–0:40. This follows Park 27e (Fig. 1, prevention of tetanus in the wounded). "Clean" = under 6 hours old, clean, non-penetrating, negligible tissue damage; everything else is "other wounds". Immunity A: course or booster within 5 years; B: 5–10 years ago; C: over 10 years ago; D: incomplete or unknown. Human tetanus immunoglobulin 250 IU IM at a different site. WHO and CDC tables differ slightly (no immunoglobulin when a full primary series is documented); say which you follow. Always clean and debride the wound.</p></aside>
 </section>
 
 <section class="section" data-title="Part 2: Yaws">
@@ -130,7 +130,7 @@
 
 <script>
 (function(){const st={i:0,w:''};const $=i=>document.getElementById(i);
-const R={'1c':'Nothing needed','1t':'Nothing needed','2c':'Nothing needed','2t':'<b>Td, one dose</b>','3c':'<b>Td, one dose</b>','3t':'<b>Td, one dose</b>','4c':'<b>Td, full course</b> (0, 1, 6 months)','4t':'<b>Td, full course</b><br>+ <b>tetanus immunoglobulin</b> 250 IU IM, other arm'};
+const R={'1c':'Nothing more needed','1t':'Nothing more needed','2c':'<b>Td, one dose</b>','2t':'<b>Td, one dose</b>','3c':'<b>Td, one dose</b>','3t':'<b>Td, one dose</b><br>+ <b>tetanus immunoglobulin</b>','4c':'<b>Td, full course</b> (0, 1, 6 months)','4t':'<b>Td, full course</b><br>+ <b>tetanus immunoglobulin</b> 250 IU IM, other arm'};
 function pick(box,key){$(box).querySelectorAll('button').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();$(box).querySelectorAll('button').forEach(x=>x.classList.remove('solid'));b.classList.add('solid');st[key]=b.dataset.v;show();}));}
 function show(){if(st.i&&st.w)$('tOut').innerHTML=R[st.i+st.w]+'<br><span style="font-size:22px">Always clean and debride the wound.</span>';}
 pick('tImm','i');pick('tWnd','w');})();

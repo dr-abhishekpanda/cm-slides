@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. **Corrections made:** Leptospirosis incubation changed to Park's 10 days (4–20). Park calls Weil-Felix OX-K "strongly positive" in scrub typhus; the slide follows ICMR 2015 (insensitive). Choose one. Check against 28e if you teach from it.
 - **Plague events (page 5 notes).** Surat and Beed 1994; Hatkoti 2002; Dangud 2004. Check dates and case counts.
 - **Leptospirosis chemoprophylaxis (page 8).** Doxycycline 200 mg weekly during exposure; check NCDC guidance.
 - **Brucellosis calf vaccination (page 11 notes).** Under the National Animal Disease Control Programme; check age band.

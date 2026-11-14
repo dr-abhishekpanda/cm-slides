@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. **Corrections made:** C. perfringens 6–24 h and botulism 18–36 h now follow Park; staphylococcal 1–8 h. Opening slide no longer gives a case count for "Typhoid Mary" (Park says over 1,300; historians count about 50). Check against 28e if you teach from it.
 - **Typhoid vaccines (page 6).** TCV is not in the national UIP at the time of writing; check for later state or national introduction.
 - **Food-specific attack rate table (page 9).** Invented numbers for teaching, labelled as such in the footer.
 - **Incubation periods of food poisoning agents (page 8).** Standard textbook ranges; check against Park.

@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. No conflicts with Park were found in the facts checked (incubation periods, key figures, schedules). Check against 28e if you teach from it.
 - **Burden (page 6).** "1 in 4 people" is from the WHO STH fact sheet; "241 million children 1–14 years at risk" is the WHO estimate MoHFW uses for NDD. Check the current NDD guideline.
 - **NDD dosing (page 7).** 200 mg for 1–2 years, 400 mg for 2–19 years; check the current round's guideline.
 - **Dracunculiasis (page 9).** India: last case 1996, certified 2000. For the global count, use the latest WHO WER summary.

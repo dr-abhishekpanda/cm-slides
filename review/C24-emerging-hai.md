@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. No conflicts with Park were found in the facts checked (incubation periods, key figures, schedules). Check against 28e if you teach from it.
 - **Opening case (page 2).** Based on the 2018 Kerala Nipah outbreak; case and death counts are in the notes as approximate. Check against NCDC/Kerala reports.
 - **Outbreak dates (page 5).** Verify each against NCDC and NIV reports; add one event from your own state.
 - **NAP-AMR 2.0 (page 11).** Launched 18 November 2025 for 2025–29.

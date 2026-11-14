@@ -4,8 +4,8 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
-- **Wound-prophylaxis tool (page 6).** Simplified from the standard table. Park's table differs from WHO/CDC in places (for example, immunoglobulin for tetanus-prone wounds when the last dose was over 10 years ago). Align the tool with whichever table you teach; the logic is in the script at the end of the source file.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. **Corrections made:** Tetanus incubation now Park's 6–10 days (1 day to several months). The wound-prophylaxis tool now follows Park's Fig. 1 exactly (clean vs other wounds; immunity A–D), which gives immunoglobulin for "other wounds" when the last dose was over 10 years ago. Check against 28e if you teach from it.
+- **Wound-prophylaxis tool (page 6).** Now follows Park 27e Fig. 1. WHO/CDC tables differ slightly; say which one you teach.
 - **Td in pregnancy (page 5).** From the 2018 Td operational guidelines.
 - **Yaws dates (page 8).** Last case 2003, declared free 2006, WHO certification 2016.
 

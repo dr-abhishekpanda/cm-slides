@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. No conflicts with Park were found in the facts checked (incubation periods, key figures, schedules). Check against 28e if you teach from it.
 - **Burden (page 3).** WHO's ~20,000 deaths (36% of global) rests on older modelling; ICMR-NIE's 2022–23 survey estimated 5,726 deaths a year. "96% follow dog bites" is the commonly quoted NCDC figure; check current NRCP materials.
 - **PEP schedules (page 8).** From the 2019 national guidelines; WHO 2018 also allows a 1-week ID regimen. Check what your state follows.
 - **RIG volumes (calculator, page 9).** Assume ERIG 300 IU/mL and HRIG 150 IU/mL; check the vial strength.

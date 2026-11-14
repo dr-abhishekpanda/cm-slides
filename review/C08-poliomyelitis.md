@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. **Corrections made:** Inapparent infection changed from 90–95% to Park's 91–96%; faecal excretion changed to "usually 2–3 weeks, up to 3–4 months". Check against 28e if you teach from it.
 - **Global WPV1 count (page 6 notes).** 2024: 99 cases (Pakistan 74, Afghanistan 25), from the 42nd IHR Emergency Committee statement. 2025: Pakistan 31 (press, January 2026). Check GPEI's weekly update before teaching.
 - **fIPV-3 (page 10).** Added to the schedule in January 2023 at 9–12 months with MR-1. Confirm against the latest MoHFW immunisation handbook.
 - **Iceberg proportions (page 4).** Approximate textbook figures (90–95% inapparent, under 1% paralytic).

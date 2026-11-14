@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. No conflicts with Park were found in the facts checked (incubation periods, key figures, schedules). Check against 28e if you teach from it.
 - **Elimination categories (page 4).** From NFME 2016. I could not confirm whether NSP 2023–27 kept the same categories; check the PDF on the NCVBDC website.
 - **Drug policy (page 7).** ACT-SP for most states and ACT-AL in the North-East follow the 2013 policy; I found no national switch to ACT-AL. First-trimester treatment: national policy says quinine; WHO allowed AL from 2022. Check for updates.
 - **Vivax calculator (page 8).** Arithmetic only (mg/kg with adult caps); real dosing uses the age-band tablet charts.

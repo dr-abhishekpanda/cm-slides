@@ -4,7 +4,7 @@
 
 ## Check Before Teaching
 
-- **Park text not read for this deck.** Park 27e Chapter 5 Part II (polio onwards) is over the Drive connector's 10 MB limit, and 28e is larger still. The textbook content in this deck is standard and was written from established sources, but **nothing is quoted from Park**, and every footer citing "Park 27e, Ch 5" should be checked against your copy (27e or 28e) before teaching. If you can upload Part II as smaller split PDFs, I can recheck it and add short quotations.
+- **Park edition.** Checked against Park 27e Chapter 5 Parts II–VII (the split 27e set in your Drive). An earlier version of this note wrongly said Park could not be read. No conflicts with Park were found in the facts checked (incubation periods, key figures, schedules). Check against 28e if you teach from it.
 - **NFHS-5 figures (page 3).** 7.2% diarrhoea prevalence and ORS-plus-zinc about 1 in 4 come from published NFHS-5 analyses (IJCM 2024; PLOS ONE 2024). I could not confirm the fact-sheet values for ORS alone and zinc alone; take them from the NFHS-5 India report.
 - **Stop Diarrhoea Campaign (page 7).** Successor to IDCF; check the current name, dates and components.
 - **Plan C volumes (calculator, page 5).** WHO 2005: 100 mL/kg Ringer's lactate; under 12 months 30 mL/kg in 1 hour then 70 mL/kg in 5 hours; older 30 mL/kg in 30 minutes then 70 mL/kg in 2½ hours.
