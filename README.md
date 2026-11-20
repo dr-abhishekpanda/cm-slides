@@ -28,6 +28,20 @@ python3 tools/build.py H05        # one deck (prefix match)
 python3 tools/index.py            # refresh index.html
 ```
 
+## Checks
+
+```bash
+python3 tools/lint.py                       # house style: banned words, labels, Indian English, quotes, em-dashes
+```
+
+```bash
+node tools/layout_check.js decks/*.html     # content running into the footer or off the page
+```
+
+```bash
+node tools/qa.js decks/*.html               # click every widget; report script errors, NaN output, overflow
+```
+
 ## Presenting
 
 | Key | Action |
