@@ -10,7 +10,7 @@ for(const f of process.argv.slice(2)){errs=[];
  for(let i=0;i<n;i++){
   const r=await p.evaluate(async i=>{window.Deck.show(i);const s=document.querySelector('.slide.active');const res=[];
    s.querySelectorAll('.frag').forEach(x=>x.classList.add('on'));
-   s.querySelectorAll('.reveal,.hot').forEach(x=>{x.click();if(!x.classList.contains('open'))res.push('reveal did not open');});
+   s.querySelectorAll('.reveal,.hot').forEach(x=>{if(x.onclick||'on' in x.dataset)return; /* deck-specific widgets toggle their own state */ x.click();if(!x.classList.contains('open'))res.push('reveal did not open');});
    s.querySelectorAll('.mcq').forEach(q=>{const o=q.querySelectorAll('.opt');const a=+q.dataset.ans;
      if(!(a>=0&&a<o.length)){res.push('mcq data-ans out of range');return;}
      o[a].click();const fb=q.querySelector('.fb');if(fb&&!fb.textContent.trim())res.push('mcq feedback empty');
