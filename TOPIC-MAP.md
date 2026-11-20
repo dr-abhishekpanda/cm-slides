@@ -1,10 +1,9 @@
-# CM Lecture Deck Repository: Draft Topic Map
+# CM Lecture Deck Repository: Topic Map
 
-**Status:** Draft v0.1 for approval. Topic-wise, ordered by Park 28e chapters. Each row is one one-hour interactive lecture (LGT). SGT/DOAP sessions are not listed separately.
+**Status:** Approved v1.0. Built so far: Parts C, D, E, G and H, and B17 (see `index.html`). Topic-wise, ordered by Park 28e chapters. Each row is one one-hour interactive lecture (LGT). SGT/DOAP sessions are not listed separately.
 **Codes:** NMC CBME 2024, Vol II, Community Medicine (20 topics, 136 competencies).
 **Count:** 133 lectures in total.
 
-> **Check this first:** your May 2026 competency timetable uses codes such as CM 16.4, 18.1 and 29.1–29.4. Those look like the **2019** numbering, because the 2024 document stops at CM 20.4. Tell me which set the decks should carry. Until you decide, I use the 2024 codes.
 
 ## Part A · Foundations (Park Ch 1–2, 12–14)
 
@@ -20,7 +19,7 @@
 | A8 | Medicine and social sciences: social psychology, community behaviour, the family | Ch 12 | CM 2.2, 2.4 |
 | A9 | Socio-economic status scales; poverty and social security | Ch 12 | CM 2.2, 2.5 |
 | A10 | Barriers to health and health-seeking behaviour; clinico-socio-cultural assessment | Ch 12 | CM 2.1, 2.3 |
-| A11 | Tribal health in India *(Sundargarh focus)* | Ch 13 | CM 2.1–2.5 (local) |
+| A11 | Tribal health in India | Ch 13 | CM 2.1–2.5 |
 | A12 | MDGs to SDGs: health targets and India's progress | Ch 14 | CM 17.4 |
 
 ## Part B · Epidemiology and Screening (Park Ch 3–4)
@@ -43,7 +42,7 @@
 | B14 | Disinfection and sterilisation in community settings | Ch 3 | CM 7.2 |
 | B15 | Investigation of an epidemic | Ch 3 | CM 7.7, 8.4 |
 | B16 | Surveillance; IDSP and IHIP | Ch 3, 7 | CM 8.6, 8.7 |
-| B17 | **Screening for disease** *(sample deck: built)* | Ch 4 | **CM 7.6** |
+| B17 | Screening for disease | Ch 4 | CM 7.6 |
 | B18 | Computers and AI in epidemiology; research proposals and critical appraisal | Ch 3 | CM 7.9–7.11 |
 
 ## Part C · Communicable Diseases (Park Ch 5)
@@ -143,7 +142,7 @@ These are taught with their diseases in Parts C and D. Two overview lectures sta
 | H1 | Water I: safe and wholesome water, sources, water-related diseases | CM 3.1, 3.2 |
 | H2 | Water II: purification at large and small scale; chlorination | CM 3.2 |
 | H3 | Water III: quality standards, conservation, rainwater harvesting | CM 3.2 |
-| H4 | Air pollution and ventilation *(Sundargarh: mining dust)* | CM 3.1 |
+| H4 | Air pollution and ventilation (including mining dust) | CM 3.1 |
 | H5 | Noise, radiation, heat and climate change | CM 3.1 |
 | H6 | Housing standards and health | CM 3.5 |
 | H7 | Solid waste disposal | CM 3.4 |
@@ -196,7 +195,6 @@ These are taught with their diseases in Parts C and D. Two overview lectures sta
 | K13 | Disaster management: concept, cycle, NDMA, man-made disasters | Ch 17 | CM 13.1–13.5 |
 | K14 | Recent public health events, outbreaks and laws in community medicine | Web | CM 20.1–20.4 |
 
-## Open Questions for You
+## Open Question
 
-- **Lecture budget:** 133 is above what most colleges timetable for CM LGTs. Should I merge some units (for example C17 into C13) to fit your college's hour allocation? [INSERT: total CM LGT hours per phase at GMCH Sundargarh]
-- **Phase placement:** I can tag each unit Phase I / II / III-P1 from your timetable once you confirm the numbering question above.
+- **Lecture budget:** 133 lectures is more than most colleges timetable for Community Medicine LGTs. Units can be merged (for example C17 into C13) to fit your college's hour allocation. [INSERT: total CM LGT hours at your college]

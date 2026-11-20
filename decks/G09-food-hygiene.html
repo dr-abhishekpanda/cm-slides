@@ -223,6 +223,10 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
   .slide{display:block!important;position:relative;height:900px;page-break-after:always;animation:none}
   .frag{opacity:1!important;transform:none!important}
 }
+/* form controls for risk scores */
+.slide select{font:inherit;font-size:20px;padding:6px 10px;border:1.5px solid var(--teal);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+.form{display:grid;gap:12px;font-size:21px}
+.form label{display:grid;grid-template-columns:1fr 330px;align-items:center;gap:14px}
 </style>
 </head>
 <body>
@@ -232,7 +236,7 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
   <h2 class="s">Forty Guests Vomit <em>Three Hours</em> After a Wedding Lunch.</h2>
   <p class="lede">The menu: biryani, chicken curry, raita, custard. The food was cooked the night before.</p>
   <p class="frag" style="font-family:var(--font-display);font-size:44px;font-style:italic;color:var(--amber);margin-top:26px">Which organism? Which dish? How would you prove it?</p>
-  <aside class="notes"><p>0:00–0:03. A short incubation (1–6 h) with vomiting suggests a preformed toxin: Staphylococcus aureus (custard, raita handled by a carrier) or Bacillus cereus (reheated rice). Proof: food-specific attack rates. Return at the investigation page.</p></aside>
+  <aside class="notes"><p>0:00–0:03. A short incubation (1–8 h) with vomiting suggests a preformed toxin: Staphylococcus aureus (custard, raita handled by a carrier) or Bacillus cereus (reheated rice). Proof: food-specific attack rates. Return at the investigation page.</p></aside>
 <div class="foot"><span class="src">Teaching case</span></div><div class="tab">Think · Pair · Share</div></section>
 <section class="slide has-tab" data-title="Milk-borne Diseases"><div class="run"><span><b>Food Hygiene</b> · Milk-borne Diseases</span><span class="pn"></span></div>
   <h2 class="xs">Milk-borne Diseases: From the Cow, or From the <em>Milker</em>?</h2>
@@ -303,8 +307,8 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
     </div>
     <div class="panel" id="fpR" style="min-height:300px"></div>
   </div>
-  <aside class="notes"><p>0:33–0:40. Typical incubation: Staph aureus 1–6 h (vomiting; toxin; custard, milk products, handled foods); B. cereus emetic 1–6 h (fried rice), diarrhoeal 6–24 h; C. perfringens 8–24 h (meat, gravies); Salmonella 12–36 h (fever, diarrhoea; eggs, poultry); C. botulinum 12–36 h (descending paralysis; canned foods). Bars are approximate.</p></aside>
-<div class="foot"><span class="src">Park 27e, Ch 11: Food poisoning (bacterial)</span></div><div class="tab">Move the Clock</div></section>
+  <aside class="notes"><p>0:33–0:40. Incubation periods as given in Park 27e, Ch 5 (food poisoning): Staph aureus 1–8 h (vomiting; preformed toxin; custard, milk products, handled foods); B. cereus emetic 1–6 h (fried rice), diarrhoeal 12–24 h; C. perfringens 6–24 h, peak 10–14 h (meat, gravies); Salmonella 12–24 h commonly (fever, diarrhoea; eggs, poultry); C. botulinum 18–36 h (descending paralysis; canned foods).</p></aside>
+<div class="foot"><span class="src">Park 27e, Ch 5: Food poisoning (incubation periods)</span></div><div class="tab">Move the Clock</div></section>
 <section class="slide " data-title="Investigating an Outbreak"><div class="run"><span><b>Food Hygiene</b> · Investigating an Outbreak</span><span class="pn"></span></div>
   <h2 class="xs">Investigating the Wedding Outbreak</h2>
   <div class="cols c55 top">
@@ -341,7 +345,7 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
       <p class="fb" data-fb="Phosphatase is destroyed by proper pasteurisation."></p></div>
     <div class="mcq" data-ans="2"><p style="font-size:29px">Vomiting 2 hours after eating custard suggests:</p>
       <button class="opt"><span class="l">A</span>Salmonella</button><button class="opt"><span class="l">B</span>C. botulinum</button><button class="opt"><span class="l">C</span>Staphylococcus aureus</button><button class="opt"><span class="l">D</span>C. perfringens</button>
-      <p class="fb" data-fb="Preformed staphylococcal enterotoxin: 1–6 hours."></p></div>
+      <p class="fb" data-fb="Preformed staphylococcal enterotoxin: 1–8 hours."></p></div>
   </div>
   <aside class="notes"><p>0:53–0:56.</p></aside>
 <div class="foot"><span class="src">Teaching questions based on Park 27e</span></div><div class="tab">Tap an Option</div></section>
@@ -351,7 +355,7 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
     <li><span>Milk can carry disease from the <b>animal</b> or the <b>handler</b>.</span></li>
     <li><span>Pasteurise: <b>63–66 °C × 30 min</b>, or <b>72 °C × 15 s</b>; check with the <b>phosphatase test</b>.</span></li>
     <li><span>Examine and train food handlers; look for carriers.</span></li>
-    <li><span>Short incubation (1–6 h) = <b>preformed toxin</b>.</span></li>
+    <li><span>Short incubation (1–8 h) = <b>preformed toxin</b>.</span></li>
     <li><span>Find the vehicle with <b>food-specific attack rates</b>.</span></li>
   </ol>
   <aside class="notes"><p>0:56–0:60. Next: Food fortification, additives, adulteration and toxicants.</p></aside>
@@ -449,7 +453,7 @@ input.num{font:600 34px var(--font-mono);width:180px;text-align:center;border:1.
 })();
 </script>
 <script>(function(){
-const B=[['S. aureus',1,6,'#A23B2B','Vomiting, cramps; little fever. Preformed enterotoxin in custard, milk products, handled foods.'],['B. cereus (emetic)',1,6,'#BE651F','Vomiting. Reheated or fried rice.'],['C. perfringens',8,24,'#C9A227','Diarrhoea, cramps. Meat, gravies kept warm.'],['Salmonella',12,36,'#0C5E4E','Fever, diarrhoea, vomiting. Eggs, poultry, meat.'],['C. botulinum',12,36,'#3D6E7A','Descending paralysis, diplopia, dysphagia. Canned or preserved foods.']];
+const B=[['S. aureus',1,8,'#A23B2B','Vomiting, cramps; little fever. Preformed enterotoxin in custard, milk products, handled foods.'],['B. cereus (emetic)',1,6,'#BE651F','Vomiting. Reheated or fried rice.'],['C. perfringens',6,24,'#C9A227','Diarrhoea, cramps. Meat, gravies kept warm.'],['Salmonella',12,24,'#0C5E4E','Fever, diarrhoea, vomiting. Eggs, poultry, meat.'],['C. botulinum',18,36,'#3D6E7A','Descending paralysis, diplopia, dysphagia. Canned or preserved foods.']];
 const g=document.getElementById('fpBars'),NS='http://www.w3.org/2000/svg',X=h=>h/72*700;
 B.forEach((b,i)=>{const r=document.createElementNS(NS,'rect');r.setAttribute('x',X(b[1]));r.setAttribute('y',10+i*48);r.setAttribute('width',X(b[2])-X(b[1]));r.setAttribute('height',34);r.setAttribute('rx',8);r.setAttribute('fill',b[3]);g.appendChild(r);
 const t=document.createElementNS(NS,'text');t.setAttribute('x',X(b[2])+8);t.setAttribute('y',33+i*48);t.setAttribute('font-size','18');t.setAttribute('fill','#15201B');t.textContent=b[0];g.appendChild(t);});

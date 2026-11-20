@@ -6,7 +6,7 @@
 
 - **Park edition.** This deck uses Park 27e Chapter 6, read in full from the split 27e set in your Drive. Quotations in quotation marks are from that text. Check them against 28e if you teach from it.
 - **Burden (page 3).** 63% of deaths and the 23% risk of dying at 30–70 are Park 27e figures (WHO country profile). ICMR-INDIAB-17 (2023) supplies hypertension 35.5%, diabetes 11.4%, prediabetes 15.3%.
-- **CBAC scoring (page 10).** Scored from memory of the NP-NCD CBAC form: age 0–3, tobacco 0–2, alcohol 0–1, waist 0–2, activity 0–1, family history 0–2, flag above 4. **Check against the current form before teaching.**
+- **CBAC scoring (page 10).** Corrected in the review pass: age is now 30–39 = 0, 40–49 = 1, 50 or more = 2 (the earlier "60 or more = 3" option was wrong). Tobacco 0–2, daily alcohol 1, waist 0–2, activity under 150 minutes 1, family history 2; "above 4" flags priority for the weekly screening day (confirmed). The official form PDF on the AAM portal was unavailable (server error), so compare once with the printed form at your facility.
 - **75/25 progress (page 11).** 4.2 crore on hypertension and 2.5 crore on diabetes treatment as of 5 March 2025 (PIB). Update from the NCD portal.
 - **Trans-fat limit (page 8).** FSSAI 2% of total fat; check the current regulation.
 

@@ -8,7 +8,7 @@
 - **NBVIS 2015–19 (page 4).** 1.99% blindness in 50+, cataract 66.2%, avoidable 92.9%, projected all-age prevalence 0.36% (Park and NBVIS summary).
 - **Cause shares (page 5).** Not given as percentages beyond cataract; add NBVIS figures if you want them.
 - **NPCBVI components and target (page 8).** Check against the current NPCBVI guidelines; the 0.25% target year may have changed.
-- **Trachoma (page 7 notes).** India's WHO validation for eliminating trachoma (2024) is noted from memory; confirm.
+- **Trachoma (page 7 notes).** Confirmed: WHO validated India as having eliminated trachoma as a public health problem on 8 October 2024 (India had been declared free of infective trachoma in 2017).
 
 ## Images
 

@@ -6,7 +6,7 @@
 
 - **Park edition.** This deck uses Park 27e Chapter 6, read in full from the split 27e set in your Drive. Quotations in quotation marks are from that text. Check them against 28e if you teach from it.
 - **Burden (page 3).** 15.7 lakh cases projected for 2025 and 2.27 lakh breast cancers in 2024 come from Lok Sabha answers citing ICMR-NCRP. Projections, not counts.
-- **HPV vaccine (page 7 notes).** Press reports say a national drive began February 2026 (single dose; Gardasil and Cervavac). Confirm age group and dosing with MoHFW.
+- **HPV vaccine (page 7 notes).** Confirmed from PIB (28 February 2026): single dose of Gardasil-4, free and voluntary, for girls aged 14 (about 1.15 crore); girls turning 15 within the 90-day intensive phase also eligible. Cervavac was not used in the national drive.
 - **Screening interval (page 8).** Every 5 years for women 30–65 per the 2016 framework; check NP-NCD 2023–30.
 - **GATS-2 (page 4).** 28.6% adult tobacco use (2016–17). GATS-3 may have been released; check.
 
